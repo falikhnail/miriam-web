@@ -1,7 +1,7 @@
 <div id="topbar" class="flex flex-col items-center">
     <div class="container flex flex-col md:flex-row items-center justify-center md:justify-between my-[10px] md:my-5">
         <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">rsiamiriam@gmail.com</a>
+            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">sdm.rsiamiriam@gmail.com</a>
             <i class="bi bi-phone"></i> +62 853-2947-3535
         </div>
         <div class="flex space-x-4 mt-[15px] md:mt-0">
@@ -14,7 +14,7 @@
     <header id="header" class="sticky w-full">
         <div class="container flex flex-col md:flex-col xl:flex-row items-center justify-center">
             <h1 class="text-2xl font-bold text-center md:text-left">
-                <a href="{{ route('frontend.index') }}">RSIA Ibu dan Anak MIRIAM</a>
+                <a href="{{ route('frontend.index') }}">RSIA MIRIAM</a>
             </h1>
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
