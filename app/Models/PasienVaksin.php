@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class PasienVaksin extends Model
 {
     use HasFactory;
+
+    protected $table = 'pasien_vaksin';
+
+    protected $fillable = [
+        'nik_anak',
+        'nama_lengkap_anak',
+        'tempat_tanggal_lahir_anak',
+        'nama_orang_tua',
+        'no_hp',
+        'alamat',
+        'vaksin',
+        'schedule'
+    ];
 }

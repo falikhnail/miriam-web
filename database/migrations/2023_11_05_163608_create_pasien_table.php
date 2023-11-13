@@ -13,23 +13,23 @@ return new class extends Migration
     {
         Schema::create('pasien', function (Blueprint $table) {
             $table->id();
-            $table->string('nik', 50);
+            $table->string('nik', 50)->nullable();
             $table->string('nama_lengkap', 150);
-            $table->string('jenis_kelamin', 20);
+            $table->string('jenis_kelamin', 20)->nullable();
             $table->string('tempat_tanggal_lahir', 100);
-            $table->string('agama', 50);
+            $table->string('agama', 50)->nullable();
             $table->text('alamat');
-            $table->string('pendidikan_terakhir', 20);
-            $table->string('pekerjaan', 50);
-            $table->string('status_kawin', 50);
+            $table->string('pendidikan_terakhir', 20)->nullable();
+            $table->string('pekerjaan', 50)->nullable();
+            $table->string('status_kawin', 50)->nullable();
             $table->string('no_hp', 50);
-            $table->string('no_rm', 100);
-            $table->string('nik_suami', 50);
-            $table->string('nama_suami', 150);
-            $table->string('pekerjaan_suami', 150);
-            $table->date('tanggal_periksa');
-            $table->string('no_hp_suami', 50);
-            $table->string('dokter', 150);
+            $table->string('no_rm', 100)->nullable();
+            $table->string('nik_suami', 50)->nullable();
+            $table->string('nama_suami', 150)->nullable();
+            $table->string('pekerjaan_suami', 150)->nullable();
+            $table->string('no_hp_suami', 50)->nullable();
+            $table->string('dokter', 150)->nullable();
+            $table->date('schedule')->nullable();
             $table->timestamps();
         });
     }

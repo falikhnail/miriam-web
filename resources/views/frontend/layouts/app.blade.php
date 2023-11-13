@@ -45,6 +45,12 @@
     <!-- Styles Assets -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/css/tw-elements.min.css" rel="stylesheet">
+
+    @vite('resources/css/app.css')
     @vite('resources/css/common.css')
     @vite(['resources/js/app.js'])
 
@@ -57,13 +63,17 @@
     <div class="flex flex-col justify-between h-screen">
         @include('frontend.includes.header')
 
-        <main>
+        <main class="relative">
+            <div class="absolute top-10 left-10 right-10 px-5">
+                @include('flash::message')
+            </div>
             @yield('content')
         </main>
 
 
         @include('frontend.includes.footer')
 
+        @include('includes.flash-message')
         <!-- Scripts -->
         @livewireScripts
     </div>
@@ -77,15 +87,15 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"></script>
     <script>
         $(document).ready(function() {
-            //console.log('height', $('#appbar').height())
-
-            /* $(window).resize(function() {
-                var screensize = $(window).width();
-                console.log('widht', screensize)
-            }); */
-        });
+            /* if ($("#notification").is(":visible")) {
+                setTimeout(() => {
+                    $("#notification").hide()
+                }, 3000)
+            } */
+        })
     </script>
 
     @stack('after-scripts')

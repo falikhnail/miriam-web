@@ -16,13 +16,13 @@
 }
 
 button {
-    color: var(--text-white);
-    background-color: var(--btn-color);
+    color: var(--text-white) !important;
+    background-color: var(--btn-color) !important;
 }
 
 button:disabled {
-    color: var(--text-white);
-    background-color: var(--btn-color-disabled);
+    color: var(--text-white) !important;
+    background-color: var(--btn-color-disabled) !important;
 }
 
 
@@ -40,4 +40,12 @@ input:checked+label {
     background-color: var(--color-accent);
     color: var(--text-white);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.should-click {
+    @apply cursor-none !important;
+}
+
+.dot-required{
+    color: red !important;
 }

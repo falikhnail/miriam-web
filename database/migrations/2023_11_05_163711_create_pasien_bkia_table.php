@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('pasien_bkia', function (Blueprint $table) {
             $table->id();
             $table->string('nik_anak', 100);
-            $table->string('nama_lengkap', 150);
-            $table->string('tempat_tanggal_lahir', 100);
+            $table->string('nama_lengkap_anak', 150);
+            $table->string('tempat_tanggal_lahir_anak', 100);
             $table->string('nama_orang_tua', 150);
             $table->string('no_hp', 50);
             $table->text('alamat');
