@@ -582,7 +582,7 @@
                             aria-controls="faq-list-5" href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
                             <i class="bx bx-chevron-down icon-show"></i><i
                                 class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                        <div id="faq-list-5" class="!visible hidden">
                             <p>
                                 RSIA Miriam Tersedia 2 jam.
                             </p>
