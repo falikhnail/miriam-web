@@ -10,7 +10,7 @@
                         Kudus <br>
                         Jawa Tengah 59317 <br><br>
                         <strong>Phone:</strong> +62 291 437047<br>
-                        <strong>Email:</strong> rsiamiriam@gmail.com<br>
+                        <strong>Email:</strong> sdm.rsiamiriam@gmail.com<br>
                     </p>
                 </div>
 

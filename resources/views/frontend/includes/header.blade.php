@@ -1,7 +1,7 @@
 <div id="topbar" class="flex flex-col items-center">
     <div class="container flex flex-col md:flex-row items-center justify-center md:justify-between my-[10px] md:my-5">
         <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">rsiamiriam@gmail.com</a>
+            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">sdm.rsiamiriam@gmail.com</a>
             <i class="bi bi-phone"></i> +62 853-2947-3535
         </div>
         <div class="flex space-x-4 mt-[15px] md:mt-0">

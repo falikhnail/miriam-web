@@ -23,17 +23,11 @@
                     <div class="content">
                         <h3>Kenapa Memilih RSIA MIRIAM ?</h3>
                         <p>
-                            Karena RSIA MIRIAM Spesialisasi terkhusus dalam perawatan ibu dan anak seperti persalinan,
-                            perawatan
-                            bayi baru lahir, konsultasi kehamilan dan gangguan kehamilan, pijat dan tindik bayi
-                            dilengkapi dengan
-                            fasilitas khusus
-                            Dokter Spesialis RSIA Miriam dokter-dokter spesialis dalam obstetri (bidan dan dokter
-                            kandungan) dan
-                            pediatri (dokter anak), sehingga perawatan pasien dapat terfokus dan berkualitas
-                            Di dukung fasilitas lain seperti pemeriksaan laboratorium, pelayanan dokter gigi,
-                            pemeriksaan radiologi,
-                            dan pelayanan darurat atau IGD 24 jam
+                        Karena RSIA Miriam merupakan salah satu RSIA yang terbaik di kota Kudus dengan spesialisasi
+                        perawatan ibu dan anak seperti persalinan, perawatan bayi dan anak, konsultasi kehamilan dan
+                        didukung oleh dokter-dokter spesialis obgyn dan pediatrik yang kompeten dan berpengalaman.
+                        Juga dilengkapi dengan fasilitas dan peralatan medis yang canggih dan modern serta
+                        tenaga medis yang handal.
                         </p>
                         <div class="text-center">
                             <a href="#" class="more-btn">Pelajari lebih lanjut<i class="bx bx-chevron-right"></i></a>
@@ -222,7 +216,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Appointment Section ======= -->
-    <section id="appointment" class="appointment section-bg">
+    <!-- <section id="appointment" class="appointment section-bg">
         <div class="container">
 
             <div class="section-title">
@@ -287,7 +281,7 @@
             </form>
 
         </div>
-    </section><!-- End Appointment Section -->
+    </section> End Appointment Section -->
 
     <!-- ======= Departments Section ======= -->
     <section id="departments" class="departments">
@@ -518,10 +512,10 @@
 
             <div class="section-title">
                 <h2>Frequently Asked Questions</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
                     consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
                     fugiat sit
-                    in iste officiis commodi quidem hic quas.</p>
+                    in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="faq-list">
@@ -530,15 +524,13 @@
                         <i class="bx bx-help-circle icon-help"></i>
                         <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" href="#faq-list-1"
                             aria-expanded="false" aria-controls="faq-list-1">
-                            Non consectetur a erat nam at lectus urna duis?
+                            Apakah RSIA Miriam Sudah Terakreditasi ?
                             <i class="bx bx-chevron-down icon-show"></i>
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
-                            <p>
-                                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                                curabitur
-                                gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
+                                BPJS.
                             </p>
                         </div>
                     </li>
@@ -547,17 +539,12 @@
                         <i class="bx bx-help-circle icon-help"></i>
                         <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
                             aria-controls="faq-list-2" href="#faq-list-2">
-                            Feugiat scelerisque varius morbi enim nunc?
+                            apakah RSIA MIRIAM Hanya Menyediakan Pelayanan Untuk Ibu dan Anak ?
                             <i class="bx bx-chevron-down icon-show"></i>
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-2" class="!visible hidden" data-te-collapse-item>
-                            <p>
-                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                velit laoreet id
-                                donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
-                                pellentesque elit
-                                ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                            <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga Terdapat Pelayanan Umum.
                             </p>
                         </div>
                     </li>
@@ -566,19 +553,12 @@
                         <i class="bx bx-help-circle icon-help"></i>
                         <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
                             aria-controls="faq-list-3" href="#faq-list-3">
-                            Dolor sit amet consectetur adipiscing elit?
+                            Apakah RSIA Miriam Memiliki Kualitas yang bagus ?
                             <i class="bx bx-chevron-down icon-show"></i>
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-3" class="!visible hidden" data-te-collapse-item>
-                            <p>
-                                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                pulvinar elementum
-                                integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                                eu tincidunt.
-                                Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed
-                                odio morbi
-                                quis
+                            <p> RSIA Miriam Saat ini sudah memenuhi Standart dan Kulitas Internasional.
                             </p>
                         </div>
                     </li>
@@ -587,39 +567,24 @@
                         <i class="bx bx-help-circle icon-help"></i>
                         <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
                             aria-controls="faq-list-4" href="#faq-list-4">
-                            Tempus quam pellentesque nec nam aliquam
-                            sem et tortor consequat?
+                            Apakah RSIA Miriam Memiliki Fasilitas Yang Dibutuhkan Oleh Pasien ?
                             <i class="bx bx-chevron-down icon-show"></i>
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
-                            <p>
-                                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
-                                ante in. Nunc
-                                vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum
-                                est. Purus
-                                gravida quis blandit turpis cursus in.
+                            <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan Pasien.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="400">
-                        <i class="bx bx-help-circle icon-help"></i>
-                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
-                            aria-controls="faq-list-5" href="#faq-list-5">
-                            Tortor vitae purus faucibus ornare. Varius
-                            vel pharetra vel turpis nunc eget lorem
-                            dolor?
-                            <i class="bx bx-chevron-down icon-show"></i>
-                            <i class="bx bx-chevron-up icon-close"></i>
-                        </a>
-                        <div id="faq-list-5" class="!visible hidden" data-te-collapse-item>
+                        <i class="bx bx-help-circle icon-help"></i> <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-5" href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
+                            <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                             <p>
-                                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                                integer malesuada
-                                nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed.
-                                Ut venenatis
-                                tellus in metus vulputate eu scelerisque.
+                                RSIA Miriam Tersedia 2 jam.
                             </p>
                         </div>
                     </li>
@@ -631,99 +596,99 @@
     </section><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials">
-                                                              <div class="container">
+    <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
 
-                                                                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                                                                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                        <h3>Bambang Sugeni</h3>
+                        <h4>Karyawan Swasta</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            RSIA Miriam Memiliki Kualitas dan Kuantitas Yang Dapat Menunjang Semua Kebutuhan Anak dan Istri saya. Dimana Juga Memiliki Pelayanan Yang Cepat dan Efisien
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
 
-                                                                    <div class="swiper-slide">
-                                                                      <div class="testimonial-wrap">
-                                                                        <div class="testimonial-item">
-                                                                          <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                                                          <h3>Saul Goodman</h3>
-                                                                          <h4>Ceo &amp; Founder</h4>
-                                                                          <p>
-                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                                                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                                                          </p>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div>
-                                                                    <--End testimonial item -->
 
-    <!-- <div class="swiper-slide">
-                                                                      <div class="testimonial-wrap">
-                                                                        <div class="testimonial-item">
-                                                                          <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                                                          <h3>Sara Wilsson</h3>
-                                                                          <h4>Designer</h4>
-                                                                          <p>
-                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                                                          </p>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div> -->
-    <!-- End testimonial item -->
+    <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                        <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                        <h3>Richa Auliya Sari</h3>
+                        <h4>PNS</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Terimakasih Sudah Memberikan Yang Terbaik Untuk Saya.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
 
-    <!-- <div class="swiper-slide">
-                                                                      <div class="testimonial-wrap">
-                                                                        <div class="testimonial-item">
-                                                                          <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                                                          <h3>Jena Karlis</h3>
-                                                                          <h4>Store Owner</h4>
-                                                                          <p>
-                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                                                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                                                          </p>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div> -->
-    <!-- End testimonial item -->
 
-    <!-- <div class="swiper-slide">
-                                                                      <div class="testimonial-wrap">
-                                                                        <div class="testimonial-item">
-                                                                          <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                                                          <h3>Matt Brandon</h3>
-                                                                          <h4>Freelancer</h4>
-                                                                          <p>
-                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                                                          </p>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div> -->
-    <!-- End testimonial item -->
+    <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                        <h3>Naomi Sudarsono</h3>
+                        <h4>Store Owner</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Pelayanan Yang Diberikan Oleh Perawat Di RSIA Miriam Sangat Memuaskan dan Ramah Terhadap Pasien.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
 
-    <!-- <div class="swiper-slide">
-                                                                      <div class="testimonial-wrap">
-                                                                        <div class="testimonial-item">
-                                                                          <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                                                          <h3>John Larson</h3>
-                                                                          <h4>Entrepreneur</h4>
-                                                                          <p>
-                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                                                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                                                          </p>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div> -->
-    <!-- End testimonial item -->
 
-    <!-- </div>
-                                                                  <div class="swiper-pagination"></div>
-                                                                </div>
+    <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                        <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                        <h3>Tommy Bagus</h3>
+                        <h4>Freelancer</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Terimakasih Sudah Memberikan Pertolongan Kepada Anak dan Istri Saya Pasca Melahirkan Hingga Pengobatan Anak Saya Yang Sampai
+                            Saat Ini Diusia 10th Sudah memberikan Pelayanan Yang Terbaik. Semoga Kedepannya Semakin Sukses
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
 
-                                                              </div>
-                                                            </section> -->
-    <!-- End Testimonials Section -->
+
+    <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                        <h3>Budi Setiawan</h3>
+                        <h4>Pengusaha</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Pelayanan RSIA Miriam Memiliki Keunggulan Dimana RS Belum Memiliki Hal Tersebut.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+
+
+    </div>
+                <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+            </section>
+
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
@@ -901,7 +866,7 @@
                         <div class="email">
                             <i class="bi bi-envelope"></i>
                             <h4>Email:</h4>
-                            <p>rsiamiriam@gmail.com</p>
+                            <p>sdm.rsiamiriam@gmail.com</p>
                         </div>
 
                         <div class="phone">
