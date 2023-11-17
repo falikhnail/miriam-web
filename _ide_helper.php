@@ -18390,7 +18390,110 @@
      
 }
 
-        namespace Barryvdh\Debugbar\Facades { 
+        namespace Lavary\Menu { 
+            /**
+     * 
+     *
+     */ 
+        class Facade {
+                    /**
+         * Check if a menu builder exists.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($name)
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->exists($name);
+        }
+                    /**
+         * Create a new menu builder instance.
+         *
+         * @param string $name
+         * @param callable $callback
+         * @return \Lavary\Menu\Builder 
+         * @static 
+         */ 
+        public static function makeOnce($name, $callback)
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->makeOnce($name, $callback);
+        }
+                    /**
+         * Create a new menu builder instance.
+         *
+         * @param string $name
+         * @param callable $callback
+         * @param array $options (optional, it will be combined with the options to be applied)
+         * @return \Lavary\Menu\Builder 
+         * @static 
+         */ 
+        public static function make($name, $callback, $options = [])
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->make($name, $callback, $options);
+        }
+                    /**
+         * Loads and merges configuration data.
+         *
+         * @param string $name
+         * @return array 
+         * @static 
+         */ 
+        public static function loadConf($name)
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->loadConf($name);
+        }
+                    /**
+         * Return Menu builder instance from the collection by key.
+         *
+         * @param string $key
+         * @return \Lavary\Menu\Builder 
+         * @static 
+         */ 
+        public static function get($key)
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->get($key);
+        }
+                    /**
+         * Return Menu builder collection.
+         *
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function getCollection()
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->getCollection();
+        }
+                    /**
+         * Alias for getCollection.
+         *
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function all()
+        {
+                        /** @var \Lavary\Menu\Menu $instance */
+                        return $instance->all();
+        }
+         
+    }
+            /**
+     * 
+     *
+     */ 
+        class Collection {
+         
+    }
+     
+}
+
+    namespace Barryvdh\Debugbar\Facades { 
             /**
      * 
      *
@@ -24049,6 +24152,7 @@ namespace  {
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
             class Vite extends \Illuminate\Support\Facades\Vite {}
+            class Menu extends \Lavary\Menu\Facade {}
             class Debugbar extends \Barryvdh\Debugbar\Facades\Debugbar {}
             class Flash extends \Laracasts\Flash\Flash {}
             class Livewire extends \Livewire\Livewire {}

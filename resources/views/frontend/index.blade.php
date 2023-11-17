@@ -1,9 +1,10 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{ app_name() }} @endsection
+@section('title')
+    {{ app_name() }}
+@endsection
 
 @section('content')
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
@@ -526,10 +527,14 @@
             <div class="faq-list">
                 <ul>
                     <li data-aos="fade-up">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                            data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
-                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" href="#faq-list-1"
+                            aria-expanded="false" aria-controls="faq-list-1">
+                            Non consectetur a erat nam at lectus urna duis?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
                             <p>
                                 Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
                                 curabitur
@@ -539,10 +544,14 @@
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="100">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc?
-                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-2" href="#faq-list-2">
+                            Feugiat scelerisque varius morbi enim nunc?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-2" class="!visible hidden" data-te-collapse-item>
                             <p>
                                 Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
                                 velit laoreet id
@@ -554,10 +563,14 @@
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="200">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit?
-                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-3" href="#faq-list-3">
+                            Dolor sit amet consectetur adipiscing elit?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-3" class="!visible hidden" data-te-collapse-item>
                             <p>
                                 Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
                                 pulvinar elementum
@@ -571,11 +584,15 @@
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam
-                            sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i
-                                class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-4" href="#faq-list-4">
+                            Tempus quam pellentesque nec nam aliquam
+                            sem et tortor consequat?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
                             <p>
                                 Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
                                 ante in. Nunc
@@ -587,12 +604,16 @@
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="400">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-5" href="#faq-list-5">
+                            Tortor vitae purus faucibus ornare. Varius
                             vel pharetra vel turpis nunc eget lorem
-                            dolor? <i class="bx bx-chevron-down icon-show"></i><i
-                                class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                            dolor?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-5" class="!visible hidden" data-te-collapse-item>
                             <p>
                                 Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
                                 integer malesuada
@@ -611,97 +632,97 @@
 
     <!-- ======= Testimonials Section ======= -->
     <!-- <section id="testimonials" class="testimonials">
-              <div class="container">
+                                                              <div class="container">
 
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                  <div class="swiper-wrapper">
+                                                                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                                                  <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                      <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                          <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                          <h3>Saul Goodman</h3>
-                          <h4>Ceo &amp; Founder</h4>
-                          <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <--End testimonial item -->
+                                                                    <div class="swiper-slide">
+                                                                      <div class="testimonial-wrap">
+                                                                        <div class="testimonial-item">
+                                                                          <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                                                                          <h3>Saul Goodman</h3>
+                                                                          <h4>Ceo &amp; Founder</h4>
+                                                                          <p>
+                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                                          </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                    <--End testimonial item -->
 
     <!-- <div class="swiper-slide">
-                      <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                          <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                          <h3>Sara Wilsson</h3>
-                          <h4>Designer</h4>
-                          <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                          </p>
-                        </div>
-                      </div>
-                    </div> -->
+                                                                      <div class="testimonial-wrap">
+                                                                        <div class="testimonial-item">
+                                                                          <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                                                                          <h3>Sara Wilsson</h3>
+                                                                          <h4>Designer</h4>
+                                                                          <p>
+                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                                          </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div> -->
     <!-- End testimonial item -->
 
     <!-- <div class="swiper-slide">
-                      <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                          <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                          <h3>Jena Karlis</h3>
-                          <h4>Store Owner</h4>
-                          <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                          </p>
-                        </div>
-                      </div>
-                    </div> -->
+                                                                      <div class="testimonial-wrap">
+                                                                        <div class="testimonial-item">
+                                                                          <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                                                                          <h3>Jena Karlis</h3>
+                                                                          <h4>Store Owner</h4>
+                                                                          <p>
+                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                                          </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div> -->
     <!-- End testimonial item -->
 
     <!-- <div class="swiper-slide">
-                      <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                          <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                          <h3>Matt Brandon</h3>
-                          <h4>Freelancer</h4>
-                          <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                          </p>
-                        </div>
-                      </div>
-                    </div> -->
+                                                                      <div class="testimonial-wrap">
+                                                                        <div class="testimonial-item">
+                                                                          <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                                                                          <h3>Matt Brandon</h3>
+                                                                          <h4>Freelancer</h4>
+                                                                          <p>
+                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                                          </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div> -->
     <!-- End testimonial item -->
 
     <!-- <div class="swiper-slide">
-                      <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                          <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                          <h3>John Larson</h3>
-                          <h4>Entrepreneur</h4>
-                          <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                          </p>
-                        </div>
-                      </div>
-                    </div> -->
+                                                                      <div class="testimonial-wrap">
+                                                                        <div class="testimonial-item">
+                                                                          <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                                                                          <h3>John Larson</h3>
+                                                                          <h4>Entrepreneur</h4>
+                                                                          <p>
+                                                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                                          </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div> -->
     <!-- End testimonial item -->
 
     <!-- </div>
-                  <div class="swiper-pagination"></div>
-                </div>
+                                                                  <div class="swiper-pagination"></div>
+                                                                </div>
 
-              </div>
-            </section> -->
+                                                              </div>
+                                                            </section> -->
     <!-- End Testimonials Section -->
 
     <!-- ======= Gallery Section ======= -->

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "304c5c172899df41f2dd2c61feac558d",
+    "content-hash": "c43ef63df55c26c332b3f3436ded9744",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
@@ -1618,6 +1618,62 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.8.2"
             },
             "time": "2023-08-15T14:27:00+00:00"
+        },
+        {
+            "name": "lavary/laravel-menu",
+            "version": "v1.8.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lavary/laravel-menu.git",
+                "reference": "5255e715912b50127b296da7410bd97468bf5e40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lavary/laravel-menu/zipball/5255e715912b50127b296da7410bd97468bf5e40",
+                "reference": "5255e715912b50127b296da7410bd97468bf5e40",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0",
+                "illuminate/view": ">=5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lavary\\Menu\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Menu": "Lavary\\Menu\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Lavary\\Menu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lavary",
+                    "email": "mrl.8081@gmail.com"
+                }
+            ],
+            "description": "A quick way to create menus in Laravel 5",
+            "homepage": "https://github.com/lavary/laravel-menu",
+            "keywords": [
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/lavary/laravel-menu/issues",
+                "source": "https://github.com/lavary/laravel-menu/tree/v1.8.4"
+            },
+            "time": "2022-02-14T19:30:22+00:00"
         },
         {
             "name": "league/commonmark",
