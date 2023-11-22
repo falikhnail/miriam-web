@@ -530,7 +530,11 @@
                         </a>
                         <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
+=======
+                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
+>>>>>>> 975eb48cc2ca56586959e6b6e6507e556e2b0a86
 =======
                              <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
 >>>>>>> 975eb48cc2ca56586959e6b6e6507e556e2b0a86
