@@ -29,12 +29,12 @@
                             class="flex-shrink w-[50%] appearance-none block bg-white text-gray-700 border border-red-500 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md"
                             required />
                         <span class="mx-2">/</span>
-                        <div class="flex-1 relative" data-te-datepicker-init>
+                        <div class="flex-1 relative date-picker" data-te-datepicker-init>
                             <input
                                 class="w-full appearance-none block bg-white text-gray-700 border border-red-500 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md"
                                 id="ttl-anak" name="ttl-anak" type="text" required>
-                            <div class="absolute top-0 left-0 right-0 bottom-0 z-30" data-te-datepicker-toggle-ref
-                                data-te-datepicker-toggle-button-ref></div>
+                            <div class="absolute top-0 left-0 right-0 bottom-0 z-30 cursor-pointer"
+                                data-te-datepicker-toggle-ref data-te-datepicker-toggle-button-ref></div>
                         </div>
                     </div>
                     <p id="error-nama-lengkap" class="text-red-500 text-xs italic hidden">

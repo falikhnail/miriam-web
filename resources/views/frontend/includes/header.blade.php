@@ -12,10 +12,11 @@
         </div>
     </div>
     <header id="header" class="sticky w-full">
-        <div class="container flex flex-col md:flex-col xl:flex-row items-center justify-center">
-            <h1 class="text-2xl font-bold text-center md:text-left">
-                <a href="{{ route('frontend.index') }}">RSIA MIRIAM</a>
-            </h1>
+        <div class="flex flex-row items-center justify-between  px-[10px] md:px-[5rem]">
+            {{-- <h1 class="text-2xl font-bold text-center md:text-left">
+                <a href="{{ route('frontend.index') }}">RSIA Ibu dan Anak MIRIAM</a>
+            </h1> --}}
+            <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia">
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="{{ route('frontend.index') }}">Home</a></li>
@@ -24,7 +25,6 @@
                             <li>
                                 <a href="#">Profile RSIA MIRIAM</a>
                             </li>
-
                             <li><a href="#">Visi dan Misi</a></li>
                             <li><a href="#">Sejarah</a></li>
                             <li><a href="#">Unit Kerja</a></li>

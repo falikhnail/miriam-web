@@ -1,9 +1,10 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{ app_name() }} @endsection
+@section('title')
+    {{ app_name() }}
+@endsection
 
 @section('content')
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
@@ -18,7 +19,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="col-lg-5 d-flex align-items-stretch">
                     <div class="content">
                         <h3>Kenapa Memilih RSIA MIRIAM ?</h3>
                         <p>
@@ -33,25 +34,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="col-lg-7 d-flex align-items-stretch">
                     <div class="icon-boxes d-flex flex-column justify-content-center">
                         <div class="row">
                             <div class="col-xl-4 d-flex align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
+                                <div class="icon-box mt-6 mt-xl-0">
                                     <i class="bx bx-receipt"></i>
                                     <h4>Ambulance Service</h4>
                                     <p>..............</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 d-flex align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
+                                <div class="icon-box mt-6 mt-xl-0">
                                     <i class="bx bx-cube-alt"></i>
                                     <h4>Ruangan Darurat</h4>
                                     <p>................</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 d-flex align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
+                                <div class="icon-box mt-6 mt-xl-0">
                                     <i class="bx bx-images"></i>
                                     <h4>Pemeriksaan Geratis</h4>
                                     <p>...................</p>
@@ -520,53 +521,72 @@
             <div class="faq-list">
                 <ul>
                     <li data-aos="fade-up">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                            data-bs-target="#faq-list-1">Apakah RSIA Miriam Sudah Terakreditasi ?
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" href="#faq-list-1"
+                            aria-expanded="false" aria-controls="faq-list-1">
+                            Apakah RSIA Miriam Sudah Terakreditasi ?
                             <i class="bx bx-chevron-down icon-show"></i>
-                                <i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
+<<<<<<< HEAD
                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
+=======
+                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
+>>>>>>> 975eb48cc2ca56586959e6b6e6507e556e2b0a86
                                 BPJS.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="100">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-2" class="collapsed">apakah RSIA MIRIAM Hanya Menyediakan Pelayanan Untuk Ibu dan Anak ? 
-                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-2" href="#faq-list-2">
+                            apakah RSIA MIRIAM Hanya Menyediakan Pelayanan Untuk Ibu dan Anak ?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-2" class="!visible hidden" data-te-collapse-item>
                             <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga Terdapat Pelayanan Umum.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="200">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-3" class="collapsed">Apakah RSIA Miriam Memiliki Kualitas yang bagus ?
-                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-3" href="#faq-list-3">
+                            Apakah RSIA Miriam Memiliki Kualitas yang bagus ?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-3" class="!visible hidden" data-te-collapse-item>
                             <p> RSIA Miriam Saat ini sudah memenuhi Standart dan Kulitas Internasional.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-4" class="collapsed">Apakah RSIA Miriam Memiliki Fasilitas Yang Dibutuhkan Oleh Pasien ? <i class="bx bx-chevron-down icon-show"></i><i
-                                class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-4" href="#faq-list-4">
+                            Apakah RSIA Miriam Memiliki Fasilitas Yang Dibutuhkan Oleh Pasien ?
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
                             <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan Pasien.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="400">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                            data-bs-target="#faq-list-5" class="collapsed">Apakah RSIA Miriam Tersedia 24 Jam ?
+                        <i class="bx bx-help-circle icon-help"></i> <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-5" href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
                             <i class="bx bx-chevron-down icon-show"></i><i
                                 class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                        <div id="faq-list-5" class="!visible hidden">
                             <p>
                                 RSIA Miriam Tersedia 2 jam.
                             </p>
