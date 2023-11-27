@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('vaksin', 100)->nullable();
             $table->string('schedule', 50)->nullable();
+            $table->string('status', 100)->nullable();
             $table->timestamps();
         });
     }

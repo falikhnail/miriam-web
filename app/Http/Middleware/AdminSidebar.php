@@ -13,14 +13,64 @@ class AdminSidebar {
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response {
-        $link_style = 'flex items-center focus:outline-none focus:ring-2 focus:ring-white';
-        $text_style = 'w-full flex items-center justify-between text-gray-500 hover:text-primary hover:font-bold items-center cursor-pointer mb-6';
+        \Menu::make('admin_sidebar', function ($menu) {
+            // * used for general or dropdown parent
+            $link_style = 'flex h-12 cursor-pointer items-center truncate rounded-[5px]
+                            px-6 py-4 text-gray-700 font-bold outline-none transition duration-300
+                            [&>span]:text-primary
+                            ease-linear hover:text-white hover:bg-primary hover:[&>span]:text-white
+                            active:bg-primary active:text-inherit active:bg-primary
+                            data-[te-sidenav-state-active]:text-inherit
+                            data-[te-sidenav-state-focus]:outline-none
+                            motion-reduce:transition-none';
 
-        \Menu::make('admin_sidebar', function ($menu) use ($link_style, $text_style) {
-            // Dashboard
-            $menu->add('<i class="fa-solid fa-industry"></i></i> <span class="text-lg ml-2">Dashboard</span>', [
+            // * used for dropdown child
+            $link_style_child = 'flex h-10 cursor-pointer items-center truncate rounded-[5px]
+                                py-4 pr-6 text-gray-700 font-bold outline-none
+                                transition duration-300 ease-linear
+                                hover:text-primary
+                                active:bg-slate-50 active:text-inherit active:outline-none
+                                data-[te-sidenav-state-active]:text-inherit
+                                data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none';
+
+            $dropdown_parent = function ($name, $icon) {
+                return '
+                <span class="mr-4">
+                    <i class="' . $icon . '"></i>
+                </span>
+                <span class="group-[&[data-te-sidenav-slim-collapsed=' . "'true'" . ']]:data-[te-sidenav-slim=' . "'false'" . ']:hidden"
+                    data-te-sidenav-slim=' . "'false'" . '>'
+                    . $name . '
+                </span>
+                <span
+                    class="absolute right-0 ml-auto mr-[0.5rem] transition-transform duration-300 ease-linear motion-reduce:transition-none"
+                    data-te-sidenav-rotate-icon-ref>
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </span>';
+            };
+
+            $item = function ($name, $icon) {
+                // * selector eg. svg = [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300
+                return '<span class="mr-4">
+                    <i class="' . $icon . '"></i>
+                </span>
+                <span class="group-[&[data-te-sidenav-slim-collapsed=' . "'true'" . ']]:data-[te-sidenav-slim=' . "'false'" . ']:hidden"
+                    data-te-sidenav-slim=' . "'false'" . '>' . $name . '</span>';
+            };
+
+            $itemDropdown = function ($name) {
+                return '
+                        <span class="mr-4">
+                            <i class="fa-regular fa-circle fa-2xs"></i>
+                        </span>
+                        <span class="group-[&[data-te-sidenav-slim-collapsed=' . "'true'" . ']]:data-[te-sidenav-slim=' . "'false'" . ']:hidden"
+                            data-te-sidenav-slim=' . "'false'" . '>' . $name . '
+                        </span>';
+            };
+
+            $menu->add($item('Dashboard', 'fa-solid fa-industry'), [
                 'route' => 'backend.dashboard',
-                'class' => $text_style,
+                'class' => 'relative',
             ])
                 ->data([
                     'order' => 1,
@@ -28,18 +78,84 @@ class AdminSidebar {
                 ])
                 ->link->attr([
                     'class' => $link_style,
+                    'data-te-sidenav-link-ref'
                 ]);
 
-            $menu->add('<i class="fa-solid fa-bed"></i> <span class="text-lg ml-2">Pasien</span>', [
-                'route' => 'backend.dashboard',
-                'class' => $text_style,
+            $pasien = $menu->add($dropdown_parent('Registrasi', 'fa-solid fa-industry'), [
+                'class' => 'relative',
             ])
                 ->data([
                     'order' => 1,
-                    'activematches' => 'admin/dashboard*',
+                    'activematches' => 'admin/pasien*',
+                    'permission' => [],
+                ]);
+
+            $pasien->link->attr([
+                'href' => 'javascript:;',
+                'class' => $link_style,
+                'data-te-sidenav-link-ref'
+            ]);
+
+            $pasien
+                ->add($itemDropdown('Pasien'), [
+                    'route' => 'backend.pasien.p.index',
+                    'class' => 'relative',
+                ])
+                ->data([
+                    'activematches' => 'admin/pasien/p*',
+                ])
+                ->link->attr([
+                    'class' => $link_style_child
+                ]);
+
+            $pasien
+                ->add($itemDropdown('Vaksin'), [
+                    'route' => 'backend.pasien.vaksin.index',
+                    'class' => 'relative',
+                ])
+                ->data([
+                    'activematches' => 'admin/pasien/vaksin*',
+                ])
+                ->link->attr([
+                    'class' => $link_style_child
+                ]);
+
+            $pasien
+                ->add($itemDropdown('BKIA'), [
+                    'route' => 'backend.pasien.bkia.index',
+                    'class' => 'relative',
+                ])
+                ->data([
+                    'activematches' => 'admin/pasien/bkia*',
+                ])
+                ->link->attr([
+                    'class' => $link_style_child
+                ]);
+
+            $menu->add($item('Dokter', 'fa-solid fa-industry'), [
+                'route' => 'backend.dokter.index',
+                'class' => 'relative',
+            ])
+                ->data([
+                    'order' => 1,
+                    'activematches' => 'admin/dokter*',
                 ])
                 ->link->attr([
                     'class' => $link_style,
+                    'data-te-sidenav-link-ref'
+                ]);
+
+            $menu->add($item('Schedule', 'fa-solid fa-industry'), [
+                'route' => 'backend.schedule.index',
+                'class' => 'relative',
+            ])
+                ->data([
+                    'order' => 1,
+                    'activematches' => 'admin/schedule*',
+                ])
+                ->link->attr([
+                    'class' => $link_style,
+                    'data-te-sidenav-link-ref'
                 ]);
 
             // Notifications
@@ -163,6 +279,9 @@ class AdminSidebar {
                 return true;
             });
         })->sortBy('order');
+
+
+
 
         return $next($request);
     }

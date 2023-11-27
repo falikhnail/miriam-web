@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-    <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <h1>Selamat datang di RSIA Miriam</h1>
@@ -23,11 +22,11 @@
                     <div class="content">
                         <h3>Kenapa Memilih RSIA MIRIAM ?</h3>
                         <p>
-                        Karena RSIA Miriam merupakan salah satu RSIA yang terbaik di kota Kudus dengan spesialisasi
-                        perawatan ibu dan anak seperti persalinan, perawatan bayi dan anak, konsultasi kehamilan dan
-                        didukung oleh dokter-dokter spesialis obgyn dan pediatrik yang kompeten dan berpengalaman.
-                        Juga dilengkapi dengan fasilitas dan peralatan medis yang canggih dan modern serta
-                        tenaga medis yang handal.
+                            Karena RSIA Miriam merupakan salah satu RSIA yang terbaik di kota Kudus dengan spesialisasi
+                            perawatan ibu dan anak seperti persalinan, perawatan bayi dan anak, konsultasi kehamilan dan
+                            didukung oleh dokter-dokter spesialis obgyn dan pediatrik yang kompeten dan berpengalaman.
+                            Juga dilengkapi dengan fasilitas dan peralatan medis yang canggih dan modern serta
+                            tenaga medis yang handal.
                         </p>
                         <div class="text-center">
                             <a href="#" class="more-btn">Pelajari lebih lanjut<i class="bx bx-chevron-right"></i></a>
@@ -217,71 +216,71 @@
 
     <!-- ======= Appointment Section ======= -->
     <!-- <section id="appointment" class="appointment section-bg">
-        <div class="container">
+            <div class="container">
 
-            <div class="section-title">
-                <h2>Make an Appointment</h2>
-                <p>..............</p>
+                <div class="section-title">
+                    <h2>Make an Appointment</h2>
+                    <p>..............</p>
+                </div>
+
+                <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="name" class="form-control" id="name"
+                                placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email"
+                                placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="tel" class="form-control" name="phone" id="phone"
+                                placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 form-group mt-3">
+                            <input type="datetime" name="date" class="form-control datepicker" id="date"
+                                placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3">
+                            <select name="department" id="department" class="form-select">
+                                <option value="">Unit</option>
+                                <option value="Department 1">Department 1</option>
+                                <option value="Department 2">Department 2</option>
+                                <option value="Department 3">Department 3</option>
+                            </select>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3">
+                            <select name="doctor" id="doctor" class="form-select">
+                                <option value="">Select Doctor</option>
+                                <option value="Doctor 1">Doctor 1</option>
+                                <option value="Doctor 2">Doctor 2</option>
+                                <option value="Doctor 3">Doctor 3</option>
+                            </select>
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Make an Appointment</button></div>
+                </form>
+
             </div>
-
-            <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                    <div class="col-md-4 form-group">
-                        <input type="text" name="name" class="form-control" id="name"
-                            placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email"
-                            placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <input type="tel" class="form-control" name="phone" id="phone"
-                            placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 form-group mt-3">
-                        <input type="datetime" name="date" class="form-control datepicker" id="date"
-                            placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-md-4 form-group mt-3">
-                        <select name="department" id="department" class="form-select">
-                            <option value="">Unit</option>
-                            <option value="Department 1">Department 1</option>
-                            <option value="Department 2">Department 2</option>
-                            <option value="Department 3">Department 3</option>
-                        </select>
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-md-4 form-group mt-3">
-                        <select name="doctor" id="doctor" class="form-select">
-                            <option value="">Select Doctor</option>
-                            <option value="Doctor 1">Doctor 1</option>
-                            <option value="Doctor 2">Doctor 2</option>
-                            <option value="Doctor 3">Doctor 3</option>
-                        </select>
-                        <div class="validate"></div>
-                    </div>
-                </div>
-
-                <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-                    <div class="validate"></div>
-                </div>
-                <div class="mb-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Make an Appointment</button></div>
-            </form>
-
-        </div>
-    </section> End Appointment Section -->
+        </section> End Appointment Section -->
 
     <!-- ======= Departments Section ======= -->
     <section id="departments" class="departments">
@@ -513,9 +512,9 @@
             <div class="section-title">
                 <h2>Frequently Asked Questions</h2>
                 <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit
-                    in iste officiis commodi quidem hic quas.</p> -->
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                        fugiat sit
+                        in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="faq-list">
@@ -529,15 +528,8 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
-=======
-                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
->>>>>>> 975eb48cc2ca56586959e6b6e6507e556e2b0a86
-=======
-                             <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan yang menggunakan.
->>>>>>> 975eb48cc2ca56586959e6b6e6507e556e2b0a86
+                            <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan
+                                yang menggunakan.
                                 BPJS.
                             </p>
                         </div>
@@ -552,7 +544,8 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-2" class="!visible hidden" data-te-collapse-item>
-                            <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga Terdapat Pelayanan Umum.
+                            <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga
+                                Terdapat Pelayanan Umum.
                             </p>
                         </div>
                     </li>
@@ -580,16 +573,17 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
-                            <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan Pasien.
+                            <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan
+                                Pasien.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="400">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
-                            aria-controls="faq-list-5" href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
-                            <i class="bx bx-chevron-down icon-show"></i><i
-                                class="bx bx-chevron-up icon-close"></i></a>
+                        <i class="bx bx-help-circle icon-help"></i> <a data-te-collapse-init data-te-ripple-init
+                            data-te-ripple-color="light" aria-expanded="false" aria-controls="faq-list-5"
+                            href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-5" class="!visible hidden">
                             <p>
                                 RSIA Miriam Tersedia 2 jam.
@@ -605,97 +599,106 @@
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
-            <div class="container">
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-            <div class="swiper-wrapper">
+        <div class="container">
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                        <h3>Bambang Sugeni</h3>
-                        <h4>Karyawan Swasta</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            RSIA Miriam Memiliki Kualitas dan Kuantitas Yang Dapat Menunjang Semua Kebutuhan Anak dan Istri saya. Dimana Juga Memiliki Pelayanan Yang Cepat dan Efisien
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Bambang Sugeni</h3>
+                                <h4>Karyawan Swasta</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    RSIA Miriam Memiliki Kualitas dan Kuantitas Yang Dapat Menunjang Semua Kebutuhan Anak
+                                    dan Istri saya. Dimana Juga Memiliki Pelayanan Yang Cepat dan Efisien
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    </div>
 
 
-    <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                        <h3>Richa Auliya Sari</h3>
-                        <h4>PNS</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Terimakasih Sudah Memberikan Yang Terbaik Untuk Saya.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Richa Auliya Sari</h3>
+                                <h4>PNS</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Terimakasih Sudah Memberikan Yang Terbaik Untuk Saya.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    </div>
 
 
-    <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                        <h3>Naomi Sudarsono</h3>
-                        <h4>Store Owner</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Pelayanan Yang Diberikan Oleh Perawat Di RSIA Miriam Sangat Memuaskan dan Ramah Terhadap Pasien.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Naomi Sudarsono</h3>
+                                <h4>Store Owner</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Pelayanan Yang Diberikan Oleh Perawat Di RSIA Miriam Sangat Memuaskan dan Ramah Terhadap
+                                    Pasien.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    </div>
 
 
-    <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                        <h3>Tommy Bagus</h3>
-                        <h4>Freelancer</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Terimakasih Sudah Memberikan Pertolongan Kepada Anak dan Istri Saya Pasca Melahirkan Hingga Pengobatan Anak Saya Yang Sampai
-                            Saat Ini Diusia 10th Sudah memberikan Pelayanan Yang Terbaik. Semoga Kedepannya Semakin Sukses
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Tommy Bagus</h3>
+                                <h4>Freelancer</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Terimakasih Sudah Memberikan Pertolongan Kepada Anak dan Istri Saya Pasca Melahirkan
+                                    Hingga Pengobatan Anak Saya Yang Sampai
+                                    Saat Ini Diusia 10th Sudah memberikan Pelayanan Yang Terbaik. Semoga Kedepannya Semakin
+                                    Sukses
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    </div>
 
 
-    <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                        <h3>Budi Setiawan</h3>
-                        <h4>Pengusaha</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Pelayanan RSIA Miriam Memiliki Keunggulan Dimana RS Belum Memiliki Hal Tersebut.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Budi Setiawan</h3>
+                                <h4>Pengusaha</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Pelayanan RSIA Miriam Memiliki Keunggulan Dimana RS Belum Memiliki Hal Tersebut.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    </div>
 
 
-    </div>
-                <div class="swiper-pagination"></div>
                 </div>
-
+                <div class="swiper-pagination"></div>
             </div>
-            </section>
+
+        </div>
+    </section>
 
 
     <!-- ======= Gallery Section ======= -->

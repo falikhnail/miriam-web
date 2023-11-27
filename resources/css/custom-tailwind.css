@@ -11,7 +11,31 @@
 }
 
 .main-input {
-    @apply appearance-none block w-full bg-white text-gray-700 border rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+    @apply appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-auto {
+    @apply appearance-none block w-auto bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-row1 {
+    @apply flex-shrink w-[50%] appearance-none block bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-row2 {
+    @apply w-full appearance-none block bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.btn-sm {
+    @apply text-white bg-primary px-3 py-1 rounded-lg shadow-lg text-center ml-3;
+}
+
+.btn-sm-danger {
+    @apply text-white bg-red-500 px-3 py-1 rounded-lg shadow-lg text-center ml-3 !important;
+}
+
+.btn {
+    @apply text-white bg-primary px-3 py-1 rounded-lg shadow-lg text-center;
 }
 
 .container-input-group {
@@ -26,6 +50,100 @@
     @apply pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3;
 }
 
-.admin-sidebar{
-    @apply fixed left-0 top-20 h-full w-60 px-8 py-5 -translate-x-full overflow-hidden bg-white shadow-lg data-[te-sidenav-hidden='false']:translate-x-0;
+.container-input-group .input-sm {
+    @apply rounded-xl border-0 py-2 pl-10 pr-5 text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-inset focus:ring-primary focus:outline-none focus:bg-white focus:shadow-md sm:text-sm sm:leading-6;
+}
+
+#datatable thead th {
+    @apply text-center border h-[4rem];
+}
+
+#datatable tbody .odd {
+    @apply h-14 font-medium bg-gray-100 !important;
+}
+
+#datatable tbody .even {
+    @apply h-14 font-medium bg-gray-50 !important;
+}
+
+#datatable tbody>tr {
+    @apply hover:bg-slate-200 hover:text-black !important;
+}
+
+#datatable tbody tr td {
+    @apply border px-2;
+}
+
+#full-loading {
+    @apply fixed top-0 left-0 right-0 bottom-0 w-screen h-screen z-[9999];
+}
+
+.disabled {
+    @apply cursor-not-allowed pointer-events-none bg-gray-300;
+}
+
+.disabled a {
+    @apply cursor-not-allowed pointer-events-none;
+}
+
+#datatable_wrapper ul>.active {
+    @apply cursor-not-allowed pointer-events-none text-white bg-primary border-none !important;
+}
+
+ul li .active a {
+    @apply bg-transparent text-primary !important;
+}
+
+#admin-sidebar ul li ul li a:before {
+    content: "";
+    @apply border-l-[1px] h-10 border-gray-400 ml-14 mr-2;
+}
+
+/* #admin-sidebar .active {
+    @apply bg-primary text-white rounded-xl;
+} */
+
+input:disabled {
+    @apply bg-slate-200 cursor-not-allowed border-none !important;
+}
+
+textarea:disabled {
+    @apply bg-slate-200 cursor-not-allowed border-none !important;
+}
+
+select:disabled {
+    @apply bg-slate-200 cursor-not-allowed border-none !important;
+}
+
+.blur-divider {
+    @apply my-5 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-25;
+}
+
+.fc-daygrid-day-frame {
+    @apply hover:bg-slate-200;
+}
+
+.fc-toolbar-title {
+    @apply font-bold;
+}
+
+.fc-event-title .fc-sticky {
+    white-space: pre-wrap !important;
+}
+
+.fc-button-primary {
+    @apply bg-primary border-none mx-1 rounded-xl px-4 shadow-lg !important;
+}
+
+.fc-daygrid-day-number {
+    @apply font-bold !important;
+}
+
+.fc-list-event-time {
+    display: none !important;
+}
+
+.fc-button-active::after{
+    content: "";
+    @apply absolute top-0 right-0 w-1 p-1 bg-red-500 rounded-xl;
 }

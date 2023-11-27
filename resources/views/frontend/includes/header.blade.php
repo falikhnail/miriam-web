@@ -19,7 +19,7 @@
             <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia">
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{{ route('frontend.index') }}">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
                     <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li>

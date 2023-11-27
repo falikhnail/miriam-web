@@ -69,8 +69,7 @@
                     </label>
                     <textarea rows="5" id="alamat"
                         class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md"
-                        placeholder="Masukkan Alamat Lengkap" required>
-                    </textarea>
+                        placeholder="Masukkan Alamat Lengkap" required></textarea>
                 </div>
             </div>
             <div class="flex flex-wrap mb-3">
@@ -102,10 +101,10 @@
                         id="no-hp" type="text" required>
                 </div>
             </div>
-            <div class="flex-shrink-0 flex  items-center justify-center mt-5">
+            <div class="flex-shrink-0 flex  items-center justify-center mt-5 space-x-5">
                 <button type="button"
-                    class="p-2 rounded-lg shadow-lg text-center w-40 mr-3 btn-back-formulir">Kembali</button>
-                <button type="submit" class="p-2 rounded-lg shadow-lg text-center w-40 ml-3">Registrasi</button>
+                    class="btn btn-primary btn-back-formulir">Kembali</button>
+                <button type="submit" class="btn btn-primary">Registrasi</button>
             </div>
         </form>
     </div>

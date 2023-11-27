@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('no_hp_suami', 50)->nullable();
             $table->string('dokter', 150)->nullable();
             $table->date('schedule')->nullable();
+            $table->string('status', 100)->nullable();
             $table->timestamps();
         });
     }

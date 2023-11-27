@@ -34,7 +34,7 @@
                                 <input id="password" name="password" type="password" required>
                             </div>
                         </div>
-                        <button type="submit" class="p-2 rounded-lg shadow-lg text-center w-full">Login</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </form>
             </div>

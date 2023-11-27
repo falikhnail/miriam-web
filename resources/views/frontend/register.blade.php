@@ -45,11 +45,11 @@
                             </p>
                             <div class="flex-shrink-0 flex flex-column flex-md-row items-center justify-center mt-5">
                                 <button id="btn-pasien-lama"
-                                    class="{{ $primary_btn }} md:hover:scale-125 ease-in duration-300 md:hover:mr-10 w-40 md:w-52 mr-0 sm:mr-0 md:mr-3 lg:mr-3">
+                                    class="btn btn-primary md:hover:scale-125 ease-in duration-300 md:hover:mr-10 w-40 md:w-52 mr-0 sm:mr-0 md:mr-3 lg:mr-3">
                                     Pasien Lama
                                 </button>
                                 <button id="btn-pasien-baru"
-                                    class="{{ $primary_btn }} md:hover:scale-125 ease-in duration-300 md:hover:ml-10 w-40 md:w-52 text-center ml-0 sm:ml-0 md:ml-3 lg:ml-3 mt-[20px] md:mt-0">
+                                    class="btn btn-primary md:hover:scale-125 ease-in duration-300 md:hover:ml-10 w-40 md:w-52 text-center ml-0 sm:ml-0 md:ml-3 lg:ml-3 mt-[20px] md:mt-0">
                                     Pasien Baru
                                 </button>
                             </div>
@@ -105,8 +105,8 @@
                                 </div>
                             </div>
                             <div class="flex-shrink-0 flex  items-center justify-center mt-5">
-                                <button id="btn-back-formulir" class="{{ $primary_btn }} w-40 mr-3">Kembali</button>
-                                <button id="btn-next-formulir" class="{{ $primary_btn }} w-40 ml-3">Lanjutkan</button>
+                                <button id="btn-back-formulir" class="btn btn-primary w-40 mr-3">Kembali</button>
+                                <button id="btn-next-formulir" class="btn btn-primary w-40 ml-3">Lanjutkan</button>
                             </div>
                         </div>
                     </div>
@@ -145,6 +145,10 @@
         $("#btn-back-formulir").click(() => {
             $("#jenis-pasien").show()
             $("#jenis-formulir").hide()
+
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
         })
 
         $("#btn-next-formulir").click(() => {
@@ -157,6 +161,10 @@
             $("#formulir-vaksin").hide()
             $("#formulir-bkia").hide()
             $("#formulir-pasien").hide()
+
+            $("html, body").animate({
+                scrollTop: 0
+            }, "smooth");
         })
 
         function showForm(formulir) {

@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('nama_orang_tua', 150);
             $table->string('no_hp', 50);
             $table->text('alamat');
-            $table->string('scedule', 50);
+            $table->string('schedule', 50);
+            $table->string('status', 100)->nullable();
             $table->timestamps();
         });
     }
