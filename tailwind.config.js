@@ -27,7 +27,7 @@ module.exports = {
             secondary: '#60aef3',
             transparent: 'transparent',
             current: 'currentColor',
-            black: colors.black,
+           /*  black: colors.black,
             white: colors.white,
             gray: colors.gray,
             emerald: colors.emerald,
@@ -36,7 +36,8 @@ module.exports = {
             slate: colors.slate,
             blue: colors.blue,
             green: colors.green,
-            red: colors.red
+            red: colors.red */
+            ...colors
         }
     },
     plugins: [

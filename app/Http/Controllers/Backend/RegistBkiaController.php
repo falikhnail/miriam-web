@@ -5,20 +5,26 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PasienBkiaRequest;
 use App\Models\PasienBkia;
+use App\Repository\DokterRepository;
 use App\Repository\PasienBkiaRepository;
+use App\Repository\ScheduleRepository;
 use DataTables;
 use DB;
 use Illuminate\Http\Request;
 use Throwable;
 
 class RegistBkiaController extends Controller {
-    protected $pasienBkiaRepo;
 
-    public function __construct(PasienBkiaRepository $pasienBkiaRepo) {
-        $this->pasienBkiaRepo = $pasienBkiaRepo;
+
+    public function __construct(
+        public PasienBkiaRepository $pasienBkiaRepo,
+        public DokterRepository $dokterRepo,
+        public ScheduleRepository $scheduleRepo
+    ) {
     }
 
     public function index() {
+
 
         return view('backend.regist_pasien_bkia.index');
     }
@@ -52,8 +58,16 @@ class RegistBkiaController extends Controller {
             ->addColumn('schedule', fn ($data) => date('d/m/Y', strtotime($data->schedule)))
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (PasienBkia $data) {
-                $route = 'backend.pasien.bkia.show';
-                return view('backend.components.action_pasien', compact('data', 'route'));
+                $viewRoute = 'backend.pasien.bkia.show';
+                $editRoute = 'backend.pasien.bkia.edit';
+                $module = 'pasien_bkia';
+
+                return view('backend.components.action_pasien', compact(
+                    'data',
+                    'viewRoute',
+                    'editRoute',
+                    'module'
+                ));
             })
             ->rawColumns([
                 'nama',
@@ -68,15 +82,25 @@ class RegistBkiaController extends Controller {
     }
 
     public function show($id) {
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
         $pasien = $this->pasienBkiaRepo->getById($id);
 
         return view('backend.regist_pasien_bkia.show', compact(
             'pasien',
+            'dokterList',
+            'scheduleList'
         ));
     }
 
     public function create() {
-        return view('backend.regist_pasien_bkia.create');
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
+
+        return view('backend.regist_pasien_bkia.show', compact(
+            'dokterList',
+            'scheduleList'
+        ));
     }
 
     public function store(PasienBkiaRequest $request) {
@@ -92,6 +116,15 @@ class RegistBkiaController extends Controller {
     }
 
     public function edit($id) {
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
+        $pasien = $this->pasienBkiaRepo->getById($id);
+
+        return view('backend.regist_pasien_bkia.show', compact(
+            'pasien',
+            'dokterList',
+            'scheduleList'
+        ));
     }
 
     public function update(PasienBkiaRequest $request, $id) {
@@ -110,7 +143,7 @@ class RegistBkiaController extends Controller {
         try {
             $this->pasienBkiaRepo->delete($id);
 
-            return redirect()->back()->with("success", "Pasien berhasil dihapus");
+            return redirect()->route('backend.pasien.bkia.index')->with("success", "Pasien berhasil dihapus");
         } catch (Throwable $e) {
             return redirect()->back()->with([
                 'error' => $e->getMessage(),

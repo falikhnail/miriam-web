@@ -12,7 +12,9 @@
             <div class="my-10 shadow-lg rounded px-6 py-5 bg-white">
                 <div class="flex flex-row">
                     <div class="flex items-center space-x-3">
-                        <a href="javascript:;" class="btn btn-primary" id="btn-tambah">Tambah</a>
+                        @can('add_dokter')
+                            <a href="javascript:;" class="btn btn-primary" id="btn-tambah">Tambah</a>
+                        @endcan
                         {{-- <button class="btn btn-primary" id="btn-import">Import Excel</button> --}}
                     </div>
                 </div>
@@ -97,6 +99,10 @@
     <script type="text/javascript" src="{{ asset('assets/vendor/datatable/datatables.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendor/datatable/custom-datatable.js') }}"></script>
     <script type="text/javascript">
+        const canUpdate = `{{ Auth::user()->can('edit_dokter') }}` == 1
+        const canDelete = `{{ Auth::user()->can('delete_dokter') }}` == 1
+        const canAdd = `{{ Auth::user()->can('add_dokter') }}` == 1
+
         let table = $('#datatable').DataTable({
             processing: true,
             serverSide: true,
@@ -162,32 +168,34 @@
             setModalData(row)
         });
 
-        $("body").on("click", "#datatable tbody tr #delete-action-default", function(e) {
-            e.preventDefault();
-            var row = table.row($(this).closest('tr')).data();
-            Swal.fire({
-                title: "Hapus Dokter?",
-                text: `Hapus Dokter ${row.nama}?`,
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Hapus",
-                showLoaderOnConfirm: true,
-                preConfirm: () => {
-                    return new Promise(function(resolve, reject) {
-                        // here should be AJAX request
-                        setTimeout(function() {
-                            resolve();
-                        }, 5000);
-                    });
-                }
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    deleteDokter(row)
-                }
+        @can('delete_dokter')
+            $("body").on("click", "#datatable tbody tr #delete-action-default", function(e) {
+                e.preventDefault();
+                const row = table.row($(this).closest('tr')).data();
+                Swal.fire({
+                    title: "Hapus Dokter?",
+                    text: `Hapus Dokter ${row.nama}?`,
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Hapus",
+                    showLoaderOnConfirm: true,
+                    /* preConfirm: () => {
+                        return new Promise(function(resolve, reject) {
+                            // here should be AJAX request
+                            setTimeout(function() {
+                                resolve();
+                            }, 5000);
+                        });
+                    } */
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        deleteDokter(row)
+                    }
+                });
             });
-        });
+        @endcan
 
         var wto;
 
@@ -200,47 +208,52 @@
 
         function setModalData(data, title) {
             $("#form-detail").get(0).reset();
-            //$("._token").val("{{ csrf_token() }}")
-
             if (data) {
-                const updateRoute = "{{ route('backend.dokter.update', ':id') }}".replace(":id", data.id);
-
                 $("#tittle-modal").text("Detail Dokter")
                 $("#nama").val(data.nama)
                 $("#status").val(data.status.includes("1") ? "1" : "0")
 
-                $("#form-detail").prepend(`{{ method_field('PUT') }}`)
-                $("#form-detail").attr("action", updateRoute)
+                @can('edit_dokter')
+                    const updateRoute = "{{ route('backend.dokter.update', ':id') }}".replace(":id", data.id);
+                    $("#form-detail").prepend(`{{ method_field('PUT') }}`)
+                    $("#form-detail").attr("action", updateRoute)
+                @endcan
+
             } else {
                 $("#tittle-modal").text("Tambah Dokter")
                 $('#form-detail input[name="_method"]').remove()
-                $("#form-detail").attr("action", "{{ route('backend.dokter.store') }}")
+
+                @can('add_dokter')
+                    $("#form-detail").attr("action", "{{ route('backend.dokter.store') }}")
+                @endcan
             }
         }
 
-        function deleteDokter(data) {
-            var form =
-                $('<form>', {
-                    'method': 'POST',
-                    'action': "{{ route('backend.dokter.destroy', ':id') }}".replace(":id", data.id)
-                });
+        @can('delete_dokter')
+            function deleteDokter(data) {
+                var form =
+                    $('<form>', {
+                        'method': 'POST',
+                        'action': "{{ route('backend.dokter.destroy', ':id') }}".replace(":id", data.id)
+                    });
 
-            var token =
-                $('<input>', {
-                    'type': 'hidden',
-                    'name': '_token',
-                    'value': '{{ csrf_token() }}'
-                });
+                var token =
+                    $('<input>', {
+                        'type': 'hidden',
+                        'name': '_token',
+                        'value': '{{ csrf_token() }}'
+                    });
 
-            var hiddenInput =
-                $('<input>', {
-                    'name': '_method',
-                    'type': 'hidden',
-                    'value': 'DELETE'
-                });
+                var hiddenInput =
+                    $('<input>', {
+                        'name': '_method',
+                        'type': 'hidden',
+                        'value': 'DELETE'
+                    });
 
-            form.append(token, hiddenInput).appendTo('body');
-            form.submit()
-        }
+                form.append(token, hiddenInput).appendTo('body');
+                form.submit()
+            }
+        @endcan
     </script>
 @endpush

@@ -9,13 +9,31 @@
         <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia">
         <x-btn-menu />
     </div>
-
-    <ul class="flex items-center w-28 px-3">
-        <li>
-            <a href="#" class="flex items-center">
-                <i class="fa-solid fa-right-from-bracket me-2"></i>
-                Logout
+    <div class="flex items-center justify-end w-full">
+        <div x-data="{ show: false }" class="dropdown" @mouseover="show = true" @mouseleave="show = false">
+            <a href="#" class="avatar" @click="show = true">
+                <i class="fa fa-user"></i>
             </a>
-        </li>
-    </ul>
+            <div class="dropdown-menu" x-show="show" x-cloak accesskey
+                x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100">
+                <div class="dropdown-item">
+                    <h2 class="font-bold text-lg text-center">{{ auth()->user()->name }}</h2>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-item">
+                    <a href="{{ route('auth.admin.logout') }}" class="flex items-center"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <i class="fa-solid fa-right-from-bracket me-2"></i>
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('auth.admin.logout') }}" method="POST"
+                        style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

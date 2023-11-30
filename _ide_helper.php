@@ -18157,8 +18157,8 @@
          * @static 
          */ 
         public static function preloadedAssets()
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->preloadedAssets();
         }
                     /**
@@ -18168,8 +18168,8 @@
          * @static 
          */ 
         public static function cspNonce()
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->cspNonce();
         }
                     /**
@@ -18180,44 +18180,44 @@
          * @static 
          */ 
         public static function useCspNonce($nonce = null)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useCspNonce($nonce);
         }
                     /**
          * Use the given key to detect integrity hashes in the manifest.
          *
          * @param string|false $key
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function useIntegrityKey($key)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useIntegrityKey($key);
         }
                     /**
          * Set the Vite entry points.
          *
          * @param array $entryPoints
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function withEntryPoints($entryPoints)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->withEntryPoints($entryPoints);
         }
                     /**
          * Set the filename for the manifest file.
          *
          * @param string $filename
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function useManifestFilename($filename)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useManifestFilename($filename);
         }
                     /**
@@ -18227,68 +18227,68 @@
          * @static 
          */ 
         public static function hotFile()
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->hotFile();
         }
                     /**
          * Set the Vite "hot" file path.
          *
          * @param string $path
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function useHotFile($path)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useHotFile($path);
         }
                     /**
          * Set the Vite build directory.
          *
          * @param string $path
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function useBuildDirectory($path)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useBuildDirectory($path);
         }
                     /**
          * Use the given callback to resolve attributes for script tags.
          *
          * @param \Illuminate\Foundation\(callable(string,  string, ?array, ?array): array)|array  $attributes
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function useScriptTagAttributes($attributes)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useScriptTagAttributes($attributes);
         }
                     /**
          * Use the given callback to resolve attributes for style tags.
          *
          * @param \Illuminate\Foundation\(callable(string,  string, ?array, ?array): array)|array  $attributes
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function useStyleTagAttributes($attributes)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->useStyleTagAttributes($attributes);
         }
                     /**
          * Use the given callback to resolve attributes for preload tags.
          *
          * @param \Illuminate\Foundation\(callable(string,  string, ?array, ?array): (array|false))|array|false  $attributes
-         * @return \Illuminate\Foundation\Vite 
+         * @return \App\Services\DeferViteServices 
          * @static 
          */ 
         public static function usePreloadTagAttributes($attributes)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->usePreloadTagAttributes($attributes);
         }
                     /**
@@ -18298,8 +18298,8 @@
          * @static 
          */ 
         public static function reactRefresh()
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->reactRefresh();
         }
                     /**
@@ -18311,8 +18311,8 @@
          * @static 
          */ 
         public static function asset($asset, $buildDirectory = null)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->asset($asset, $buildDirectory);
         }
                     /**
@@ -18325,8 +18325,8 @@
          * @static 
          */ 
         public static function content($asset, $buildDirectory = null)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->content($asset, $buildDirectory);
         }
                     /**
@@ -18337,8 +18337,8 @@
          * @static 
          */ 
         public static function manifestHash($buildDirectory = null)
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->manifestHash($buildDirectory);
         }
                     /**
@@ -18348,8 +18348,8 @@
          * @static 
          */ 
         public static function isRunningHot()
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->isRunningHot();
         }
                     /**
@@ -18359,8 +18359,8 @@
          * @static 
          */ 
         public static function toHtml()
-        {
-                        /** @var \Illuminate\Foundation\Vite $instance */
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        /** @var \App\Services\DeferViteServices $instance */
                         return $instance->toHtml();
         }
                     /**
@@ -18372,8 +18372,8 @@
          * @static 
          */ 
         public static function macro($name, $macro)
-        {
-                        \Illuminate\Foundation\Vite::macro($name, $macro);
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        \App\Services\DeferViteServices::macro($name, $macro);
         }
                     /**
          * Mix another object into the class.
@@ -18385,8 +18385,8 @@
          * @static 
          */ 
         public static function mixin($mixin, $replace = true)
-        {
-                        \Illuminate\Foundation\Vite::mixin($mixin, $replace);
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        \App\Services\DeferViteServices::mixin($mixin, $replace);
         }
                     /**
          * Checks if macro is registered.
@@ -18396,8 +18396,8 @@
          * @static 
          */ 
         public static function hasMacro($name)
-        {
-                        return \Illuminate\Foundation\Vite::hasMacro($name);
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        return \App\Services\DeferViteServices::hasMacro($name);
         }
                     /**
          * Flush the existing macros.
@@ -18406,8 +18406,8 @@
          * @static 
          */ 
         public static function flushMacros()
-        {
-                        \Illuminate\Foundation\Vite::flushMacros();
+        {            //Method inherited from \Illuminate\Foundation\Vite         
+                        \App\Services\DeferViteServices::flushMacros();
         }
          
     }

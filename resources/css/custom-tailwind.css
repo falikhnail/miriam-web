@@ -26,6 +26,14 @@
     @apply w-full appearance-none block bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
 }
 
+.main-input-p-0 {
+    @apply appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded-xl leading-tight focus:border-none focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-no-border {
+    @apply appearance-none block w-full bg-white text-gray-700 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
 .btn-sm {
     @apply text-white bg-primary px-3 py-1 rounded-lg shadow-lg text-center ml-3;
 }
@@ -143,7 +151,57 @@ select:disabled {
     display: none !important;
 }
 
-.fc-button-active::after{
+.fc-button-active::after {
     content: "";
     @apply absolute top-0 right-0 w-1 p-1 bg-red-500 rounded-xl;
+}
+
+.avatar {
+    @apply m-1 mr-2 w-12 h-12 relative flex justify-center items-center rounded-full bg-blue-500 text-xl text-white uppercase;
+}
+
+.dropdown {
+    @apply relative px-2;
+}
+
+.dropdown .dropdown-menu {
+    /* display: none;
+    z-index: 0; */
+    @apply mx-2 py-3 hover:block origin-top-right absolute top-14 right-0 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}
+
+.dropdown .dropdown-menu .dropdown-item {
+    @apply leading-relaxed py-1 px-4 hover:bg-gray-100 hover:shadow-inner transition duration-500 ease-in-out;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
+.select2-container {
+    @apply w-full border-gray-300 rounded-xl border py-[0.32rem] px-1 !important;
+}
+
+
+.select2-selection--multiple {
+    @apply border-none !important;
+}
+
+.select2-container--open {
+    @apply mt-2 shadow-lg border-primary !important;
+}
+
+.select2-dropdown {
+    @apply border-none;
+}
+
+.select2-results {
+    @apply py-2 shadow-2xl border rounded-xl !important;
+}
+
+.select2-container--open {
+    @apply mt-2 shadow-lg !important;
 }

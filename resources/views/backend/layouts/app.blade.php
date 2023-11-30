@@ -38,6 +38,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     @vite(['resources/js/app.js', 'resources/css/app.css', 'resources/css/custom-tailwind.css'])
 
@@ -52,7 +54,7 @@
             <i class="fa-solid fa-spinner fa-spin fa-2xl" style="color: #1662e3;"></i>
         </div>
     </div>
-    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white">
+    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white" id="main">
         @include('backend.includes.main_header')
 
         @include('backend.includes.main_sidebar')
@@ -90,9 +92,7 @@
             $('meta[name="viewport"]').prop('content', 'width=1440');
             initialSidebar()
 
-            $("#full-loading").fadeOut(2500, function() {
-                $("#content").fadeIn(1000);
-            });
+            $("#full-loading").hide()
         })
 
         $("#admin-sidebar-toggler").click(() => {
@@ -104,10 +104,10 @@
 
         })
 
-        function initialSidebar() {
+        async function initialSidebar() {
             let isSidebarCollapsed = sessionStorage.getItem('admin_sidebar_slim');
             if (isSidebarCollapsed == 'false') {
-                sidebar.toggleSlim();
+                sidebar.toggleSlim()
                 togglePadSectionFooter(isSidebarCollapsed == 'false')
             }
         }
@@ -134,6 +134,31 @@
                 allowEnterKey: false,
                 showConfirmButton: false,
             })
+        }
+
+        function showDeleteConfirm(callback) {
+            Swal.fire({
+                title: "Hapus Data?",
+                text: `Hapus Data ini?`,
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Hapus",
+                showLoaderOnConfirm: true,
+                /* preConfirm: () => {
+                    return new Promise(function(resolve, reject) {
+                        // here should be AJAX request
+                        setTimeout(function() {
+                            resolve();
+                        }, 5000);
+                    });
+                } */
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    callback()
+                }
+            });
         }
     </script>
 

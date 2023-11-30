@@ -52,6 +52,10 @@ class DokterRepository {
         return $this->getAll(null, null, $limit);
     }
 
+    public function getActive() {
+        return $this->getAll(null, 1);
+    }
+
     public function store(DokterRequest $request) {
         DB::beginTransaction();
         try {

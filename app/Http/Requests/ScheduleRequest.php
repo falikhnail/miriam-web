@@ -19,7 +19,6 @@ class ScheduleRequest extends FormRequest {
      */
     public function rules(): array {
         return [
-            'dokter' => 'required',
             'kuota' => 'required',
             'tanggal' => 'required'
         ];

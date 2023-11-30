@@ -71,6 +71,7 @@ class AuthPermissionCommand extends Command
 
     private function getNameArgument()
     {
-        return strtolower(Str::plural($this->argument('name')));
+        //return strtolower(Str::plural($this->argument('name')));
+        return strtolower($this->argument('name'));
     }
 }

@@ -9,4 +9,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::post('/register-vaksin', 'PasienController@storeFormVaksin')->name('form_vaksin');
     Route::post('/register-bkia', 'PasienController@storeFormBkia')->name('form_bkia');
     Route::post('/register-pasien', 'PasienController@storeFormPasien')->name('form_pasien');
+
+    Route::get('/register-success', 'PasienController@success')->name('form_success');
 });

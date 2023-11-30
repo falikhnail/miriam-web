@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Dokter;
+use App\Models\KuotaTransaksi;
+use App\Models\ScheduleDokter;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Pasien;
 use App\Models\PasienBkia;
@@ -27,7 +29,7 @@ class RepositoryProvider extends ServiceProvider {
      */
     public function boot(): void {
         $this->app->bind(PasienVaksinRepository::class, function ($app) {
-            return new PasienVaksinRepository(new PasienVaksin());
+            return new PasienVaksinRepository(new PasienVaksin(), new Schedule());
         });
 
         $this->app->bind(PasienRepository::class, function ($app) {
@@ -43,7 +45,12 @@ class RepositoryProvider extends ServiceProvider {
         });
 
         $this->app->bind(ScheduleRepository::class, function ($app) {
-            return new ScheduleRepository(new Schedule(), new Dokter());
+            return new ScheduleRepository(
+                new Schedule(),
+                new Dokter(),
+                new ScheduleDokter(),
+                new KuotaTransaksi()
+            );
         });
     }
 }

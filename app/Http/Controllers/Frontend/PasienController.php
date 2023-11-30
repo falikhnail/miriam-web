@@ -37,6 +37,10 @@ class PasienController extends Controller {
         return view("frontend.register");
     }
 
+    public function success() {
+        return redirect()->back()->with("success", "Formulir berhasil disimpan");
+    }
+
     public function storeFormVaksin(PasienVaksinRequest $request) {
         try {
             $this->vaksinRepo->store($request);
@@ -54,7 +58,7 @@ class PasienController extends Controller {
         try {
             $this->bkiaRepo->store($request);
 
-            return redirect()->back()->with('info', 'Pasien berhasil di daftarkan');
+            return redirect()->back()->with('success', 'Pasien berhasil di daftarkan');
         } catch (Throwable $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }

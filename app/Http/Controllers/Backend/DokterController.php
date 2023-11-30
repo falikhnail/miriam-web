@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\DokterRequest;
 use App\Models\Dokter;
 use App\Repository\DokterRepository;
+use Auth;
 use DataTables;
 use DB;
 use Dotenv\Exception\ValidationException;
@@ -45,8 +46,9 @@ class DokterController extends Controller {
             })
             ->addColumn('action', function (Dokter $data) {
                 //$deleteRoute = 'backend.dokter.destroy';
+                $module = 'dokter';
 
-                return view('backend.components.action_default', compact('data'));
+                return view('backend.components.action_default', compact('data', 'module'));
             })
             ->rawColumns([
                 'nama',

@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Http\Requests\PasienVaksinRequest;
 use App\Models\PasienVaksin;
+use App\Models\Schedule;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -12,10 +13,10 @@ use Throwable;
 
 class PasienVaksinRepository {
 
-    protected $model;
-
-    public function __construct(PasienVaksin $model) {
-        $this->model = $model;
+    public function __construct(
+        public PasienVaksin $model,
+        public Schedule $schedule
+    ) {
     }
 
     public function getAll(
@@ -83,9 +84,14 @@ class PasienVaksinRepository {
         DB::beginTransaction();
         try {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-            $request['schedule'] = Carbon::createFromFormat('d/m/Y', $request['schedule'])->format('Y-m-d');
+            $request['schedule_id'] = $request->schedule;
+            $request['dokter_id'] = $request->dokter;
 
-            $pasienVaksin = $this->model::create($request->all());
+            $pasienVaksin = $this->model::create($request->except([
+                'schedule',
+                'dokter'
+            ]));
+            
             $pasienVaksin->save();
 
             DB::commit();
@@ -131,5 +137,11 @@ class PasienVaksinRepository {
             \Log::error('Error delete($id) >>> ' . $e->getMessage());
             throw new Exception($e->getMessage());
         }
+    }
+
+    public function storeWithQuota() {
+        DB::transaction(function () {
+
+        });
     }
 }

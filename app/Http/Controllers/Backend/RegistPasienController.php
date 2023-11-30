@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PasienRequest;
 use App\Models\Pasien;
+use App\Repository\DokterRepository;
 use App\Repository\PasienRepository;
+use App\Repository\ScheduleRepository;
 use DataTables;
 use DB;
 use Illuminate\Http\Request;
@@ -14,10 +16,13 @@ use Throwable;
 
 class RegistPasienController extends Controller {
 
-    protected $pasienRepo;
 
-    public function __construct(PasienRepository $pasienRepo) {
-        $this->pasienRepo = $pasienRepo;
+
+    public function __construct(
+        public PasienRepository $pasienRepo,
+        public DokterRepository $dokterRepo,
+        public ScheduleRepository $scheduleRepo
+    ) {
     }
 
     public function index() {
@@ -52,8 +57,16 @@ class RegistPasienController extends Controller {
             ->addColumn('schedule', fn ($data) => date('d/m/Y', strtotime($data->schedule)))
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (Pasien $data) {
-                $route = 'backend.pasien.p.show';
-                return view('backend.components.action_pasien', compact('data', 'route'));
+                $editRoute = 'backend.pasien.p.edit';
+                $viewRoute = 'backend.pasien.p.show';
+                $module = 'pasien';
+
+                return view('backend.components.action_pasien', compact(
+                    'data',
+                    'editRoute',
+                    'viewRoute',
+                    'module'
+                ));
             })
             ->rawColumns([
                 'nama',
@@ -68,53 +81,54 @@ class RegistPasienController extends Controller {
     }
 
     public function create() {
-        return view('backend.regist_pasien.create');
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
+
+        return view('backend.regist_pasien.show', compact(
+            'dokterList',
+            'scheduleList'
+        ));
     }
 
     public function show($id) {
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
         $pasien = $this->pasienRepo->getById($id);
 
         return view('backend.regist_pasien.show', compact(
             'pasien',
+            'dokterList',
+            'scheduleList'
         ));
     }
 
     public function store(PasienRequest $request) {
-        try {
-            $this->pasienRepo->store($request);
+        $this->pasienRepo->store($request);
 
-            return redirect(route('backend.pasien.p.index'))->with("success", "Pasien berhasil disimpan");
-        } catch (Throwable $e) {
-            return redirect()->route('backend.pasien.p.index')->with([
-                'error' => $e->getMessage(),
-            ]);
-        }
+        return redirect(route('backend.pasien.p.index'))->with("success", "Pasien berhasil disimpan");
     }
 
     public function edit($id) {
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
+        $pasien = $this->pasienRepo->getById($id);
+
+        return view('backend.regist_pasien.show', compact(
+            'pasien',
+            'dokterList',
+            'scheduleList'
+        ));
     }
 
     public function update(PasienRequest $request, $id) {
-        try {
-            $this->pasienRepo->update($id, $request);
+        $this->pasienRepo->update($id, $request);
 
-            return redirect(route('backend.pasien.p.index'))->with("success", "Pasien berhasil disimpan");
-        } catch (Throwable $e) {
-            return redirect()->route('backend.pasien.p.index')->with([
-                'error' => $e->getMessage(),
-            ]);
-        }
+        return redirect(route('backend.pasien.p.index'))->with("success", "Pasien berhasil disimpan");
     }
 
     public function destroy($id) {
-        try {
-            $this->pasienRepo->delete($id);
+        $this->pasienRepo->delete($id);
 
-            return redirect()->back()->with("success", "Pasien berhasil dihapus");
-        } catch (Throwable $e) {
-            return redirect()->route('backend.pasien.p.index')->with([
-                'error' => $e->getMessage(),
-            ]);
-        }
+        return redirect()->back()->with("success", "Pasien berhasil dihapus");
     }
 }

@@ -8,9 +8,9 @@
     {{-- <button class="px-4 py-2 text-white bg-blue-500 rounded select-none no-outline focus:shadow-outline"
         @click="open = true">Open Modal</button> --}}
     {{ $slot }}
-    <div id="{{ $id }}" role="dialog" aria-labelledby="modal1_label" aria-modal="true" tabindex="0"
-        x-show="openModal" @click="openModal = false" @click.away="openModal = false"
-        class="fixed top-0 left-0 w-full h-screen flex justify-center items-center {{ empty($zIndex) ? 'z-20' : $zIndex }}">
+    <div id="{{ $id ?? 'global-modal' }}" role="dialog" aria-labelledby="modal1_label" aria-modal="true" tabindex="0"
+        x-show="openModal"
+        class="fixed top-0 left-0 w-full h-screen flex justify-center items-center {{ empty($zIndex) ? 'z-20' : $zIndex }} modal">
         <div aria-hidden="true" class="absolute top-0 left-0 w-full h-screen bg-black transition duration-300"
             :class="{ 'opacity-60': openModal, 'opacity-0': !openModal }" x-show="openModal"
             x-transition:leave="delay-150">
@@ -23,7 +23,14 @@
             x-transition:leave-end="transform scale-50 opacity-0"
             class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white {{ $height }} {{ $width }} z-10">
             <div class="p-6 border-b">
-                {{ $modalheader }}
+                <div class="flex justify-between">
+                    {{ $modalheader }}
+                    <div class="hover:text-red-700">
+                        <a href="javascript:;" @click="openModal = false" class="">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="p-6">
                 {{ $modalcontent }}

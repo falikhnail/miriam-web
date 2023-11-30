@@ -9,11 +9,16 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller {
 
+    public function __construct() {
+    }
+
     public function index() {
         return view('auth.login');
     }
 
     public function store(Request $request) {
+        \Log::warning('login');
+
         $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -45,6 +50,6 @@ class LoginController extends Controller {
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect()->route('auth.admin_login.view');
     }
 }

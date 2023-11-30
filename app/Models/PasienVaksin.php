@@ -19,6 +19,8 @@ class PasienVaksin extends Model
         'no_hp',
         'alamat',
         'vaksin',
-        'schedule'
+        'dokter_id',
+        'schedule_id',
+        'cara_bayar'
     ];
 }

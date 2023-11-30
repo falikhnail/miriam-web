@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Auth;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -81,82 +82,96 @@ class AdminSidebar {
                     'data-te-sidenav-link-ref'
                 ]);
 
-            $pasien = $menu->add($dropdown_parent('Registrasi', 'fa-solid fa-industry'), [
-                'class' => 'relative',
-            ])
-                ->data([
-                    'order' => 1,
-                    'activematches' => 'admin/pasien*',
-                    'permission' => [],
-                ]);
-
-            $pasien->link->attr([
-                'href' => 'javascript:;',
-                'class' => $link_style,
-                'data-te-sidenav-link-ref'
-            ]);
-
-            $pasien
-                ->add($itemDropdown('Pasien'), [
-                    'route' => 'backend.pasien.p.index',
+            if (Auth::user()->can('view_pasien') || Auth::user()->can('view_pasien_bkia') || Auth::user()->can('view_pasien_vaksin')) {
+                $pasien = $menu->add($dropdown_parent('Registrasi', 'fa-solid fa-industry'), [
                     'class' => 'relative',
                 ])
-                ->data([
-                    'activematches' => 'admin/pasien/p*',
-                ])
-                ->link->attr([
-                    'class' => $link_style_child
-                ]);
+                    ->data([
+                        'order' => 1,
+                        'activematches' => 'admin/pasien*',
+                        'permission' => [],
+                    ]);
 
-            $pasien
-                ->add($itemDropdown('Vaksin'), [
-                    'route' => 'backend.pasien.vaksin.index',
-                    'class' => 'relative',
-                ])
-                ->data([
-                    'activematches' => 'admin/pasien/vaksin*',
-                ])
-                ->link->attr([
-                    'class' => $link_style_child
-                ]);
-
-            $pasien
-                ->add($itemDropdown('BKIA'), [
-                    'route' => 'backend.pasien.bkia.index',
-                    'class' => 'relative',
-                ])
-                ->data([
-                    'activematches' => 'admin/pasien/bkia*',
-                ])
-                ->link->attr([
-                    'class' => $link_style_child
-                ]);
-
-            $menu->add($item('Dokter', 'fa-solid fa-industry'), [
-                'route' => 'backend.dokter.index',
-                'class' => 'relative',
-            ])
-                ->data([
-                    'order' => 1,
-                    'activematches' => 'admin/dokter*',
-                ])
-                ->link->attr([
+                $pasien->link->attr([
+                    'href' => 'javascript:;',
                     'class' => $link_style,
                     'data-te-sidenav-link-ref'
                 ]);
 
-            $menu->add($item('Schedule', 'fa-solid fa-industry'), [
-                'route' => 'backend.schedule.index',
-                'class' => 'relative',
-            ])
-                ->data([
-                    'order' => 1,
-                    'activematches' => 'admin/schedule*',
+                if (Auth::user()->can('view_pasien')) {
+                    $pasien
+                        ->add($itemDropdown('Pasien'), [
+                            'route' => 'backend.pasien.p.index',
+                            'class' => 'relative',
+                        ])
+                        ->data([
+                            'activematches' => 'admin/pasien/p*',
+                        ])
+                        ->link->attr([
+                            'class' => $link_style_child
+                        ]);
+                }
+
+                if (Auth::user()->can('view_pasien_vaksin')) {
+                    $pasien
+                        ->add($itemDropdown('Vaksin'), [
+                            'route' => 'backend.pasien.vaksin.index',
+                            'class' => 'relative',
+                        ])
+                        ->data([
+                            'activematches' => 'admin/pasien/vaksin*',
+                        ])
+                        ->link->attr([
+                            'class' => $link_style_child
+                        ]);
+                }
+
+                if (Auth::user()->can('view_pasien_bkia')) {
+                    $pasien
+                        ->add($itemDropdown('BKIA'), [
+                            'route' => 'backend.pasien.bkia.index',
+                            'class' => 'relative',
+                        ])
+                        ->data([
+                            'activematches' => 'admin/pasien/bkia*',
+                        ])
+                        ->link->attr([
+                            'class' => $link_style_child
+                        ]);
+                }
+            }
+
+            if (Auth::user()->can('view_dokter')) {
+                $menu->add($item('Dokter', 'fa-solid fa-industry'), [
+                    'route' => 'backend.dokter.index',
+                    'class' => 'relative',
                 ])
-                ->link->attr([
-                    'class' => $link_style,
-                    'data-te-sidenav-link-ref'
-                ]);
+                    ->data([
+                        'order' => 1,
+                        'activematches' => 'admin/dokter*',
+                    ])
+                    ->link->attr([
+                        'class' => $link_style,
+                        'data-te-sidenav-link-ref'
+                    ]);
+            }
+
+
+            if (Auth::user()->can('view_schedule')) {
+                $menu->add($item('Schedule', 'fa-solid fa-industry'), [
+                    'route' => 'backend.schedule.index',
+                    'class' => 'relative',
+                ])
+                    ->data([
+                        'order' => 1,
+                        'activematches' => 'admin/schedule*',
+                    ])
+                    ->link->attr([
+                        'class' => $link_style,
+                        'data-te-sidenav-link-ref'
+                    ]);
+            }
+
 
             // Notifications
             /*  $menu->add('<i class="nav-icon fas fa-bell"></i> Notifications', [

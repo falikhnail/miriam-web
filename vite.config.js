@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/js/alpine.js',
                 'resources/css/common.css',
                 'resources/css/custom-tailwind.css',
+                'resources/css/select2.css',
                 'resources/scss/common.scss'
             ],
             refresh: true,

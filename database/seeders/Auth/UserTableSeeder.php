@@ -20,14 +20,21 @@ class UserTableSeeder extends Seeder {
             [
                 'name' => 'Super Admin',
                 'email' => 'super@admin.com',
-                'password' => Hash::make('secret'),
+                'password' => Hash::make('12345'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Admin Istrator',
                 'email' => 'admin@admin.com',
-                'password' => Hash::make('secret'),
+                'password' => Hash::make('12345'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Management',
+                'email' => 'management@admin.com',
+                'password' => Hash::make('12345'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

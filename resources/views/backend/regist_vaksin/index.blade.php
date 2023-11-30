@@ -11,7 +11,9 @@
             {{-- <livewire:backend.vaksin-table /> --}}
             <div class="flex flex-row">
                 <div class="flex items-center space-x-3">
-                    <a href="{{ route('backend.pasien.vaksin.create') }}" class="btn btn-primary">Tambah</a>
+                    @can('add_pasien_vaksin')
+                        <a href="{{ route('backend.pasien.vaksin.create') }}" class="btn btn-primary">Tambah</a>
+                    @endcan
                     {{-- <button class="btn btn-primary" id="btn-import">Import Excel</button>
                     <button class="btn btn-primary" id="btn-export">Export Excel</button> --}}
                 </div>

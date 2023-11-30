@@ -26,6 +26,7 @@ class ScheduleController extends Controller {
     }
 
     public function store(ScheduleRequest $request) {
+        //\Log::warning('request', $request->all());
         $this->scheduleRepo->store($request);
 
         return redirect()->back()->with([

@@ -25,7 +25,7 @@ class PasienRepository {
         $tglSchedule = '',
         $limit = null
     ) {
-        $pasien = $this->model->orderBy('pasien.created_at', 'desc');
+        $pasien = $this->model->orderBy('pasien_umum.created_at', 'desc');
 
         if (!empty($nama) && strlen($nama) > 0) {
             $pasien->whereRaw("nama_lengkap like '%$nama%'");
@@ -79,21 +79,16 @@ class PasienRepository {
     }
 
     public function store(PasienRequest $request) {
-        DB::beginTransaction();
-        try {
-            $request['tempat_tanggal_lahir'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-            $request['schedule'] = Carbon::createFromFormat('d/m/Y', $request['schedule'])->format('Y-m-d');
+        $request['tempat_tanggal_lahir'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
 
-            $pasien = $this->model::create($request->all());
-            $pasien->save();
+        $pasien = $this->model::create($request->except([
+            'tempat_lahir',
+            'tanggal_lahir'
+        ]));
 
-            DB::commit();
+        $pasien->save();
 
-            return $pasien;
-        } catch (Throwable $e) {
-            DB::rollBack();
-            throw new Exception($e->getMessage());
-        }
+        return $pasien;
     }
 
     public function update($id, PasienRequest $request) {

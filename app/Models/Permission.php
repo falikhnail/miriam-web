@@ -10,25 +10,55 @@ class Permission extends SpatiePermission {
 
     public static function defaultPermissions(): array {
         return [
-            'view_doctor',
-            'add_doctor',
-            'edit_doctor',
-            'delete_doctor',
-
             'view_pasien',
             'add_pasien',
             'edit_pasien',
             'delete_pasien',
 
+            'view_pasien_bkia',
+            'add_pasien_bkia',
+            'edit_pasien_bkia',
+            'delete_pasien_bkia',
+
+            'view_pasien_vaksin',
+            'add_pasien_vaksin',
+            'edit_pasien_vaksin',
+            'delete_pasien_vaksin',
+
+            'view_dokter',
+            'add_dokter',
+            'edit_dokter',
+            'delete_dokter',
+
             'view_schedule',
             'add_schedule',
             'edit_schedule',
             'delete_schedule',
+        ];
+    }
 
-            'view_user',
-            'add_user',
-            'edit_user',
-            'delete_user',
+    public static function management(): array {
+        return [
+            'view_pasien',
+            'view_pasien_vaksin',
+            'view_pasien_bkia',
+            'view_dokter'
+        ];
+    }
+
+    public static function admin(): array {
+        return [
+            'view_pasien',
+            'add_pasien',
+            'edit_pasien',
+
+            'view_pasien_bkia',
+            'add_pasien_bkia',
+            'edit_pasien_bkia',
+
+            'view_pasien_vaksin',
+            'add_pasien_vaksin',
+            'edit_pasien_vaksin',
         ];
     }
 

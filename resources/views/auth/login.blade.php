@@ -11,6 +11,7 @@
             <h1 class="text-xl text-center font-bold">Login Admin</h1>
             <div class="flex mt-10">
                 <form action="{{ route('auth.admin_login.action') }}" method="POST" class="w-full p-4">
+                    @csrf
                     <div class="flex flex-col">
                         <div class="w-full mb-3">
                             <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="email">

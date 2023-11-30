@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PasienVaksinRequest;
 use App\Models\PasienVaksin;
+use App\Repository\DokterRepository;
 use App\Repository\PasienVaksinRepository;
+use App\Repository\ScheduleRepository;
 use DB;
 use Illuminate\Http\Request;
 use Livewire\Exceptions\MethodNotFoundException;
@@ -14,13 +16,17 @@ use Yajra\DataTables\Facades\DataTables;
 
 class RegistVaksinController extends Controller {
 
-    protected $vaksinRepo;
 
-    public function __construct(PasienVaksinRepository $vaksinRepo) {
-        $this->vaksinRepo = $vaksinRepo;
+
+    public function __construct(
+        public PasienVaksinRepository $vaksinRepo,
+        public DokterRepository $dokterRepo,
+        public ScheduleRepository $scheduleRepo
+    ) {
     }
 
     public function index() {
+
         return view('backend.regist_vaksin.index');
     }
 
@@ -54,8 +60,16 @@ class RegistVaksinController extends Controller {
             ->addColumn('schedule', fn ($data) => date('d/m/Y', strtotime($data->schedule)))
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (PasienVaksin $data) {
-                $route = 'backend.pasien.vaksin.show';
-                return view('backend.components.action_pasien', compact('data', 'route'));
+                $editRoute = 'backend.pasien.vaksin.edit';
+                $viewRoute = 'backend.pasien.vaksin.show';
+                $module = 'pasien_vaksin';
+
+                return view('backend.components.action_pasien', compact(
+                    'data',
+                    'editRoute',
+                    'viewRoute',
+                    'module'
+                ));
             })
             ->rawColumns([
                 'nama',
@@ -71,15 +85,25 @@ class RegistVaksinController extends Controller {
     }
 
     public function show($id) {
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
         $pasien = $this->vaksinRepo->getById($id);
 
         return view('backend.regist_vaksin.show', compact(
-            'pasien'
+            'pasien',
+            'dokterList',
+            'scheduleList'
         ));
     }
 
     public function create() {
-        return view('backend.regist_vaksin.create');
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
+
+        return view('backend.regist_vaksin.show', compact(
+            'dokterList',
+            'scheduleList'
+        ));
     }
 
     public function store(PasienVaksinRequest $request) {
@@ -95,6 +119,15 @@ class RegistVaksinController extends Controller {
     }
 
     public function edit($id) {
+        $dokterList = $this->dokterRepo->getActive();
+        $scheduleList = $this->scheduleRepo->getEstimate(12);
+        $pasien = $this->vaksinRepo->getById($id);
+
+        return view('backend.regist_vaksin.show', compact(
+            'pasien',
+            'dokterList',
+            'scheduleList'
+        ));
     }
 
     public function update(PasienVaksinRequest $request, $id) {

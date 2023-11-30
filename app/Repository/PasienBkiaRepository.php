@@ -85,9 +85,14 @@ class PasienBkiaRepository {
         DB::beginTransaction();
         try {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-            $request['schedule'] = Carbon::createFromFormat('d/m/Y', $request['schedule'])->format('Y-m-d');
+            $request['schedule_id'] = $request->schedule;
+            $request['dokter_id'] = $request->dokter;
 
-            $pasien = $this->model::create($request->all());
+            $pasien = $this->model::create($request->except(
+                'schedule',
+                'dokter'
+            ));
+            
             $pasien->save();
 
             DB::commit();
