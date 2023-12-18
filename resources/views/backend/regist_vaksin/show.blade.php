@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="flex items-center">
-                    <a class="font-bold hover:text-primary" href="javascript:void(0)">
+                    <a class="font-bold hover:text-primary" href="javascript:void(0)" id="wa-pasien">
                         <i class="fa-brands fa-whatsapp fa-lg mr-2" style="color: #18d82e;"></i>
                         <span>Hubungi Pasien</span>
                     </a>
