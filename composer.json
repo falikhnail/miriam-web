@@ -42,7 +42,8 @@
         ],
         "files": [
             "app/helpers.php",
-            "app/Overrides/Builder.php"
+            "app/Overrides/Builder.php",
+            "app\\helpers.php"
         ]
     },
     "autoload-dev": {

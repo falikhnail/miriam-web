@@ -56,7 +56,7 @@ class RegistVaksinController extends Controller {
             ->addColumn('nama', '{{$nama_lengkap_anak}}')
             ->addColumn('alamat', '{{$alamat}}')
             ->addColumn('vaksin', '{{$vaksin}}')
-            ->editColumn('no_hp', '{{$no_hp}}')
+            ->editColumn('no_hp', fn($data) => "+$data->no_hp")
             ->addColumn('schedule', fn ($data) => date('d/m/Y', strtotime($data->schedule)))
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (PasienVaksin $data) {

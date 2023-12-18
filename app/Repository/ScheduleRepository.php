@@ -186,7 +186,7 @@ class ScheduleRepository {
      */
     public function updateKuota($id, $type) {
         $this->model = $this->model::find($id);
-        if ($this->model->kuota > 0 && $this->model->kuota > 1) {
+        if ($this->model->kuota > 0 && $this->model->kuota >= 1) {
             $lastKuota = $this->model->kuota;
             $this->model->kuota = $this->model->kuota - 1;
             $this->model->save();

@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Helper\StringHelper;
 use App\Http\Requests\PasienRequest;
 use App\Models\Pasien;
 use Carbon\Carbon;
@@ -80,6 +81,7 @@ class PasienRepository {
 
     public function store(PasienRequest $request) {
         $request['tempat_tanggal_lahir'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
+        $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
         $pasien = $this->model::create($request->except([
             'tempat_lahir',
@@ -100,6 +102,8 @@ class PasienRepository {
             if (!empty($request->tempat_lahir) && !empty($request->tanggal_lahir) && $existing->tempat_tanggal_lahir_anak != $ttl) {
                 $request['tempat_tanggal_lahir'] = $ttl;
             }
+
+            $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
             $pasien = $existing->fill($request->all())->save();
 

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Forms;
 
+use App\Helper\StringHelper;
 use App\Models\Dokter;
 use App\Models\KuotaTransaksi;
 use App\Models\PasienVaksin;
@@ -63,6 +64,7 @@ class PasienVaksinForm extends Form {
         DB::beginTransaction();
         try {
             $this->tempat_tanggal_lahir_anak = $this->tempat_lahir . ', ' . $this->tanggal_lahir;
+            $this->no_hp = StringHelper::formatNoPonsel($this->no_hp);
 
             PasienVaksin::create($this->except([
                 'tempat_lahir',
@@ -81,8 +83,5 @@ class PasienVaksinForm extends Form {
 
             return $e->getMessage();
         }
-    }
-
-    public function update() {
     }
 }

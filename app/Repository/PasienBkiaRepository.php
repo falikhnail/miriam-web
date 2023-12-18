@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Helper\StringHelper;
 use App\Http\Requests\PasienBkiaRequest;
 use App\Http\Requests\PasienRequest;
 use App\Models\Pasien;
@@ -87,12 +88,13 @@ class PasienBkiaRepository {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
             $request['schedule_id'] = $request->schedule;
             $request['dokter_id'] = $request->dokter;
+            $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
             $pasien = $this->model::create($request->except(
                 'schedule',
                 'dokter'
             ));
-            
+
             $pasien->save();
 
             DB::commit();
@@ -114,6 +116,8 @@ class PasienBkiaRepository {
             if (!empty($request->tempat_lahir) && !empty($request->tanggal_lahir) && $existing->tempat_tanggal_lahir_anak != $ttl) {
                 $request['tempat_tanggal_lahir_anak'] = $ttl;
             }
+
+            $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
             $pasien = $existing->fill($request->all())->save();
 

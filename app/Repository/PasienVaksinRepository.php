@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Helper\StringHelper;
 use App\Http\Requests\PasienVaksinRequest;
 use App\Models\PasienVaksin;
 use App\Models\Schedule;
@@ -86,12 +87,13 @@ class PasienVaksinRepository {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
             $request['schedule_id'] = $request->schedule;
             $request['dokter_id'] = $request->dokter;
+            $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
             $pasienVaksin = $this->model::create($request->except([
                 'schedule',
                 'dokter'
             ]));
-            
+
             $pasienVaksin->save();
 
             DB::commit();
@@ -112,6 +114,8 @@ class PasienVaksinRepository {
             if (!empty($request->tempat_lahir) && !empty($request->tanggal_lahir) && $existing->tempat_tanggal_lahir_anak != $ttl) {
                 $request['tempat_tanggal_lahir_anak'] = $ttl;
             }
+
+            $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
             $pasienVaksin = $existing->fill($request->all())->save();
 
@@ -141,7 +145,6 @@ class PasienVaksinRepository {
 
     public function storeWithQuota() {
         DB::transaction(function () {
-
         });
     }
 }

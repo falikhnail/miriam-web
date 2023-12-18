@@ -199,7 +199,7 @@
                 dateClick: function(info) {
                     //console.log(info)
                     const element = info.jsEvent.srcElement.querySelector('.fc-event-main #event-schedule')
-                    if (document.querySelectorAll('.fc-event-main').length > 0) {
+                    if (element != null && document.querySelectorAll('.fc-event-main').length > 0) {
                         scheduleArgs.id = element.getAttribute('data-id');
                         scheduleArgs.tanggal = info.dateStr;
                         scheduleArgs.kuota = element.getAttribute('data-kuota');

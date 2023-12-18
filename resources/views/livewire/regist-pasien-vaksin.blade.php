@@ -96,7 +96,7 @@
                 Hari / Tanggal Rencana Vaksin  <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
             </label>
             <div class="relative">
-                <select class="main-input" id="tanggal_schedule" wire:model="form.schedule_id"
+                <select class="main-input" id="tanggal_schedule" name="schedule_id" wire:model.live="form.schedule_id"
                     style="{{ $errors->has('form.schedule_id') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
                     @foreach ($scheduleList as $data)

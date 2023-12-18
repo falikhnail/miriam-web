@@ -75,7 +75,7 @@
                 $("#schedule_id").val(data.schedule_id)
                 $("#dokter_id").val(data.dokter_id)
                 $("#cara_bayar").val(data.cara_bayar)
-                $("#no_hp").val(data.no_hp)
+                $("#no_hp").val(`+${data.no_hp}`)
                 $("#no_rm").val(data.no_rm)
                 $("#tgl-regist").text(`Tanggal Registrasi ${data.tglRegist}`)
 
