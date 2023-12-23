@@ -576,11 +576,17 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
+<<<<<<< HEAD
                             <p> Kami menyediakan layanan antenatal yang komprehensif, termasuk konsultasi prenatal, 
                                 pemantauan kehamilan, dan penanganan masalah kesehatan ibu hamil. 
                                 Program ini juga mencakup kelas persiapan persalinan dan dukungan nutrisi khusus untuk ibu hamil. 
                                 Rumah Sakit kami memiliki fasilitas persalinan yang modern dan menyediakan perawatan pasca persalinan yang 
                                 lengkap untuk memastikan kenyamanan dan pemulihan yang optimal bagi ibu setelah melahirkan.
+=======
+                            <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan
+                                yang menggunakan.
+                                BPJS.
+>>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
                             </p>
                         </div>
                     </li>
@@ -594,11 +600,16 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-2" class="!visible hidden" data-te-collapse-item>
+<<<<<<< HEAD
                             <p>Rumah Sakit kami memiliki fasilitas persalinan yang modern dan menyediakan perawatan pasca persalinan yang 
                                 lengkap untuk memastikan kenyamanan dan pemulihan yang optimal bagi ibu setelah melahirkan dan 
                                 kami menawarkan berbagai layanan pediatrik mulai dari perawatan bayi baru lahir, termasuk konsultasi rutin, 
                                 vaksinasi, perawatan penyakit umum, serta penanganan kondisi khusus anak, USG, Fasilitas operasi Caesar yang 
                                 modern, Radiologi, dokter Gigi dan Rawat Inap 
+=======
+                            <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga
+                                Terdapat Pelayanan Umum.
+>>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
                             </p>
                         </div>
                     </li>
@@ -627,9 +638,14 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
+<<<<<<< HEAD
                             <p>Anda dapat mendaftar secara online melalui situs web kami atau menghubungi 
                                 layanan pendaftaran kami di nomor WA kami; 0853-2947-3535 untuk membuat janji. 
                                 Kami memiliki jadwal yang fleksibel untuk memenuhi kebutuhan waktu Anda.
+=======
+                            <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan
+                                Pasien.
+>>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
                             </p>
                         </div>
                     </li>
@@ -637,7 +653,11 @@
                     <li data-aos="fade-up" data-aos-delay="400">
                         <i class="bx bx-help-circle icon-help"></i> <a data-te-collapse-init data-te-ripple-init
                             data-te-ripple-color="light" aria-expanded="false" aria-controls="faq-list-5"
+<<<<<<< HEAD
                             href="#faq-list-5">Bagaimana cara atur kunjungan ke fasilitas RSIA Miriam sebelum melahirkan atau perawatan anak ?
+=======
+                            href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
+>>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
                             <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-5" class="!visible hidden">
                             <p>
