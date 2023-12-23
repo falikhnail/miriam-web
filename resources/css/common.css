@@ -10,3 +10,19 @@
 .dot-required{
     color: red !important;
 }
+
+.main-input {
+    @apply appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-auto {
+    @apply appearance-none block w-auto bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-row1 {
+    @apply flex-shrink w-[50%] appearance-none block bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}
+
+.main-input-row2 {
+    @apply w-full appearance-none block bg-white text-gray-700 border border-gray-300 rounded-xl py-3 px-2 leading-tight focus:outline-none focus:bg-white focus:shadow-md;
+}

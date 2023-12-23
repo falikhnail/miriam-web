@@ -33,6 +33,13 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/css/tw-elements.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     @vite(['resources/js/app.js', 'resources/css/app.css', 'resources/css/custom-tailwind.css'])
 
@@ -42,11 +49,25 @@
 </head>
 
 <body>
-    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white">
+    <div id="full-loading" class="bg-gradient-to-b from-slate-100 to-white">
+        <div class="flex items-center justify-center min-h-screen w-full">
+            <i class="fa-solid fa-spinner fa-spin fa-2xl" style="color: #1662e3;"></i>
+        </div>
+    </div>
+    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white" id="main">
         @include('backend.includes.main_header')
+
         @include('backend.includes.main_sidebar')
-        <div class="flex !pl-[77px] mt-20" id="slim-content">
-            @yield('content')
+
+        <div class="flex flex-col !pl-[77px] mt-20 min-h-screen bg-slate-100" id="content">
+            <div class="flex-1 m-10">
+                @yield('content')
+            </div>
+            <div class="left-0 right-0 bottom-0">
+                <div id="footer-div" class="flex items-center justify-center py-10 pl-[77px]">
+                    © 2023 Rsia Miriam
+                </div>
+            </div>
         </div>
 
         @include('includes.flash-message')
@@ -63,18 +84,82 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
+        const sidebar = te.Sidenav.getOrCreateInstance(
+            document.getElementById("admin-sidebar")
+        );
+
         $(document).ready(function() {
             $('meta[name="viewport"]').prop('content', 'width=1440');
+            initialSidebar()
 
-            document
-                .getElementById("slim-toggler")
-                .addEventListener("click", () => {
-                    const instance = te.Sidenav.getInstance(
-                        document.getElementById("sidenav-4")
-                    );
-                    instance.toggleSlim();
-                });
+            $("#full-loading").hide()
         })
+
+        $("#admin-sidebar-toggler").click(() => {
+            sidebar.toggleSlim();
+
+            const isCollapsed = sidebar._slimCollapsed;
+            sessionStorage.setItem('admin_sidebar_slim', isCollapsed);
+            togglePadSectionFooter(isCollapsed)
+
+        })
+
+        async function initialSidebar() {
+            let isSidebarCollapsed = sessionStorage.getItem('admin_sidebar_slim');
+            if (isSidebarCollapsed == 'false') {
+                sidebar.toggleSlim()
+                togglePadSectionFooter(isSidebarCollapsed == 'false')
+            }
+        }
+
+        function togglePadSectionFooter(isCollapsed) {
+            if (isCollapsed) {
+                $("#footer-div").removeClass('pl-[77px]')
+            } else {
+                $("#footer-div").addClass('pl-[77px]')
+            }
+        }
+
+        function showLoading() {
+            Swal.fire({
+                title: 'Loading',
+                onBeforeOpen() {
+                    Swal.showLoading()
+                },
+                onAfterClose() {
+                    Swal.hideLoading()
+                },
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                showConfirmButton: false,
+            })
+        }
+
+        function showDeleteConfirm(callback) {
+            Swal.fire({
+                title: "Hapus Data?",
+                text: `Hapus Data ini?`,
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Hapus",
+                showLoaderOnConfirm: true,
+                /* preConfirm: () => {
+                    return new Promise(function(resolve, reject) {
+                        // here should be AJAX request
+                        setTimeout(function() {
+                            resolve();
+                        }, 5000);
+                    });
+                } */
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    callback()
+                }
+            });
+        }
     </script>
 
 

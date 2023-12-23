@@ -50,6 +50,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/css/tw-elements.min.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
     @vite(['resources/js/app.js', 'resources/css/app.css', 'resources/css/common.css'])
 
     @livewireStyles
@@ -88,6 +91,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
+        /*  @if (Session::has('error'))
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "{{ session('error') }}",
+            });
+        @endif */
+
         $(document).ready(function() {
             /* if ($("#notification").is(":visible")) {
                 setTimeout(() => {
@@ -95,6 +106,18 @@
                 }, 3000)
             } */
         })
+
+        window.addEventListener('swal', function(e) {
+            var res = {};
+            if (Array.isArray(e.detail)) {
+                res = e.detail[0];
+            }else{
+                res = e.detail;
+            }
+            
+            console.log('swal', res)
+            Swal.fire(res);
+        });
     </script>
 
     @stack('after-scripts')

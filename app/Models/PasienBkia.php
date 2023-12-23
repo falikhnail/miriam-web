@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class PasienBkia extends Model {
     use HasFactory;
 
+    protected $table = 'pasien_bkia';
+
     protected $fillable = [
         'nik_anak',
         'nama_lengkap_anak',
@@ -15,6 +17,8 @@ class PasienBkia extends Model {
         'nama_orang_tua',
         'no_hp',
         'alamat',
-        'schedule'
+        'dokter_id',
+        'schedule_id',
+        'cara_bayar'
     ];
 }

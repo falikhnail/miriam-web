@@ -11,6 +11,7 @@
             <h1 class="text-xl text-center font-bold">Login Admin</h1>
             <div class="flex mt-10">
                 <form action="{{ route('auth.admin_login.action') }}" method="POST" class="w-full p-4">
+                    @csrf
                     <div class="flex flex-col">
                         <div class="w-full mb-3">
                             <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="email">
@@ -34,7 +35,7 @@
                                 <input id="password" name="password" type="password" required>
                             </div>
                         </div>
-                        <button type="submit" class="p-2 rounded-lg shadow-lg text-center w-full">Login</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </form>
             </div>

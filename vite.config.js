@@ -7,8 +7,10 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/js/alpine.js',
                 'resources/css/common.css',
                 'resources/css/custom-tailwind.css',
+                'resources/css/select2.css',
                 'resources/scss/common.scss'
             ],
             refresh: true,

@@ -11,12 +11,12 @@
     --text-black: #000;
 }
 
-button {
+.btn-primary {
     color: var(--text-white) !important;
     background-color: var(--btn-color) !important;
 }
 
-button:disabled {
+.btn-primary:disabled {
     color: var(--text-white) !important;
     background-color: var(--btn-color-disabled) !important;
 }

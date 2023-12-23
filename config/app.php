@@ -171,6 +171,11 @@ return [
 
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
+        App\Providers\RepositoryProvider::class,
         //Arcanedev\LogViewer\LogViewerServiceProvider::class,
     ])->toArray(),
 
@@ -187,6 +192,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Menu' => Lavary\Menu\Facade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 

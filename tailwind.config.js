@@ -4,11 +4,12 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
     content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/**/*.blade.php',
         "./resources/**/*.js",
         './resources/**/*.css',
-        "./node_modules/tw-elements/dist/js/**/*.js"
+        //"./node_modules/tw-elements/dist/js/**/*.js"
     ],
     darkMode: 'class',
     theme: {
@@ -26,15 +27,22 @@ module.exports = {
             secondary: '#60aef3',
             transparent: 'transparent',
             current: 'currentColor',
-            black: colors.black,
+           /*  black: colors.black,
             white: colors.white,
             gray: colors.gray,
             emerald: colors.emerald,
             indigo: colors.indigo,
             yellow: colors.yellow,
+            slate: colors.slate,
+            blue: colors.blue,
+            green: colors.green,
+            red: colors.red */
+            ...colors
         }
     },
     plugins: [
-        require("tw-elements/dist/plugin.cjs")
+        //require("tw-elements/dist/plugin.cjs")
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
     ],
 };

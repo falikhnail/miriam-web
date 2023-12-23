@@ -5,10 +5,11 @@
             <i class="bi bi-phone"></i> +62 853-2947-3535
         </div>
         <div class="flex space-x-4 mt-[15px] md:mt-0">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            
+            <a href="https://api.whatsapp.com/send/?phone=6285329473535" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
             <a href="https://www.instagram.com/rsiamiriamkudus/" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.youtube.com/@rsiamiriam1195" class="youtube"><i class="bi bi-youtube"></i></i></a>
+            <a href="https://www.facebook.com/rsiamiriamkudus/" class="facebook"><i class="bi bi-facebook"></i></a>
         </div>
     </div>
     <header id="header" class="sticky w-full">
@@ -19,7 +20,7 @@
             <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia">
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{{ route('frontend.index') }}">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
                     <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li>
@@ -29,11 +30,43 @@
                             <li><a href="#">Sejarah</a></li>
                             <li><a href="#">Unit Kerja</a></li>
                             <li><a href="#">Struktur Organisasi</a></li>
-                            <li><a href="#">Aspek Hukum dan Perundangan</a></li>
-                            <li><a href="#">Jajaran Direksi RSIA Miriam Kudus</a></li>
                         </ul>
-                    <li><a class="nav-link scrollto" href="#">Pelayanan</a></li>
-                    <li><a class="nav-link scrollto" href="#">Informasi</a></li>
+                        <li class="dropdown"><a href="#"><span>Pelayanan</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="#">Maklumat Pelayanan</a>
+                            </li>
+                            <li><a href="#">Pelayanan Rsia Miriam</a></li>
+                            <li><a href="#">Instalasi Gawat Darurat</a></li>
+                            <li class="dropdown"><a href="#"><span>Instalasi Radiologi</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                            <li><a href="#">Radiologi USG</a></li>
+                            <li><a href="#">Radiologi Rontgen</a></li>
+                            </ul>
+                            <li><a href="#">Konsutasi Ahli Gizi</a></li>
+                            <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                            <li><a href="#">Pijat Bayi</a></li>
+                            <li><a href="#">Cukur Bayi</a></li>
+                            <li><a href="#">Tindik Bayi</a></li>
+                            </ul>
+                            <li><a href="#">Imunisasi Dasar</a></li>
+                            <li><a href="#">Imunisasi Tambahan</a></li>
+                            <li><a href="#">Imunisasi MR</a></li>
+                            <li><a href="#">Vaksinasi Dewasa</a></li>
+                        </ul>
+                    <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="#">Jadwal Dokter</a>
+                            </li>
+                            <li><a href="#">Tarif Pelayanan Rumah Sakit</a></li>
+                            <li><a href="#">Tata Tertib Pasien, Pengujung, dan Penunggu</a></li>
+                            <li><a href="#">Ruang Rawat</a></li>
+                            <li><a href="#">Hak & Kewajiban Pasien & Keluarga Pasien</a></li>
+                            <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
+                            <li><a href="#">Mitra Kami</a></li>
+                        </ul>
                     <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li class="inline-block md:inline-block lg:hidden mt-2 ml-3 md:-ml-2">
