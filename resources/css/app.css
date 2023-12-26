@@ -49,7 +49,47 @@ input:checked+label {
 }
 
 
-.logo-rsia{
+.logo-rsia {
     width: auto;
     height: 4rem;
+}
+
+.logo-rsia-lg {
+    width: auto;
+    height: 7rem;
+}
+
+.ol-numbered {
+    list-style: none;
+    counter-reset: item;
+}
+
+.ol-numbered .ol-item {
+    counter-increment: item;
+    margin-bottom: 10px;
+}
+
+.ol-numbered .ol-item::before {
+    margin-right: 10px;
+    content: counter(item);
+    background: var(--color-primary);
+    border-radius: 100%;
+    color: white;
+    width: 1.5em;
+    text-align: center;
+    display: inline-block;
+}
+
+.text-pink {
+    font-weight: bold !important;
+    color: #dd4b7c !important;
+}
+
+.text-primary {
+    font-weight: bold !important;
+    color: var(--color-primary) !important;
+}
+
+.active {
+    color: var(--color-primary) !important;
 }

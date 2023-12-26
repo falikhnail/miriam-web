@@ -102,187 +102,10 @@
             </div>
 
         </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <!-- <section id="counts" class="counts">
-        <div class="container">
 
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="count-box">
-                        <i class="fas fa-user-md"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Dokter</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-                    <div class="count-box">
-                        <i class="far fa-hospital"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Unit</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                    <div class="count-box">
-                        <i class="fas fa-flask"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Belom Tahu Isinya</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                    <div class="count-box">
-                        <i class="fas fa-award"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Penghargaan</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>      End Counts Section -->
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Services</h2>
-                <p>..................</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                        <h4><a href="">..............</a></h4>
-                        <p>.....................</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-pills"></i></div>
-                        <h4><a href="">................</a></h4>
-                        <p>...................</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-hospital-user"></i></div>
-                        <h4><a href="">..............</a></h4>
-                        <p>....................</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-dna"></i></div>
-                        <h4><a href="">.................</a></h4>
-                        <p>......................s</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-wheelchair"></i></div>
-                        <h4><a href="">........</a></h4>
-                        <p>....................</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-notes-medical"></i></div>
-                        <h4><a href="">...........</a></h4>
-                        <p>....................</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>        End Services Section -->
-
-    <!-- ======= Appointment Section ======= -->
-    <!-- <section id="appointment" class="appointment section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Make an Appointment</h2>
-                    <p>..............</p>
-                </div>
-
-                <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
-                    <div class="row">
-                        <div class="col-md-4 form-group">
-                            <input type="text" name="name" class="form-control" id="name"
-                                placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <input type="email" class="form-control" name="email" id="email"
-                                placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <input type="tel" class="form-control" name="phone" id="phone"
-                                placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validate"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 form-group mt-3">
-                            <input type="datetime" name="date" class="form-control datepicker" id="date"
-                                placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group mt-3">
-                            <select name="department" id="department" class="form-select">
-                                <option value="">Unit</option>
-                                <option value="Department 1">Department 1</option>
-                                <option value="Department 2">Department 2</option>
-                                <option value="Department 3">Department 3</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group mt-3">
-                            <select name="doctor" id="doctor" class="form-select">
-                                <option value="">Select Doctor</option>
-                                <option value="Doctor 1">Doctor 1</option>
-                                <option value="Doctor 2">Doctor 2</option>
-                                <option value="Doctor 3">Doctor 3</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-                        <div class="validate"></div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Make an Appointment</button></div>
-                </form>
-
-            </div>
-        </section> End Appointment Section -->
-
-    <!-- ======= Departments Section ======= -->
     <section id="departments" class="departments">
         <div class="container">
 
@@ -322,7 +145,8 @@
                                     <h3>Pediatri</h3>
                                     <p class="fst-italic"></p>
                                     <p>Melayani pemeriksaan kesehatan fisik serta perkembangan
-                                        tumbuh kembang anak mulai dari usia anak 0–18 tahun, dilayani oleh Dokter Spesialis Anak : Dr. Tezza Dinayanti, Sp.A
+                                        tumbuh kembang anak mulai dari usia anak 0–18 tahun, dilayani oleh Dokter Spesialis
+                                        Anak : Dr. Tezza Dinayanti, Sp.A
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -335,8 +159,9 @@
                                 <div class="col-lg-8 details order-2 order-lg-1">
                                     <h3>Radiologi</h3>
                                     <p class="fst-italic"></p>
-                                    <p>Melayani pemeriksaaan  bagian dalam tubuh manusia dengan menggunakan teknologi pencitraan, 
-                                        baik gelombang elektromagnetik maupun gelombang mekanik. 
+                                    <p>Melayani pemeriksaaan bagian dalam tubuh manusia dengan menggunakan teknologi
+                                        pencitraan,
+                                        baik gelombang elektromagnetik maupun gelombang mekanik.
                                         Untuk Pelayanan Radiologi dilayani oleh Dr. Michael A. Leuwol, Sp. Rad</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -349,8 +174,9 @@
                                 <div class="col-lg-8 details order-2 order-lg-1">
                                     <h3>Laboratorium</h3>
                                     <p class="fst-italic"></p>
-                                    <p>Melayani pemeriksaan kesehatan dengan menggunakan sampel darah, urine, 
-                                        atau jaringan tubuh oleh ahli medis untuk melihat apakah hasil pemeriksaan berada dalam kisaran normal. </p>
+                                    <p>Melayani pemeriksaan kesehatan dengan menggunakan sampel darah, urine,
+                                        atau jaringan tubuh oleh ahli medis untuk melihat apakah hasil pemeriksaan berada
+                                        dalam kisaran normal. </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/lab.jpg" alt="" class="img-fluid">
@@ -362,8 +188,10 @@
                                 <div class="col-lg-8 details order-2 order-lg-1">
                                     <h3>IGD</h3>
                                     <p class="fst-italic"></p>
-                                    <p>IGD (Instalasi Gawat Darurat) menyediakan penanganan awal pasien, sesuai dengan tingkat kegawatannya. 
-                                        IGD juga melayani pemeriksaan kesehatan untuk umum (tidak hanya ibu hamil dan anak-anak). 
+                                    <p>IGD (Instalasi Gawat Darurat) menyediakan penanganan awal pasien, sesuai dengan
+                                        tingkat kegawatannya.
+                                        IGD juga melayani pemeriksaan kesehatan untuk umum (tidak hanya ibu hamil dan
+                                        anak-anak).
                                         Di IGD dilayani oleh Dokter Umum : Dr Sri Uminingsih & Dr Gizela Yuanita.</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -377,9 +205,10 @@
                                     <h3>Poli Obgyn</h3>
                                     <p class="fst-italic">
                                     </p>
-                                    <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil, 
-                                        konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan, 
-                                        perawatan pasca operasi sesar. Dilayani oleh Dr Ferry Santoso, Sp.OG, M.Biomed dan Dr Yudi Indarto, Sp.OG </p>
+                                    <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
+                                        konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
+                                        perawatan pasca operasi sesar. Dilayani oleh Dr Ferry Santoso, Sp.OG, M.Biomed dan
+                                        Dr Yudi Indarto, Sp.OG </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/obgyn.jpg" alt="" class="img-fluid">
@@ -392,7 +221,7 @@
                                     <h3>BKIA</h3>
                                     <p class="fst-italic">
                                     </p>
-                                    <p>Melayani Konsultasi KB untuk ibu, Cukur Bayi Usia 1-3 bulan, 
+                                    <p>Melayani Konsultasi KB untuk ibu, Cukur Bayi Usia 1-3 bulan,
                                         Pijat Untuk Bayi usia 1-12 bulan, dan Tindik untuk Bayi dan Dewasa.</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -415,135 +244,141 @@
             <div class="section-title">
                 <h2>Dokter</h2>
                 <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit
-                    in iste officiis commodi quidem hic quas.</p> -->
+                                                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                                                    fugiat sit
+                                                    in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="row">
 
                 <div class="col-lg-6">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cewe.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Dr Sri Uminingsih</h4>
                             <span>Dokter Umum</span>
-                            <p>Jangan takut untuk berubah; dalam perubahan terdapat potensi untuk pertumbuhan dan keberhasilan.</p>
+                            <p>Jangan takut untuk berubah; dalam perubahan terdapat potensi untuk pertumbuhan dan
+                                keberhasilan.</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe2.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cewe2.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Dr Gizela Yuanita</h4>
                             <span>Dokter Umum</span>
                             <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe3.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cewe3.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Dr Tezza Dinayanti, Sp.A</h4>
                             <span>Dokter Spesialis Anak</span>
-                            <p>Keberhasilan belum final, kegagalan tidak fatal: Keberanian untuk melanjutkanlah yang terpenting.</p>
+                            <p>Keberhasilan belum final, kegagalan tidak fatal: Keberanian untuk melanjutkanlah yang
+                                terpenting.</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cowo.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cowo.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Dr Yudi Indarto, Sp. OG</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>Hidup ini seperti sepasang sepatu; terkadang sulit, tapi langkah demi langkah akan membawamu ke tempat yang indah.</p>
+                            <p>Hidup ini seperti sepasang sepatu; terkadang sulit, tapi langkah demi langkah akan membawamu
+                                ke tempat yang indah.</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cowo1.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cowo1.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Dr Ferry Santoso, Sp.OG, M. Biomed</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>Jadilah seseorang yang memberikan lebih banyak cahaya daripada bayangan, dan dunia akan menjadi tempat yang lebih terang.</p>
+                            <p>Jadilah seseorang yang memberikan lebih banyak cahaya daripada bayangan, dan dunia akan
+                                menjadi tempat yang lebih terang.</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Dr. Michael A. Leuwol, Sp. Rad</h4>
                             <span>Dokter Spesialis Radiology</span>
-                            <p>Setiap matahari terbit membawa kesempatan baru. Dalam setiap tantangan, kita temukan kekuatan. Berikan cinta, cari keindahan, dan berjalanlah dengan keyakinan. Hiduplah hari ini sepenuh hati.</p>
+                            <p>Setiap matahari terbit membawa kesempatan baru. Dalam setiap tantangan, kita temukan
+                                kekuatan. Berikan cinta, cari keindahan, dan berjalanlah dengan keyakinan. Hiduplah hari ini
+                                sepenuh hati.</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe4.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="pic"><img src="assets/img/doctors/cewe4.png" class="img-fluid" alt="">
+                        </div>
                         <div class="member-info">
                             <h4>Drg Vera Sentosa</h4>
                             <span>Dokter Gigi</span>
                             <p>Jadilah matahari yang menerangi kegelapan, baik bagi dirimu sendiri maupun orang lain.</p>
                             <!-- <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div> -->
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -560,9 +395,9 @@
             <div class="section-title">
                 <h2>Pertanyaan Yang Sering Diajukan</h2>
                 <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit
-                        in iste officiis commodi quidem hic quas.</p> -->
+                                                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                                                        fugiat sit
+                                                        in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="faq-list">
@@ -576,17 +411,19 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-1" class="!visible hidden" data-te-collapse-item>
-<<<<<<< HEAD
-                            <p> Kami menyediakan layanan antenatal yang komprehensif, termasuk konsultasi prenatal, 
-                                pemantauan kehamilan, dan penanganan masalah kesehatan ibu hamil. 
-                                Program ini juga mencakup kelas persiapan persalinan dan dukungan nutrisi khusus untuk ibu hamil. 
-                                Rumah Sakit kami memiliki fasilitas persalinan yang modern dan menyediakan perawatan pasca persalinan yang 
+                            <p> Kami menyediakan layanan antenatal yang komprehensif, termasuk konsultasi
+                                prenatal,
+                                pemantauan kehamilan, dan penanganan masalah kesehatan ibu hamil.
+                                Program ini juga mencakup kelas persiapan persalinan dan dukungan nutrisi khusus untuk ibu
+                                hamil.
+                                Rumah Sakit kami memiliki fasilitas persalinan yang modern dan menyediakan perawatan pasca
+                                persalinan yang
                                 lengkap untuk memastikan kenyamanan dan pemulihan yang optimal bagi ibu setelah melahirkan.
-=======
-                            <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia pelayanan
+                            </p>
+                            <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia
+                                pelayanan
                                 yang menggunakan.
                                 BPJS.
->>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
                             </p>
                         </div>
                     </li>
@@ -600,16 +437,19 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-2" class="!visible hidden" data-te-collapse-item>
-<<<<<<< HEAD
-                            <p>Rumah Sakit kami memiliki fasilitas persalinan yang modern dan menyediakan perawatan pasca persalinan yang 
-                                lengkap untuk memastikan kenyamanan dan pemulihan yang optimal bagi ibu setelah melahirkan dan 
-                                kami menawarkan berbagai layanan pediatrik mulai dari perawatan bayi baru lahir, termasuk konsultasi rutin, 
-                                vaksinasi, perawatan penyakit umum, serta penanganan kondisi khusus anak, USG, Fasilitas operasi Caesar yang 
-                                modern, Radiologi, dokter Gigi dan Rawat Inap 
-=======
+                            <p>Rumah Sakit kami memiliki fasilitas persalinan yang modern dan menyediakan
+                                perawatan pasca persalinan yang
+                                lengkap untuk memastikan kenyamanan dan pemulihan yang optimal bagi ibu setelah melahirkan
+                                dan
+                                kami menawarkan berbagai layanan pediatrik mulai dari perawatan bayi baru lahir, termasuk
+                                konsultasi rutin,
+                                vaksinasi, perawatan penyakit umum, serta penanganan kondisi khusus anak, USG, Fasilitas
+                                operasi Caesar yang
+                                modern, Radiologi, dokter Gigi dan Rawat Inap
+                            </p>
                             <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga
                                 Terdapat Pelayanan Umum.
->>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
+
                             </p>
                         </div>
                     </li>
@@ -623,8 +463,9 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-3" class="!visible hidden" data-te-collapse-item>
-                            <p> mengakses informasi tentang program imunisasi kami melalui situs web dan sosial media kami 
-                                atau dengan berkonsultasi dengan staf kami untuk jadwal lengkap dan jenis vaksin yang disediakan.
+                            <p> mengakses informasi tentang program imunisasi kami melalui situs web dan sosial media kami
+                                atau dengan berkonsultasi dengan staf kami untuk jadwal lengkap dan jenis vaksin yang
+                                disediakan.
                             </p>
                         </div>
                     </li>
@@ -638,31 +479,28 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
-<<<<<<< HEAD
-                            <p>Anda dapat mendaftar secara online melalui situs web kami atau menghubungi 
-                                layanan pendaftaran kami di nomor WA kami; 0853-2947-3535 untuk membuat janji. 
+                            <p>Anda dapat mendaftar secara online melalui situs web kami atau menghubungi
+                                layanan pendaftaran kami di nomor WA kami; 0853-2947-3535 untuk membuat janji.
                                 Kami memiliki jadwal yang fleksibel untuk memenuhi kebutuhan waktu Anda.
-=======
+                            </p>
                             <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan
                                 Pasien.
->>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="400">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-te-collapse-init data-te-ripple-init
-                            data-te-ripple-color="light" aria-expanded="false" aria-controls="faq-list-5"
-<<<<<<< HEAD
-                            href="#faq-list-5">Bagaimana cara atur kunjungan ke fasilitas RSIA Miriam sebelum melahirkan atau perawatan anak ?
-=======
-                            href="#faq-list-5">Apakah RSIA Miriam Tersedia 24 Jam ?
->>>>>>> 94ff9bf1cbf627368b604edce42737a96a699f43
-                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false"
+                            aria-controls="faq-list-5" href="#faq-list-5">Bagaimana cara atur kunjungan ke fasilitas RSIA
+                            Miriam sebelum melahirkan
+                            atau perawatan anak ?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                        </a>
                         <div id="faq-list-5" class="!visible hidden">
                             <p>
-                            Anda dapat mengatur fasilitas sebelumnya dengan menghubungi kami melalui nomor 
-                            layanan pelanggan kami atau mengisi formulir permintaan di situs web kami
+                                Anda dapat mengatur fasilitas sebelumnya dengan menghubungi kami melalui nomor
+                                layanan pelanggan kami atau mengisi formulir permintaan di situs web kami
                             </p>
                         </div>
                     </li>
@@ -674,7 +512,7 @@
                             <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-6" class="!visible hidden">
                             <p>
-                            Ya, kami memiliki layanan 24jam yang tersedia untuk menangani kondisi darurat medis
+                                Ya, kami memiliki layanan 24jam yang tersedia untuk menangani kondisi darurat medis
                             </p>
                         </div>
                     </li>

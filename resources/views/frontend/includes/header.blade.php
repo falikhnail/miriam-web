@@ -5,8 +5,9 @@
             <i class="bi bi-phone"></i> +62 853-2947-3535
         </div>
         <div class="flex space-x-4 mt-[15px] md:mt-0">
-            
-            <a href="https://api.whatsapp.com/send/?phone=6285329473535" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+
+            <a href="https://api.whatsapp.com/send/?phone=6285329473535" class="whatsapp"><i
+                    class="bi bi-whatsapp"></i></a>
             <a href="https://www.instagram.com/rsiamiriamkudus/" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.youtube.com/@rsiamiriam1195" class="youtube"><i class="bi bi-youtube"></i></i></a>
             <a href="https://www.facebook.com/rsiamiriamkudus/" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -20,36 +21,61 @@
             <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia">
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
-                    <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                    <?php
+                    $profile = ['visi_misi'];
+
+                    $current = explode('.', Route::current()->getName())[1];
+
+                    $isActive = function ($path) use ($current) {
+                        if (is_string($path)) {
+                            return 'nav-link ' . (strpos($path, $current) !== false ? 'active' : '');
+                        }
+
+                        if (is_array($path)) {
+                            return 'nav-link ' . (in_array($current, $path) !== false ? 'active' : '');
+                        }
+
+                        return '';
+                    };
+
+                    ?>
+                    <li><a class="scrollto {{ $isActive('index') }}" href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="{{ $isActive($profile) }}">
+                            <span>Profile</span> <i class="bi bi-chevron-down"></i>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">Profile RSIA MIRIAM</a>
                             </li>
-                            <li><a href="#">Visi dan Misi</a></li>
+                            <li>
+                                <a href="{{ route('frontend.visi_misi') }}" class="{{ $isActive('visi_misi') }}">Visi dan Misi</a>
+                            </li>
                             <li><a href="#">Sejarah</a></li>
                             <li><a href="#">Unit Kerja</a></li>
                             <li><a href="#">Struktur Organisasi</a></li>
                         </ul>
-                        <li class="dropdown"><a href="#"><span>Pelayanan</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#"><span>Pelayanan</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li>
                                 <a href="#">Maklumat Pelayanan</a>
                             </li>
                             <li><a href="#">Pelayanan Rsia Miriam</a></li>
                             <li><a href="#">Instalasi Gawat Darurat</a></li>
-                            <li class="dropdown"><a href="#"><span>Instalasi Radiologi</span> <i class="bi bi-chevron-right"></i></a>
-                            <ul>
-                            <li><a href="#">Radiologi USG</a></li>
-                            <li><a href="#">Radiologi Rontgen</a></li>
-                            </ul>
+                            <li class="dropdown"><a href="#"><span>Instalasi Radiologi</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Radiologi USG</a></li>
+                                    <li><a href="#">Radiologi Rontgen</a></li>
+                                </ul>
                             <li><a href="#">Konsutasi Ahli Gizi</a></li>
-                            <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i class="bi bi-chevron-right"></i></a>
-                            <ul>
-                            <li><a href="#">Pijat Bayi</a></li>
-                            <li><a href="#">Cukur Bayi</a></li>
-                            <li><a href="#">Tindik Bayi</a></li>
-                            </ul>
+                            <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Pijat Bayi</a></li>
+                                    <li><a href="#">Cukur Bayi</a></li>
+                                    <li><a href="#">Tindik Bayi</a></li>
+                                </ul>
                             <li><a href="#">Imunisasi Dasar</a></li>
                             <li><a href="#">Imunisasi Tambahan</a></li>
                             <li><a href="#">Imunisasi MR</a></li>
@@ -78,7 +104,8 @@
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-            <a href="{{ route('frontend.register_pasien') }}" class="appointment-btn scrollto hidden md:hidden lg:inline-block">
+            <a href="{{ route('frontend.register_pasien') }}"
+                class="appointment-btn scrollto hidden md:hidden lg:inline-block">
                 Pendaftaran Online
             </a>
         </div>
