@@ -33,6 +33,7 @@ class RegistVaksinController extends Controller {
 
     public function indexDT(Request $request) {
         //\Log::warning(json_encode($request->all()));
+        DB::enableQueryLog();
 
         // * filter
         $schedule = $request->get('tgl_schedule');
@@ -50,6 +51,8 @@ class RegistVaksinController extends Controller {
             $schedule
         );
 
+        //\Log::info(DB::getQueryLog());
+        //\Log::info('schedule >>> ' . $pasienData->first());
 
         $dataTable = DataTables::of($pasienData)
             ->addIndexColumn()
@@ -57,7 +60,7 @@ class RegistVaksinController extends Controller {
             ->addColumn('alamat', '{{$alamat}}')
             ->addColumn('vaksin', '{{$vaksin}}')
             ->editColumn('no_hp', fn($data) => "+$data->no_hp")
-            ->addColumn('schedule', fn ($data) => date('d/m/Y', strtotime($data->schedule)))
+            ->addColumn('schedule', fn ($data) => date('d/m/Y', strtotime($data->schedule->tanggal)))
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (PasienVaksin $data) {
                 $editRoute = 'backend.pasien.vaksin.edit';

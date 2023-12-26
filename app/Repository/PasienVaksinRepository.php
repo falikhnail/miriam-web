@@ -28,22 +28,30 @@ class PasienVaksinRepository {
         $tglSchedule = '',
         $limit = null
     ) {
-        $pasien = $this->model->orderBy('pasien_vaksin.created_at', 'desc');
+        $pasien = $this->model::with([
+            'schedule' => function ($q) {
+                $q->select('id', 'tanggal');
+            },
+            'dokter' => function ($q) {
+                $q->select('id', 'nama');
+            },
+        ])
+            ->orderBy('pasien_vaksin.created_at', 'desc');
 
         if (!empty($namaAnak) && strlen($namaAnak) > 0) {
-            $pasien->whereRaw("nama_lengkap_anak like '%$namaAnak%'");
+            $pasien->whereRaw("pasien_vaksin.nama_lengkap_anak like '%$namaAnak%'");
         }
         if (!empty($tglRegist) && strlen($tglRegist) > 0) {
-            $pasien->whereRaw("date(created_at) = '$tglRegist'");
+            $pasien->whereRaw("pasien_vaksin.date(created_at) = '$tglRegist'");
         }
         if (!empty($tglSchedule) && strlen($tglSchedule) > 0) {
-            $pasien->whereRaw("schedule = '$tglSchedule'");
+            $pasien->whereRaw("pasien_vaksin.schedule = '$tglSchedule'");
         }
         if (!empty($alamat) && strlen($alamat) > 0) {
-            $pasien->whereRaw("alamat like '%$alamat%'");
+            $pasien->whereRaw("pasien_vaksin.alamat like '%$alamat%'");
         }
         if (!empty($noHp) && strlen($noHp) > 0) {
-            $pasien->whereRaw("no_hp like '%$noHp%'");
+            $pasien->whereRaw("pasien_vaksin.no_hp like '%$noHp%'");
         }
         if ($limit != null) {
             $pasien->limit($limit);

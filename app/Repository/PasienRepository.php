@@ -26,7 +26,15 @@ class PasienRepository {
         $tglSchedule = '',
         $limit = null
     ) {
-        $pasien = $this->model->orderBy('pasien_umum.created_at', 'desc');
+        $pasien = $this->model::with([
+            'schedule' => function ($q) {
+                $q->select('id', 'tanggal');
+            },
+            'dokter' => function ($q) {
+                $q->select('id', 'nama');
+            },
+        ])
+            ->orderBy('pasien_umum.created_at', 'desc');
 
         if (!empty($nama) && strlen($nama) > 0) {
             $pasien->whereRaw("nama_lengkap like '%$nama%'");
