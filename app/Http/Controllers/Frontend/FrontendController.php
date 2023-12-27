@@ -14,4 +14,12 @@ class FrontendController extends Controller {
     public function visiMisi() {
         return view("frontend.visi_misi");
     }
+
+    public function pelayanan() {
+        return view("frontend.pelayanan");
+    }
+
+    public function jadwalDokter() {
+        return view("frontend.jadwal_dokter");
+    }
 }

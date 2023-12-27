@@ -1,8 +1,12 @@
 <div id="topbar" class="flex flex-col items-center">
-    <div class="container flex flex-col md:flex-row items-center justify-center md:justify-between my-[10px] md:my-5">
-        <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">sdm.rsiamiriam@gmail.com</a>
-            <i class="bi bi-phone"></i> +62 853-2947-3535
+    <div class="container-sm flex flex-col md:flex-row items-center justify-center md:justify-between my-[10px] md:my-5">
+        <div class="contact-info d-flex flex-column flex-md-row align-items-center">
+            <a href="mailto:contact@example.com">
+                <i class="bi bi-envelope"></i> sdm.rsiamiriam@gmail.com
+            </a>
+            <a href="#" class="mt-3 mt-md-0">
+                <i class="bi bi-phone"></i> +62 853-2947-3535
+            </a>
         </div>
         <div class="flex space-x-4 mt-[15px] md:mt-0">
 
@@ -23,6 +27,8 @@
                 <ul>
                     <?php
                     $profile = ['visi_misi'];
+                    $pelayanan = ['pelayanan'];
+                    $informasi = ['jadwal_dokter'];
 
                     $current = explode('.', Route::current()->getName())[1];
 
@@ -49,18 +55,25 @@
                                 <a href="#">Profile RSIA MIRIAM</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.visi_misi') }}" class="{{ $isActive('visi_misi') }}">Visi dan Misi</a>
+                                <a href="{{ route('frontend.visi_misi') }}" class="{{ $isActive('visi_misi') }}">Visi
+                                    dan Misi</a>
                             </li>
                             <li><a href="#">Sejarah</a></li>
                             <li><a href="#">Unit Kerja</a></li>
                             <li><a href="#">Struktur Organisasi</a></li>
                         </ul>
-                    <li class="dropdown"><a href="#"><span>Pelayanan</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown">
+                        <a href="#" class="{{ $isActive($pelayanan) }}">
+                            <span>Pelayanan</span> <i class="bi bi-chevron-down"></i>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">Maklumat Pelayanan</a>
                             </li>
-                            <li><a href="#">Pelayanan Rsia Miriam</a></li>
+                            <li>
+                                <a href="{{ route('frontend.pelayanan') }}"
+                                    class="{{ $isActive('pelayanan') }}">Pelayanan Rsia Miriam</a>
+                            </li>
                             <li><a href="#">Instalasi Gawat Darurat</a></li>
                             <li class="dropdown"><a href="#"><span>Instalasi Radiologi</span> <i
                                         class="bi bi-chevron-right"></i></a>
@@ -81,10 +94,16 @@
                             <li><a href="#">Imunisasi MR</a></li>
                             <li><a href="#">Vaksinasi Dewasa</a></li>
                         </ul>
-                    <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown">
+                        <a href="#" class="{{ $isActive($informasi) }}">
+                            <span>Informasi</span> <i class="bi bi-chevron-down"></i>
+                        </a>
                         <ul>
                             <li>
-                                <a href="#">Jadwal Dokter</a>
+                                <a href="{{ route('frontend.jadwal_dokter') }}"
+                                    class="{{ $isActive('jadwal_dokter') }}">
+                                    Jadwal Dokter
+                                </a>
                             </li>
                             <li><a href="#">Tarif Pelayanan Rumah Sakit</a></li>
                             <li><a href="#">Tata Tertib Pasien, Pengujung, dan Penunggu</a></li>

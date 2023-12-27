@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('/visi-misi', 'FrontendController@visiMisi')->name('visi_misi');
+    Route::get('/pelayanan', 'FrontendController@pelayanan')->name('pelayanan');
+    Route::get('/jadwal-dokter', 'FrontendController@jadwalDokter')->name('jadwal_dokter');
 
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');
 
