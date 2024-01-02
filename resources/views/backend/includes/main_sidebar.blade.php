@@ -1,7 +1,19 @@
 <nav id="admin-sidebar"
-    class="group fixed left-0 top-20 h-screen w-60 -translate-x-full py-7 overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-slim='true']:hidden data-[te-sidenav-slim-collapsed='true']:w-[77px] data-[te-sidenav-slim='true']:w-[77px] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-zinc-800 [&[data-te-sidenav-slim-collapsed='true'][data-te-sidenav-slim='false']]:hidden [&[data-te-sidenav-slim-collapsed='true'][data-te-sidenav-slim='true']]:[display:unset]"
-    data-te-sidenav-init data-te-sidenav-hidden="false" data-te-sidenav-mode="side" data-te-sidenav-slim="true"
-    data-te-sidenav-content="#content" data-te-sidenav-slim-collapsed="true">
+    class="group fixed left-0 top-20 h-screen w-60 -translate-x-full py-7
+    overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)]
+    data-[te-sidenav-slim='true']:hidden
+    data-[te-sidenav-slim-collapsed='true']:w-[100px]
+    data-[te-sidenav-slim='true']:w-[100px]
+    data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-zinc-800
+    [&[data-te-sidenav-slim-collapsed='true'][data-te-sidenav-slim='false']]:hidden
+    [&[data-te-sidenav-slim-collapsed='true'][data-te-sidenav-slim='true']]:[display:unset]"
+    data-te-sidenav-init
+    data-te-sidenav-slim-width="100"
+    data-te-sidenav-hidden="false"
+    data-te-sidenav-mode="side"
+    data-te-sidenav-slim="true"
+    data-te-sidenav-content="#content"
+    data-te-sidenav-slim-collapsed="true">
     {{-- z-index default for this component z-[1035] --}}
     @php
         $subMenu = '/admin/pasien/';
@@ -14,7 +26,7 @@
     {!! $admin_sidebar->asUl(
         ['class' => 'relative m-0 list-none px-[0.2rem]', 'data-te-sidenav-menu-ref'],
         [
-            'class' => '!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block',
+            'class' => '!visible dropdown-item relative m-0 hidden list-none p-0 data-[te-collapse-show]:block',
             'data-te-sidenav-collapse-ref',
             $collapseSub,
         ],

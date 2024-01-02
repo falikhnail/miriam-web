@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Livewire\Forms\PasienBkiaForm;
+use App\Models\Dokter;
 use App\Repository\DokterRepository;
 use App\Repository\ScheduleRepository;
 use Illuminate\Support\Collection;
@@ -24,7 +25,7 @@ class RegistPasienBkia extends Component {
         //\Log::warning("schedule >> ", (array) $this->scheduleList->toArray());
 
         $this->isSuccess = false;
-        $this->form->schedule_id = '';
+        $this->form->schedule = '';
         $this->form->dokter_id = '';
         $this->form->cara_bayar = '';
 
@@ -52,23 +53,10 @@ class RegistPasienBkia extends Component {
     }
 
     public function updatedFormScheduleId($value) {
-        $r = new Collection();
+        $dokterRepository = new DokterRepository(new Dokter());
+        $dokterAvail = $dokterRepository->getReadyDokterByTanggal($value);
 
-        foreach ($this->scheduleList as $schedule) {
-            if ($schedule->id == $value) {
-                if (count($scheduleDokter = $schedule->schedule_dokter) > 0) {
-                    foreach ($scheduleDokter as $sd) {
-                        $r->push((object) [
-                            'id' => $sd->dokter->id,
-                            'nama' => $sd->dokter->nama
-                        ]);
-                    }
-                }
-                break;
-            }
-        }
-
-        if ($r->isEmpty()) {
+        if ($dokterAvail->isEmpty()) {
             $this->dispatch("swal", [
                 'icon' => 'warning',
                 'title' => 'Info',
@@ -77,9 +65,9 @@ class RegistPasienBkia extends Component {
                 'toast' => true,
             ]);
 
-            $this->form->schedule_id = "";
+            $this->form->schedule = "";
         } else {
-            $this->dokterList = $r;
+            $this->dokterList = $dokterAvail;
         }
     }
 

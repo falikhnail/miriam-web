@@ -69,7 +69,7 @@
                 $("#nik_anak").val(data.nik_anak)
                 $("#nama_orang_tua").val(data.nama_orang_tua)
                 $("#alamat").text(data.alamat)
-                $("#schedule_id").val(data.schedule_id)
+                $("#schedule").val(data.schedule)
                 $("#dokter_id").val(data.dokter_id)
                 $("#cara_bayar").val(data.cara_bayar)
                 $("#no_hp").val(`+${data.no_hp}`)

@@ -32,11 +32,11 @@ class DokterController extends Controller {
         // * filter
         $nama = $request->get('nama');
 
-        $pasienData = $this->dokterRepo->getAll(
+        $dokter = $this->dokterRepo->getAll(
             $nama
         );
 
-        $dataTable = DataTables::of($pasienData)
+        $dataTable = DataTables::of($dokter)
             ->addIndexColumn()
             ->addColumn('nama', '{{$nama}}')
             ->addColumn('status', function (Dokter $data) {

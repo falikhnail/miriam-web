@@ -12,7 +12,7 @@ class KuotaTransaksi extends Model {
     protected $table = 'kuota_transaksi';
 
     protected $fillable = [
-        'schedule_id',
+        'schedule',
         'kuota_before',
         'kuota_after',
         'type'

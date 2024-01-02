@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('kuota_transaksi', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('schedule_id')->nullable();
-            $table->foreign('schedule_id')->references('id')->on('schedule')->onDelete('cascade');
+            /* $table->unsignedBigInteger('schedule_id')->nullable();
+            $table->foreign('schedule_id')->references('id')->on('schedule')->onDelete('cascade'); */
+            $table->date('schedule')->nullable();
 
             $table->integer('kuota_before');
             $table->integer('kuota_after');

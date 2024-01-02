@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Exceptions\GeneralException;
 use App\Http\Requests\DokterRequest;
 use App\Models\Dokter;
+use App\Models\Schedule;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -12,10 +13,8 @@ use Livewire\Exceptions\MethodNotFoundException;
 use Throwable;
 
 class DokterRepository {
-    protected $model;
 
-    public function __construct(Dokter $model) {
-        $this->model = $model;
+    public function __construct(public Dokter $model) {
     }
 
     public function getAll(
@@ -35,7 +34,7 @@ class DokterRepository {
             $dokter->limit($limit);
         }
 
-        return $dokter->get();
+        return $dokter;
     }
 
     public function getById($id) {
@@ -49,11 +48,11 @@ class DokterRepository {
     }
 
     public function getLimited($limit = 5) {
-        return $this->getAll(null, null, $limit);
+        return $this->getAll(null, null, $limit)->get();
     }
 
     public function getActive() {
-        return $this->getAll(null, 1);
+        return $this->getAll(null, 1)->get();
     }
 
     public function store(DokterRequest $request) {
@@ -101,5 +100,24 @@ class DokterRepository {
             DB::rollBack();
             throw new Exception($e->getMessage());
         }
+    }
+
+    public function getStandByDokterByScheduleTanggal($tanggal) {
+        $dokterAvail = $this->model::notInSchedule($tanggal)->get();
+
+        return $dokterAvail;
+    }
+
+    public function getReadyDokterByTanggal($tanggal){
+        $dokterAvail = $this->model::leftJoinSchedule($tanggal)
+            ->get();
+
+        return $dokterAvail;
+    }
+
+    public function getAvailDokterByScheduleId($scheduleId) {
+        $dokterAvail = $this->model::inScheduleByScheduleId($scheduleId)->get();
+
+        return $dokterAvail;
     }
 }

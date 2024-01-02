@@ -18,8 +18,9 @@ return new class extends Migration {
             $table->string('no_hp', 50);
             $table->text('alamat');
 
-            $table->unsignedBigInteger('schedule_id')->nullable();
-            $table->foreign('schedule_id')->references('id')->on('schedule')->onDelete('cascade');
+            /* $table->unsignedBigInteger('schedule_id')->nullable();
+            $table->foreign('schedule_id')->references('id')->on('schedule')->onDelete('cascade'); */
+            $table->date('schedule')->nullable();
 
             $table->unsignedBigInteger('dokter_id')->nullable();
             $table->foreign('dokter_id')->references('id')->on('dokter')->onDelete('cascade');

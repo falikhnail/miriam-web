@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Livewire\Forms\PasienVaksinForm;
+use App\Models\Dokter;
 use App\Models\PasienVaksin;
 use App\Repository\DokterRepository;
 use App\Repository\ScheduleRepository;
@@ -20,12 +21,15 @@ class RegistPasienVaksin extends Component {
         DokterRepository $dokterRepository,
         ScheduleRepository $scheduleRepository
     ) {
+        // \DB::enableQueryLog();
         $this->dokterList = $dokterRepository->getActive();
         //$this->scheduleList = date_interval(date('Y-m-d'), 12);
         $this->scheduleList = $scheduleRepository->getEstimate(12);
 
+        //\Log::info(\DB::getQueryLog());
+
         $this->isSuccess = false;
-        $this->form->schedule_id = '';
+        $this->form->schedule = '';
         $this->form->dokter_id = '';
         $this->form->cara_bayar = '';
 
@@ -51,24 +55,11 @@ class RegistPasienVaksin extends Component {
         $this->validateOnly($propertyName);
     }
 
-    public function updatedFormScheduleId($value) {
-        $r = new Collection();
+    public function updatedFormSchedule($value) {
+        $dokterRepository = new DokterRepository(new Dokter());
+        $dokterAvail = $dokterRepository->getReadyDokterByTanggal($value);
 
-        foreach ($this->scheduleList as $schedule) {
-            if ($schedule->id == $value) {
-                if (count($scheduleDokter = $schedule->schedule_dokter) > 0) {
-                    foreach ($scheduleDokter as $sd) {
-                        $r->push((object) [
-                            'id' => $sd->dokter->id,
-                            'nama' => $sd->dokter->nama
-                        ]);
-                    }
-                }
-                break;
-            }
-        }
-
-        if ($r->isEmpty()) {
+        if ($dokterAvail->isEmpty()) {
             $this->dispatch("swal", [
                 'icon' => 'warning',
                 'title' => 'Info',
@@ -77,9 +68,9 @@ class RegistPasienVaksin extends Component {
                 'toast' => true,
             ]);
 
-            $this->form->schedule_id = "";
+            $this->form->schedule = "";
         } else {
-            $this->dokterList = $r;
+            $this->dokterList = $dokterAvail;
         }
     }
 

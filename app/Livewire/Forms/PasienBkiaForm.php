@@ -37,7 +37,7 @@ class PasienBkiaForm extends Form {
     public $no_hp;
 
     #[Rule('required', as: 'Tanggal Periksa')]
-    public $schedule_id;
+    public $schedule;
     public $dokter_id;
 
     #[Rule('required', as: 'Cara Bayar')]
@@ -51,7 +51,6 @@ class PasienBkiaForm extends Form {
         $this->scheduleRepo = new ScheduleRepository(
             new Schedule(),
             new Dokter(),
-            new ScheduleDokter(),
             new KuotaTransaksi()
         );
     }
@@ -69,7 +68,7 @@ class PasienBkiaForm extends Form {
                 'tanggal_lahir',
             ]));
 
-            $this->scheduleRepo->updateKuota($this->schedule_id, 'bkia');
+            $this->scheduleRepo->updateKuota($this->schedule, 'bkia');
 
             DB::commit();
 

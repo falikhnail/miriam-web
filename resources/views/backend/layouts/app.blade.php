@@ -54,6 +54,11 @@
             <i class="fa-solid fa-spinner fa-spin fa-2xl" style="color: #1662e3;"></i>
         </div>
     </div>
+    <div class="loading-content">
+        <div class="flex items-center justify-center min-h-screen w-full">
+            <i class="fa-solid fa-spinner fa-spin fa-2xl" style="color: #1662e3;"></i>
+        </div>
+    </div>
     <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white" id="main">
         @include('backend.includes.main_header')
 
@@ -84,15 +89,29 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
-        const sidebar = te.Sidenav.getOrCreateInstance(
-            document.getElementById("admin-sidebar")
+        const sidebarElement = document.getElementById("admin-sidebar");
+        let sidebar = te.Sidenav.getOrCreateInstance(
+            sidebarElement
         );
 
-        $(document).ready(function() {
+        $(document).ready(async function() {
             $('meta[name="viewport"]').prop('content', 'width=1440');
-            initialSidebar()
+            await initialSidebar()
 
             $("#full-loading").hide()
+            $(".loading-content").hide()
+
+            sidebarElement.addEventListener("expanded.te.sidenav", (event) => {
+                //console.log('event expanded sidenav', event);
+                $('.side-nav-dropdown').show()
+                $('.dropdown-item').show()
+            })
+
+            sidebarElement.addEventListener("collapse.te.sidenav", (event) => {
+                //console.log('event collapse sidenav', event);
+                $('.side-nav-dropdown').hide()
+                $('.dropdown-item').hide()
+            })
         })
 
         $("#admin-sidebar-toggler").click(() => {
@@ -101,7 +120,6 @@
             const isCollapsed = sidebar._slimCollapsed;
             sessionStorage.setItem('admin_sidebar_slim', isCollapsed);
             togglePadSectionFooter(isCollapsed)
-
         })
 
         async function initialSidebar() {
@@ -109,6 +127,11 @@
             if (isSidebarCollapsed == 'false') {
                 sidebar.toggleSlim()
                 togglePadSectionFooter(isSidebarCollapsed == 'false')
+                //$('.side-nav-dropdown').show()
+                //$('.dropdown-item').show()
+            } else {
+                $('.side-nav-dropdown').hide()
+                $('.dropdown-item').hide()
             }
         }
 
@@ -159,6 +182,35 @@
                     callback()
                 }
             });
+        }
+
+        function showLoading() {
+            $(".loading-content").slideDown()
+        }
+
+        function hideLoading() {
+            $(".loading-content").slideUp()
+        }
+
+        function showError(message = 'Terjadi kesalahan') {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: message
+            });
+        }
+
+        function makeUniqueId(length = 10) {
+            let result = '';
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const charactersLength = characters.length;
+            let counter = 0;
+            while (counter < length) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                counter += 1;
+            }
+
+            return result;
         }
     </script>
 

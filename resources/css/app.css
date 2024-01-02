@@ -93,3 +93,14 @@ input:checked+label {
 .active {
     color: var(--color-primary) !important;
 }
+
+
+.loading-content {
+    background-color: rgba(250, 250, 250, 0.9);
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

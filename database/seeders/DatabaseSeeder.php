@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder {
         //PasienVaksin::factory(20)->create();
         Dokter::factory(5)->create();
         Schedule::factory(5)->create();
-        
-        $this->call(ScheduleDokterSeeder::class);
+
+        //$this->call(ScheduleDokterSeeder::class);
 
         Schema::enableForeignKeyConstraints();
     }

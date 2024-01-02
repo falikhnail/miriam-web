@@ -18,6 +18,8 @@ class ScheduleFactory extends Factory
     public function definition(): array
     {
         return [
+            //'sid' => $this->faker->uuid(),
+            'dokter_id' => $this->faker->numberBetween(1, 5),
             'tanggal' => $this->faker->dateTimeBetween('now', '+7 days'),
             'kuota' => 5,
         ];

@@ -104,7 +104,7 @@ ul li .active a {
 
 #admin-sidebar ul li ul li a:before {
     content: "";
-    @apply border-l-[1px] h-10 border-gray-400 ml-14 mr-2;
+    @apply border-l-[1px] h-10 border-gray-200 ml-[4.5rem] mr-4;
 }
 
 /* #admin-sidebar .active {
@@ -204,4 +204,13 @@ select:disabled {
 
 .select2-container--open {
     @apply mt-2 shadow-lg !important;
+}
+
+
+.short-divider {
+    height: 20px;
+    width: 60px;
+    margin: 0 auto;
+    border-top: 4px solid #60aef3;
+    opacity: 1 !important;
 }

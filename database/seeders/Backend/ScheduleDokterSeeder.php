@@ -21,25 +21,25 @@ class ScheduleDokterSeeder extends Seeder
         $data = [
             [
                 'dokter_id' => 1,
-                'schedule_id' => 1,
+                'schedule' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'dokter_id' => 2,
-                'schedule_id' => 1,
+                'schedule' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'dokter_id' => 3,
-                'schedule_id' => 1,
+                'schedule' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'dokter_id' => 4,
-                'schedule_id' => 1,
+                'schedule' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]

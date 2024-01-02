@@ -8,8 +8,11 @@
     <div class="m-auto">
         <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia mx-auto">
         <div class="w-96 rounded-lg shadow-xl p-5 bg-white mt-5">
-            <h1 class="text-xl text-center font-bold">Login Admin</h1>
-            <div class="flex mt-10">
+            <div class="flex flex-col">
+                <h1 class="text-xl text-center font-bold">Login Admin</h1>
+                <span class="short-divider"></span>
+            </div>
+            <div class="flex mt-2">
                 <form action="{{ route('auth.admin_login.action') }}" method="POST" class="w-full p-4">
                     @csrf
                     <div class="flex flex-col">

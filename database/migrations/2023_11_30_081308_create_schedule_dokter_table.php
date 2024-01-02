@@ -9,23 +9,21 @@ return new class extends Migration {
      * Run the migrations.
      */
     public function up(): void {
-        Schema::create('schedule_dokter', function (Blueprint $table) {
+        /*  Schema::create('schedule_dokter', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('dokter_id')->nullable();
             $table->foreign('dokter_id')->references('id')->on('dokter')->onDelete('cascade');
-
-            $table->unsignedBigInteger('schedule_id')->nullable();
-            $table->foreign('schedule_id')->references('id')->on('schedule')->onDelete('cascade');
+            $table->date('schedule')->nullable();
 
             $table->timestamps();
-        });
+        }); */
     }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void {
-        Schema::dropIfExists('schedule_dokter');
+        //Schema::dropIfExists('schedule_dokter');
     }
 };

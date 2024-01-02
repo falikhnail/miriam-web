@@ -7,7 +7,6 @@ use App\Http\Requests\ScheduleRequest;
 use App\Models\Dokter;
 use App\Models\KuotaTransaksi;
 use App\Models\Schedule;
-use App\Models\ScheduleDokter;
 use Carbon\Carbon;
 use DB;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,11 +14,9 @@ use Throwable;
 
 class ScheduleRepository {
 
-
     public function __construct(
         public Schedule $model,
         public Dokter $dokter,
-        public ScheduleDokter $scheduleDokter,
         public KuotaTransaksi $kuotaTransaksi
     ) {
     }
@@ -31,12 +28,7 @@ class ScheduleRepository {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function getAll(string $tanggal = '', int $estimatedDate = 0): Builder {
-        $schedule = $this->model::with([
-            'schedule_dokter' => function ($q) {
-                $q->with('dokter:id,nama')
-                    ->select('id', 'dokter_id', 'schedule_id');
-            }
-        ]);
+        $schedule = $this->model::with('dokter');
 
         if ($estimatedDate != null && $estimatedDate > 0) {
             $schedule->whereRaw("tanggal between current_date and date_add(current_date, interval $estimatedDate day)");
@@ -50,34 +42,35 @@ class ScheduleRepository {
         return $schedule;
     }
 
+    public function getById($id) {
+        return $this->model::find($id);
+    }
+
     /**
      * Summary of getEvents
-     * @param mixed $tanggal
+     * @param string $tanggal
      * @return array
      * if tanggal was filled, there just want specific
      */
-    public function getEvents($tanggal = '') {
+    public function getEvents(string $tanggal = ''): array {
+        DB::enableQueryLog();
+
         $schedule = [];
-        if (empty($tanggal)) {
-            $scheduleData = $this->getAll($tanggal)->get();
-        } else {
-            $scheduleData = $this->getAll($tanggal)->first();
-        }
+        $scheduleData = $this->getAll($tanggal)
+            ->get();
+        /* ->groupBy(['tanggal'])
+            ->all(); */
 
-        if (!empty($tanggal)) {
-            if (empty($scheduleData)) {
-                return [];
-            }
+        /* $scheduleData = $this->model
+            ->selectRaw('id, tanggal, sum(kuota) kuota')
+            ->when(!empty($tanggal), fn ($q) => $q->where('tanggal', $tanggal))
+            ->groupByRaw('tanggal, kuota')
+            ->get(); */
 
-            return [
-                'id' => $scheduleData->id,
-                'kuota' => $scheduleData->kuota,
-                'tanggal' => $scheduleData->tanggal,
-            ];
-        }
-        //\Log::warning('get <<< ' . json_encode($scheduleData));
+        //\Log::info(DB::getQueryLog());
+        //\Log::info(json_encode($scheduleData));
 
-        if (!$scheduleData->isEmpty()) {
+        if (!empty($scheduleData)) {
             foreach ($scheduleData as $value) {
                 $events = [
                     'id' => $value->id,
@@ -85,17 +78,10 @@ class ScheduleRepository {
                     'title' => 'Kuota ' . $value->kuota,
                     'start' => $value->tanggal,
                     'schedule_id' => $value->id,
-                    'dokter' => [],
-                    'dokter_id' => [],
+                    'dokter' => $value->dokter->nama,
+                    'dokter_id' => $value->dokter->id,
                     'overlap' => false
                 ];
-
-                if (count($value->schedule_dokter) > 0) {
-                    foreach ($value->schedule_dokter as $schedule_dokter) {
-                        $events['dokter'][] = $schedule_dokter->dokter->nama;
-                        $events['dokter_id'][] = $schedule_dokter->dokter->id;
-                    }
-                }
 
                 $schedule[] = $events;
             }
@@ -112,6 +98,7 @@ class ScheduleRepository {
             ];
         }
 
+        //\Log::info(DB::getQueryLog());
         //\Log::warning('get <<< ' . json_encode($schedule));
         return $schedule;
     }
@@ -121,32 +108,42 @@ class ScheduleRepository {
     }
 
     public function getEstimate(int $estimate) {
-        return $this->getAll('', $estimate)->get();
+        return $this->getAll('', $estimate)
+            ->selectRaw("id, tanggal, sum(kuota) as kuota")
+            ->groupByRaw("tanggal")
+            ->orderBy('tanggal')
+            ->get();
     }
 
     public function store(ScheduleRequest $request) {
         try {
             DB::transaction(function () use ($request) {
-                $this->model::insert([
-                    'tanggal' => $request->tanggal,
-                    'kuota' => $request->kuota,
-                ]);
-
-                $scheduleId = DB::getPdo()->lastInsertId();
-
-                $scheduleDokterData = [];
+                /* $scheduleDokterData = [];
                 foreach ($request->dokter as $dokter) {
                     $scheduleDokterData[] = [
+                        'sid' => $request->sid,
                         'dokter_id' => $dokter,
-                        'schedule_id' => $scheduleId,
+                        'tanggal' => $request->tanggal,
+                        'kuota' => $request->kuota,
                         'created_at' => Carbon::now(),
                         'updated_at' => Carbon::now(),
                     ];
                 }
 
-                $this->scheduleDokter::insert($scheduleDokterData);
+                $this->model::insert($scheduleDokterData); */
+
+                $this->model::insert([
+                    //'sid' => $request->sid,
+                    'dokter_id' => $request->dokter,
+                    'tanggal' => $request->tanggal,
+                    'kuota' => $request->kuota,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ]);
             });
         } catch (Throwable $e) {
+            \Log::warning($e);
+
             throw new GeneralException('Gagal Menambahkan data');
         }
     }
@@ -154,23 +151,24 @@ class ScheduleRepository {
     public function update($id, ScheduleRequest $request) {
         try {
             DB::transaction(function () use ($id, $request) {
-                $this->model = $this->model::find($id);
-                $this->model->kuota = $request->kuota;
-                $this->model->save();
-
-                $this->scheduleDokter->where('schedule_id', $id)->delete();
-
-                $scheduleDokterData = [];
+                /* $scheduleDokterData = [];
                 foreach ($request->dokter as $dokter) {
                     $scheduleDokterData[] = [
+                        //'sid' => $request->sid,
                         'dokter_id' => $dokter,
-                        'schedule_id' => $id,
+                        'tanggal' => $tanggal,
+                        'kuota' => $request->kuota,
                         'created_at' => Carbon::now(),
                         'updated_at' => Carbon::now(),
                     ];
                 }
 
-                $this->scheduleDokter::insert($scheduleDokterData);
+                $this->model->insert($scheduleDokterData); */
+
+                $this->model = $this->model::lockForUpdate()->find($id);
+                $this->model->dokter_id = $request->dokter;
+                $this->model->kuota = $request->kuota;
+                $this->model->save();
             });
         } catch (Throwable $e) {
             throw new GeneralException('Gagal Memperharui data');
@@ -185,7 +183,7 @@ class ScheduleRepository {
      * @throws GeneralException
      */
     public function updateKuota($id, $type) {
-        $this->model = $this->model::find($id);
+        $this->model = $this->model::lockForUpdate()->find($id);
         if ($this->model->kuota > 0 && $this->model->kuota >= 1) {
             $lastKuota = $this->model->kuota;
             $this->model->kuota = $this->model->kuota - 1;
@@ -206,11 +204,11 @@ class ScheduleRepository {
 
     public function delete($id) {
         DB::transaction(function () use ($id) {
-            if ($this->model::find($id)->delete()) {
+            if ($this->model::lockForUpdate()->find($id)->delete()) {
                 return true;
             }
 
-            throw new GeneralException('Gagal menambahkan data');
+            throw new GeneralException('Gagal menghapus data');
         });
     }
 }

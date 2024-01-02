@@ -93,14 +93,14 @@
     <div class="flex flex-wrap mb-3">
         <div class="w-full md:px-3">
             <label class="block tracking-wide text-gray-700 font-bold mb-2" for="tanggal_schedule">
-                Hari / Tanggal Rencana Vaksin  <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
+                Hari / Tanggal Rencana Vaksin <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
             </label>
             <div class="relative">
-                <select class="main-input" id="tanggal_schedule" name="schedule_id" wire:model.live="form.schedule_id"
-                    style="{{ $errors->has('form.schedule_id') ? 'border-color: red;' : '' }}">
+                <select class="main-input" id="tanggal_schedule" name="schedule" wire:model.live="form.schedule"
+                    style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
                     @foreach ($scheduleList as $data)
-                        <option value="{{ $data->id }}" class="flex justify-between">
+                        <option value="{{ $data->tanggal }}" class="flex justify-between">
                             <span>{{ date('d/m/Y', strtotime($data->tanggal)) }}</span>
                         </option>
                     @endforeach
@@ -109,12 +109,12 @@
                     <i class="fa-solid fa-circle-notch fa-spin"></i>
                 </div> --}}
             </div>
-            @error('form.schedule_id')
+            @error('form.schedule')
                 <span class="text-red-500 text-xs italic">{{ $message }}</span>
             @enderror
         </div>
     </div>
-    <div class="flex flex-wrap mb-3">
+    <div class="flex flex-wrap mb-3 relative">
         <div class="w-full md:px-3">
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter">
                 Dokter
@@ -122,9 +122,13 @@
             <select class="main-input" id="dokter" wire:model="form.dokter_id">
                 <option value="" disabled selected hidden>Pilih Dokter</option>
                 @foreach ($dokterList as $data)
-                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                    <option value="{{ $data->id }}">{{ $data->nama . ', Kuota ' . $data->kuota . 'x' }}</option>
                 @endforeach
             </select>
+        </div>
+        <div wire:loading wire:target="form.schedule" class="absolute "
+            style="top: 50%; left: 50%; background-color: rgba(250, 250, 250, 0.9)">
+            <i class="fa-solid fa-spinner fa-spin fa-xl" style="color: #1662e3;"></i>
         </div>
     </div>
     <div class="flex flex-wrap mb-3">

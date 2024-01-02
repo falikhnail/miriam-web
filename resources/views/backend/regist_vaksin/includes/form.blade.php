@@ -52,12 +52,12 @@
             <input class="main-input" id="vaksin" name="vaksin" type="text">
         </div>
         <div class="w-full md:px-3">
-            <label class="block tracking-wide text-gray-700 font-bold mb-2" for="schedule_id">
+            <label class="block tracking-wide text-gray-700 font-bold mb-2" for="schedule">
                 Hari / Tanggal Rencana Vaksin <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
             </label>
             <div class="relative">
-                <select class="main-input" id="schedule_id" name="schedule_id"
-                    style="{{ $errors->has('form.schedule_id') ? 'border-color: red;' : '' }}">
+                <select class="main-input" id="schedule" name="schedule"
+                    style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
                     @foreach ($scheduleList as $data)
                         <option value="{{ $data->id }}" class="flex justify-between">
@@ -66,7 +66,7 @@
                     @endforeach
                 </select>
             </div>
-            @error('schedule_id')
+            @error('schedule')
                 <span class="text-red-500 text-xs italic">{{ $message }}</span>
             @enderror
         </div>

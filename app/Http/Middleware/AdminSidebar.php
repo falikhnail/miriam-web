@@ -34,42 +34,60 @@ class AdminSidebar {
                                 data-[te-sidenav-state-active]:text-inherit
                                 data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none';
 
-            $dropdown_parent = function ($name, $icon) {
+            $dropdown_parent = function ($name, $icon, $isAsset = false) {
+                if ($isAsset) {
+                    $i = '<img src="' . asset("images/$icon") . '" width="30" height="30" />';
+                } else {
+                    $i = '<i class="' . $icon . '"></i>';
+                }
+
                 return '
                 <span class="mr-4">
-                    <i class="' . $icon . '"></i>
+                    ' . $i . '
                 </span>
                 <span class="group-[&[data-te-sidenav-slim-collapsed=' . "'true'" . ']]:data-[te-sidenav-slim=' . "'false'" . ']:hidden"
                     data-te-sidenav-slim=' . "'false'" . '>'
                     . $name . '
                 </span>
                 <span
-                    class="absolute right-0 ml-auto mr-[0.5rem] transition-transform duration-300 ease-linear motion-reduce:transition-none"
+                    class="side-nav-dropdown absolute right-0 ml-auto mr-[0.5rem] transition-transform duration-300 ease-linear motion-reduce:transition-none"
                     data-te-sidenav-rotate-icon-ref>
                     <i class="fa-solid fa-circle-chevron-down"></i>
                 </span>';
             };
 
-            $item = function ($name, $icon) {
+            $item = function ($name, $icon, $isAsset = false) {
                 // * selector eg. svg = [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300
+                if ($isAsset) {
+                    $i = '<img src="' . asset("images/$icon") . '" width="30" height="30" />';
+                } else {
+                    $i = '<i class="' . $icon . '"></i>';
+                }
+
                 return '<span class="mr-4">
-                    <i class="' . $icon . '"></i>
+                ' . $i . '
                 </span>
                 <span class="group-[&[data-te-sidenav-slim-collapsed=' . "'true'" . ']]:data-[te-sidenav-slim=' . "'false'" . ']:hidden"
                     data-te-sidenav-slim=' . "'false'" . '>' . $name . '</span>';
             };
 
-            $itemDropdown = function ($name) {
+            $itemDropdown = function ($name, $icon = '') {
+                if (!empty($icon)) {
+                    $i = '<img src="' . asset("images/$icon") . '" width="20" height="20" />';
+                } else {
+                    $i = '<i class="fa-regular fa-circle fa-2xs"></i>';
+                }
+
                 return '
                         <span class="mr-4">
-                            <i class="fa-regular fa-circle fa-2xs"></i>
+                            ' . $i . '
                         </span>
                         <span class="group-[&[data-te-sidenav-slim-collapsed=' . "'true'" . ']]:data-[te-sidenav-slim=' . "'false'" . ']:hidden"
                             data-te-sidenav-slim=' . "'false'" . '>' . $name . '
                         </span>';
             };
 
-            $menu->add($item('Dashboard', 'fa-solid fa-industry'), [
+            $menu->add($item('Dashboard', 'icon/dashboard.png', true), [
                 'route' => 'backend.dashboard',
                 'class' => 'relative',
             ])
@@ -83,7 +101,7 @@ class AdminSidebar {
                 ]);
 
             if (Auth::user()->can('view_pasien') || Auth::user()->can('view_pasien_bkia') || Auth::user()->can('view_pasien_vaksin')) {
-                $pasien = $menu->add($dropdown_parent('Registrasi', 'fa-solid fa-industry'), [
+                $pasien = $menu->add($dropdown_parent('Registrasi', 'icon/register.png', true), [
                     'class' => 'relative',
                 ])
                     ->data([
@@ -100,7 +118,7 @@ class AdminSidebar {
 
                 if (Auth::user()->can('view_pasien')) {
                     $pasien
-                        ->add($itemDropdown('Pasien'), [
+                        ->add($itemDropdown('Pasien', 'icon/pasien.png'), [
                             'route' => 'backend.pasien.p.index',
                             'class' => 'relative',
                         ])
@@ -114,7 +132,7 @@ class AdminSidebar {
 
                 if (Auth::user()->can('view_pasien_vaksin')) {
                     $pasien
-                        ->add($itemDropdown('Vaksin'), [
+                        ->add($itemDropdown('Vaksin', 'icon/vaccine.png'), [
                             'route' => 'backend.pasien.vaksin.index',
                             'class' => 'relative',
                         ])
@@ -128,7 +146,7 @@ class AdminSidebar {
 
                 if (Auth::user()->can('view_pasien_bkia')) {
                     $pasien
-                        ->add($itemDropdown('BKIA'), [
+                        ->add($itemDropdown('BKIA', 'icon/bkia.png'), [
                             'route' => 'backend.pasien.bkia.index',
                             'class' => 'relative',
                         ])
@@ -142,7 +160,7 @@ class AdminSidebar {
             }
 
             if (Auth::user()->can('view_dokter')) {
-                $menu->add($item('Dokter', 'fa-solid fa-industry'), [
+                $menu->add($item('Dokter', 'icon/dokter.png', true), [
                     'route' => 'backend.dokter.index',
                     'class' => 'relative',
                 ])
@@ -158,7 +176,7 @@ class AdminSidebar {
 
 
             if (Auth::user()->can('view_schedule')) {
-                $menu->add($item('Schedule', 'fa-solid fa-industry'), [
+                $menu->add($item('Schedule', 'icon/schedule.png', true), [
                     'route' => 'backend.schedule.index',
                     'class' => 'relative',
                 ])

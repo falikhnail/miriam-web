@@ -17,6 +17,7 @@
                 <div id="calendar" class="w-full"></div>
             </div>
         </div>
+        {{-- @livewire('add-schedule') --}}
         <x-modal id="modal" height="" width="w-2/5">
             <button type="button" class="hidden" id="btn-show-modal" @click="openModal = true"></button>
             <x-slot name="modalheader">
@@ -30,6 +31,7 @@
                     <form class="form" id="form-detail" method="POST">
                         @csrf
                         <input type="hidden" name="tanggal">
+                        <input type="hidden" name="sid">
                         <div class="flex mb-6">
                             <div class="w-full px-3">
                                 <label class="block tracking-wide text-gray-700  font-bold mb-2" for="kuota">
@@ -44,12 +46,14 @@
                                 <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter">
                                     Nama Dokter
                                 </label>
-                                <select id="dokter" name="dokter[]" multiple required>
+                                <select id="dokter" name="dokter" class="main-input" required>
                                     {{-- <option value="" disabled selected>Pilih Dokter</option> --}}
                                     @foreach ($dokter as $d)
                                         <option value="{{ $d->id }}">{{ $d->nama }}</option>
                                     @endforeach
                                 </select>
+                                <span class="no-dokter italic text-red-600">Semua dokter sudah di jadwalkan untuk tanggal
+                                    ini</span>
                             </div>
                         </div>
                         {{-- <div class="flex mb-6">
@@ -69,7 +73,7 @@
                             </div>
                         </div> --}}
                         <div class="flex-shrink-0 flex  items-center justify-center mt-5">
-                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="submit" class="btn btn-primary btn-save">Simpan</button>
                         </div>
                     </form>
                 </div>
@@ -90,6 +94,7 @@
     <script>
         var calendarEl = document.getElementById('calendar');
         var scheduleArgs = {
+            sid: '',
             id: 0,
             kuota: 0,
             tanggal: '',
@@ -99,9 +104,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             initCalendar()
 
-            $("#dokter").select2({
+            /* $("#dokter").select2({
                 placeholder: 'Pilih Dokter',
-            })
+            }) */
+
             $("#modal").addClass("z-[1000]")
         });
 
@@ -120,6 +126,7 @@
                 expandRows: true,
                 allDaySlot: false,
                 eventOverlap: false,
+                eventDurationEditable: false, //disable resize
                 validRange: {
                     start: moment().format('YYYY-MM-DD'),
                     end: moment().add(1, 'month').format('YYYY-MM-DD')
@@ -164,9 +171,9 @@
                     div.classList.add('flex')
                     div.classList.add('flex-col')
                     div.setAttribute('id', 'event-schedule')
-                    div.setAttribute('data-id', data.schedule_id)
-                    div.setAttribute('data-dokter-id', data.dokter_id.join(',').toString())
-                    div.setAttribute('data-nama-dokter', data.dokter.join(','))
+                    div.setAttribute('data-id', data.schedule)
+                    div.setAttribute('data-dokter-id', data.dokter_id)
+                    div.setAttribute('data-nama-dokter', data.dokter)
                     div.setAttribute('data-kuota', data.kuota)
 
                     var h3Kuota = document.createElement('h3')
@@ -178,13 +185,11 @@
                     ulDokter.classList.add('flex-col')
 
                     var listDokter = ``;
-                    if (typeof data === 'object' && typeof data.dokter === 'object' && data.dokter !== null) {
-                        data.dokter.forEach((e) => {
-                            var liDokter = document.createElement('li')
-                            liDokter.classList.add('text-sm')
-                            liDokter.innerText = `- ${e}`
-                            ulDokter.append(liDokter)
-                        })
+                    if (typeof data === 'object' && data.dokter !== null) {
+                        var liDokter = document.createElement('li')
+                        liDokter.classList.add('text-sm')
+                        liDokter.innerText = `- ${data.dokter}`
+                        ulDokter.append(liDokter)
                     }
 
                     div.append(h3Kuota)
@@ -198,35 +203,28 @@
                 },
                 dateClick: function(info) {
                     //console.log(info)
-                    const element = info.jsEvent.srcElement.querySelector('.fc-event-main #event-schedule')
-                    if (element != null && document.querySelectorAll('.fc-event-main').length > 0) {
-                        scheduleArgs.id = element.getAttribute('data-id');
-                        scheduleArgs.tanggal = info.dateStr;
-                        scheduleArgs.kuota = element.getAttribute('data-kuota');
-                        scheduleArgs.dokter_id = element.getAttribute('data-dokter-id').split(',');
 
-                        edit()
-                    } else {
-                        scheduleArgs.id = null;
-                        scheduleArgs.tanggal = info.dateStr;
-                        scheduleArgs.kuota = null;
-                        scheduleArgs.dokter_id = null;
+                    scheduleArgs.sid = makeUniqueId();
+                    scheduleArgs.id = null;
+                    scheduleArgs.tanggal = info.dateStr;
+                    scheduleArgs.kuota = null;
+                    scheduleArgs.dokter_id = null;
 
-                        add()
-                    }
+                    fetchDokterByDate(moment(scheduleArgs.tanggal).format("YYYY-MM-DD"));
                 },
                 eventClick: function(info) {
                     const event = info.event
                     const range = event._instance.range
                     const data = event.extendedProps
-                    console.log('data', data)
+                    //console.log('data', data)
 
+                    scheduleArgs.sid = data.sid;
                     scheduleArgs.id = event._def.publicId;
                     scheduleArgs.tanggal = range.start;
                     scheduleArgs.kuota = data.kuota;
                     scheduleArgs.dokter_id = data.dokter_id;
 
-                    edit()
+                    fetchDokterByDate(moment(scheduleArgs.tanggal).format("YYYY-MM-DD"), false);
                 },
                 headerToolbar: {
                     left: "dayGridMonth,listWeek",
@@ -313,9 +311,11 @@
 
                 $('input[name="tanggal"]').val(moment(scheduleArgs.tanggal).format("YYYY-MM-DD"))
 
+                $("#sid").val(scheduleArgs.sid)
                 $("#kuota").val(scheduleArgs.kuota)
                 $("#dokter").val(scheduleArgs.dokter_id).trigger('change')
-                console.log('schedule', scheduleArgs)
+                //$("#dokter").val(scheduleArgs.dokter_id).trigger('change')
+                //console.log('schedule', scheduleArgs)
 
                 $("#btn-delete-schedule").attr('data-id', scheduleArgs.id)
                 $("#btn-delete-schedule").attr('data-tanggal', moment(scheduleArgs.tanggal).format(
@@ -336,6 +336,8 @@
                 // * form data
                 $('#form-detail input[name="_method"]').remove()
                 $("#form-detail").attr("action", "{{ route('backend.schedule.store') }}")
+                $("#sid").val(scheduleArgs.sid)
+                $("#dokter").val('').trigger('change')
 
                 $('input[name="tanggal"]').val(moment(scheduleArgs.tanggal).format("YYYY-MM-DD"))
 
@@ -345,6 +347,63 @@
 
                 $("#btn-show-modal").trigger('click')
             @endcan
+        }
+
+        function fetchDokterByDate(tanggal, isAdd = true) {
+            showLoading();
+
+            const route = "{{ route('dokter.by_tanggal', ':tanggal') }}".replace(":tanggal", tanggal);
+
+            $.ajax({
+                url: route,
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    scheduleId: scheduleArgs.id
+                },
+                success: function(res) {
+                    hideLoading()
+
+                    if (res.status) {
+                        let dokter = res.data.map((item) => `
+                            <option value="${item.id}">${item.nama}</option>
+                        `);
+
+                        if (dokter.length == 0) {
+                            $(".no-dokter").show()
+                            $(".btn-save").hide()
+                        } else {
+                            $(".no-dokter").hide()
+                            $(".btn-save").show()
+                        }
+
+                        $("#dokter").empty();
+                        $("#dokter").append(`
+                            <option value="" selected disabled>Pilih Dokter</option>
+                        `)
+                        $("#dokter").append(dokter)
+
+                        if (isAdd) {
+                            add();
+                        } else {
+                            edit();
+                        }
+                    } else {
+                        showError(res.message);
+                    }
+
+                    //console.log('fetchDokterByDate', res);
+                },
+                error: function(xhr, textStatus, error) {
+                    hideLoading()
+
+                    console.log('xhr', xhr.statusText);
+                    console.log('textStatus', textStatus);
+                    console.log('error', error);
+
+                    showError(error);
+                }
+            });
         }
     </script>
 @endpush

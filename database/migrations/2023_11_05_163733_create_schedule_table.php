@@ -11,8 +11,12 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('schedule', function (Blueprint $table) {
             $table->id();
-            /* $table->unsignedBigInteger('dokter_id')->nullable();
-            $table->foreign('dokter_id')->references('id')->on('dokter')->onDelete('cascade'); */
+
+            // * identifier to determine schedule was create at same time
+            //$table->string('sid', 150);
+
+            $table->unsignedBigInteger('dokter_id')->nullable();
+            $table->foreign('dokter_id')->references('id')->on('dokter')->onDelete('cascade');
             $table->date('tanggal');
             $table->integer('kuota');
             $table->timestamps();

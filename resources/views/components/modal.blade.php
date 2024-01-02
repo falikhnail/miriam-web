@@ -4,7 +4,7 @@
     'width' => 'w-3/5',
     'zIndex' => '',
 ])
-<div x-data="{ openModal: false, model: {} }">
+<div x-data="{ openModal: false, model: {} }" >
     {{-- <button class="px-4 py-2 text-white bg-blue-500 rounded select-none no-outline focus:shadow-outline"
         @click="open = true">Open Modal</button> --}}
     {{ $slot }}

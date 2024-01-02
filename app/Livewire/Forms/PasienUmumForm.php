@@ -40,8 +40,10 @@ class PasienUmumForm extends Form
     #[Rule('required|min:5', as: 'No. Hp')]
     public $no_hp;
     public $no_hp_suami;
+
     #[Rule('required', as: 'Tanggal Periksa')]
-    public $schedule_id;
+    public $schedule;
+
     public $dokter_id;
     #[Rule('required', as: 'Cara Bayar')]
     public $cara_bayar;
@@ -54,7 +56,6 @@ class PasienUmumForm extends Form
         $this->scheduleRepo = new ScheduleRepository(
             new Schedule(),
             new Dokter(),
-            new ScheduleDokter(),
             new KuotaTransaksi()
         );
     }
@@ -72,7 +73,7 @@ class PasienUmumForm extends Form
                 'tanggal_lahir',
             ]));
 
-            $this->scheduleRepo->updateKuota($this->schedule_id, 'pasien_umum');
+            $this->scheduleRepo->updateKuota($this->schedule, 'pasien_umum');
 
             DB::commit();
 

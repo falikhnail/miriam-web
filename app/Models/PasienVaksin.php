@@ -21,7 +21,7 @@ class PasienVaksin extends Model {
         'alamat',
         'vaksin',
         'dokter_id',
-        'schedule_id',
+        'schedule',
         'cara_bayar'
     ];
 

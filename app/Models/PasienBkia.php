@@ -19,7 +19,7 @@ class PasienBkia extends Model {
         'no_hp',
         'alamat',
         'dokter_id',
-        'schedule_id',
+        'schedule',
         'cara_bayar'
     ];
 

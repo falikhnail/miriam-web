@@ -72,7 +72,7 @@
                 $("#pekerjaan").val(data.pekerjaan)
                 $("#pendidikan_terakhir").val(data.pendidikan_terakhir)
                 $("#alamat").text(data.alamat)
-                $("#schedule_id").val(data.schedule_id)
+                $("#schedule").val(data.schedule)
                 $("#dokter_id").val(data.dokter_id)
                 $("#cara_bayar").val(data.cara_bayar)
                 $("#no_hp").val(`+${data.no_hp}`)

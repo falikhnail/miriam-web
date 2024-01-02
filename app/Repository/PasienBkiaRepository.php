@@ -94,7 +94,7 @@ class PasienBkiaRepository {
         DB::beginTransaction();
         try {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-            $request['schedule_id'] = $request->schedule;
+            $request['schedule'] = $request->schedule;
             $request['dokter_id'] = $request->dokter;
             $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 

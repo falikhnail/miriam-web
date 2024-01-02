@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+/* namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -13,10 +13,11 @@ class ScheduleDokter extends Model {
 
     protected $fillable = [
         'dokter_id',
-        'schedule_id'
+        'schedule'
     ];
 
     public function dokter(): BelongsTo {
         return $this->belongsTo(Dokter::class);
     }
 }
+ */

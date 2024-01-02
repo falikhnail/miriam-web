@@ -20,7 +20,7 @@ class ScheduleController extends Controller {
 
     public function index() {
         $schedule = $this->scheduleRepo->getEvents();
-        $dokter = $this->dokterRepo->getAll('', 1);
+        $dokter = $this->dokterRepo->getActive();
 
         return view('backend.schedule.index', compact('dokter', 'schedule'));
     }

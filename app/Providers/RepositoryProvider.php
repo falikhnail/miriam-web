@@ -48,7 +48,6 @@ class RepositoryProvider extends ServiceProvider {
             return new ScheduleRepository(
                 new Schedule(),
                 new Dokter(),
-                new ScheduleDokter(),
                 new KuotaTransaksi()
             );
         });

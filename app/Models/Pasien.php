@@ -28,7 +28,7 @@ class Pasien extends Model {
         'pekerjaan_suami',
         'no_hp_suami',
         'dokter_id',
-        'schedule_id',
+        'schedule',
         'cara_bayar'
     ];
 
