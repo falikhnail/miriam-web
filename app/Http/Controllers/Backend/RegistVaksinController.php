@@ -60,7 +60,7 @@ class RegistVaksinController extends Controller {
             ->addColumn('alamat', '{{$alamat}}')
             ->addColumn('vaksin', '{{$vaksin}}')
             ->editColumn('no_hp', fn($data) => "+$data->no_hp")
-            ->addColumn('schedule', fn ($data) => $data->schedule != null ? date('d/m/Y', strtotime($data->schedule->tanggal)) : '')
+            ->addColumn('schedule', fn ($data) => $data->schedule != null ? date('d/m/Y', strtotime($data->schedule)) : '')
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (PasienVaksin $data) {
                 $editRoute = 'backend.pasien.vaksin.edit';

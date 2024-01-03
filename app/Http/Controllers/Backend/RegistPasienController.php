@@ -54,7 +54,7 @@ class RegistPasienController extends Controller {
             ->addColumn('nama', '{{$nama_lengkap}}')
             ->addColumn('alamat', '{{$alamat}}')
             ->editColumn('no_hp', fn ($data) => "+$data->no_hp")
-            ->addColumn('schedule', fn ($data) => $data->schedule != null ? date('d/m/Y', strtotime($data->schedule->tanggal)) : '')
+            ->addColumn('schedule', fn ($data) => $data->schedule != null ? date('d/m/Y', strtotime($data->schedule)) : '')
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (Pasien $data) {
                 $editRoute = 'backend.pasien.p.edit';
