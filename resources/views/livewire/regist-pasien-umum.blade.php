@@ -67,8 +67,11 @@
             <label class="block  tracking-wide text-gray-700  font-bold mb-2" for="jenis_kelamin">
                 Jenis Kelamin
             </label>
-            <input class="main-input" id="jenis_kelamin" name="jenis_kelamin" type="text"
-                wire:model="form.jenis_kelamin">
+            <select id="jenis_kelamin" name="jenis_kelamin" class="main-input" wire:model="form.jenis_kelamin">
+                <option value="" selected disabled>Pilih Jenis Kelamin</option>
+                <option value="Laki - Laki">Laki - Laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
             <p id="error-jenis-kelamin" class="text-red-500 text-xs italic hidden">
                 Please fill out this field.
             </p>
@@ -109,7 +112,15 @@
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="agama">
                 Agama
             </label>
-            <input class="main-input" id="agama" name="agama" type="text" wire:model="form.agama">
+            <select id="agama" name="agama" class="main-input" wire:model="form.agama">
+                <option value="" selected disabled>Pilih Agama</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen Protestan">Kristen Protestan</option>
+                <option value="Kristen Katolik">Kristen Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
         </div>
     </div>
     <div class="flex flex-wrap mb-6">
@@ -207,7 +218,8 @@
             <select class="main-input" id="dokter" wire:model="form.dokter_id">
                 <option value="" disabled selected hidden>Pilih Dokter</option>
                 @foreach ($dokterList as $data)
-                    <option value="{{ $data['id'] }}">{{ $data['nama'] . ', Kuota ' . $data['kuota'] . 'x' }}</option>
+                    <option value="{{ $data['id'] }}">{{ $data['nama'] . ', Kuota ' . $data['kuota'] . 'x' }}
+                    </option>
                 @endforeach
             </select>
         </div>

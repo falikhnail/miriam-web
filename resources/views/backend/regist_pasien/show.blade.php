@@ -63,8 +63,6 @@
             const data = @json(isset($pasien) ? $pasien : []);
             //console.log(data)
             if (data) {
-
-
                 $("#nama_lengkap").val(data.nama_lengkap)
                 $("#tanggal_lahir").val(data.tglLahir)
                 $("#tempat_lahir").val(data.tempatLahir)
