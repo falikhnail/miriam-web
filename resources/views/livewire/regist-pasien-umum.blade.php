@@ -181,7 +181,7 @@
                 Hari / Tanggal Rencana Vaksin <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
             </label>
             <div class="relative">
-                <select class="main-input" id="tanggal_schedule" wire:model="form.schedule"
+                <select class="main-input" id="tanggal_schedule" wire:model.live="form.schedule"
                     style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
                     @foreach ($scheduleList as $data)
@@ -200,14 +200,14 @@
         </div>
     </div>
     <div class="flex flex-wrap mb-6 relative">
-        <div class="w-full md:px-3">
+        <div class="w-full md:px-3" wire:target="form.schedule">
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter">
                 Dokter
             </label>
             <select class="main-input" id="dokter" wire:model="form.dokter_id">
                 <option value="" disabled selected hidden>Pilih Dokter</option>
                 @foreach ($dokterList as $data)
-                    <option value="{{ $data->id }}">{{ $data->nama . ', Kuota ' . $data->kuota . 'x' }}</option>
+                    <option value="{{ $data['id'] }}">{{ $data['nama'] . ', Kuota ' . $data['kuota'] . 'x' }}</option>
                 @endforeach
             </select>
         </div>

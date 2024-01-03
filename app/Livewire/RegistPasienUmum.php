@@ -18,7 +18,7 @@ class RegistPasienUmum extends Component {
         DokterRepository $dokterRepository,
         ScheduleRepository $scheduleRepository
     ) {
-        $this->dokterList = $dokterRepository->getActive();
+        $this->dokterList = $dokterRepository->getReadyDokterByTanggal()->toArray();
         //$this->scheduleList = date_interval(date('Y-m-d'), 12);
         $this->scheduleList = $scheduleRepository->getEstimate(12);
 
@@ -50,8 +50,12 @@ class RegistPasienUmum extends Component {
     }
 
     public function updatedFormSchedule($value) {
+        $this->_dokterBySchedule($value);
+    }
+
+    private function _dokterBySchedule($tanggal) {
         $dokterRepository = new DokterRepository(new Dokter());
-        $dokterAvail = $dokterRepository->getReadyDokterByTanggal($value);
+        $dokterAvail = $dokterRepository->getReadyDokterByTanggal($tanggal)->toArray();
 
         if ($dokterAvail->isEmpty()) {
             $this->dispatch("swal", [

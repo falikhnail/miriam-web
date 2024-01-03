@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -36,5 +37,9 @@ class Schedule extends Model {
 
     public function scopeByTanggal($query, $tanggal) {
         return $query->where('tanggal', $tanggal)->first();
+    }
+
+    public function scopeForUpdateKuota($query, $tanggal, $dokterId) {
+        return $query->where('tanggal', $tanggal)->where('dokter_id', $dokterId);
     }
 }

@@ -61,6 +61,11 @@
 </head>
 
 <body>
+    <div class="loading-content">
+        <div class="flex items-center justify-center min-h-screen w-full">
+            <i class="fa-solid fa-spinner fa-spin fa-2xl" style="color: #1662e3;"></i>
+        </div>
+    </div>
     <div class="flex flex-col justify-between h-screen">
         @include('frontend.includes.header')
 
@@ -91,15 +96,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
-        /*  @if (Session::has('error'))
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "{{ session('error') }}",
-            });
-        @endif */
+        $(window).on('load', function() {
+            $('.loading-content').slideDown();
+        });
+
+        $(window).on('beforeunload', function() {
+            $('.loading-content').slideDown();
+        });
+
+        $(function() {
+            $('.loading-content').slideUp();
+        })
+
 
         $(document).ready(function() {
+            $('.loading-content').hide();
             /* if ($("#notification").is(":visible")) {
                 setTimeout(() => {
                     $("#notification").hide()
@@ -111,10 +122,10 @@
             var res = {};
             if (Array.isArray(e.detail)) {
                 res = e.detail[0];
-            }else{
+            } else {
                 res = e.detail;
             }
-            
+
             console.log('swal', res)
             Swal.fire(res);
         });

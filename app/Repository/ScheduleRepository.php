@@ -182,15 +182,18 @@ class ScheduleRepository {
      * @return bool
      * @throws GeneralException
      */
-    public function updateKuota($id, $type) {
-        $this->model = $this->model::lockForUpdate()->find($id);
+    public function updateKuota(string $tanggal, string $dokter, $type) {
+        $this->model = $this->model::lockForUpdate()
+            ->forUpdateKuota($tanggal, $dokter)
+            ->first();
+
         if ($this->model->kuota > 0 && $this->model->kuota >= 1) {
             $lastKuota = $this->model->kuota;
             $this->model->kuota = $this->model->kuota - 1;
             $this->model->save();
 
             $this->kuotaTransaksi::create([
-                'schedule_id' => $this->model->id,
+                'schedule' => $this->model->tanggal,
                 'kuota_before' => $lastKuota,
                 'kuota_after' => $this->model->kuota,
                 'type' => $type

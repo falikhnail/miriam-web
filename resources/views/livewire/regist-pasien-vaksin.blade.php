@@ -115,14 +115,14 @@
         </div>
     </div>
     <div class="flex flex-wrap mb-3 relative">
-        <div class="w-full md:px-3">
+        <div class="w-full md:px-3" wire:target="form.schedule">
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter">
                 Dokter
             </label>
             <select class="main-input" id="dokter" wire:model="form.dokter_id">
                 <option value="" disabled selected hidden>Pilih Dokter</option>
                 @foreach ($dokterList as $data)
-                    <option value="{{ $data->id }}">{{ $data->nama . ', Kuota ' . $data->kuota . 'x' }}</option>
+                    <option value="{{ $data['id'] }}">{{ $data['nama'] . ', Kuota ' . $data['kuota'] . 'x' }}</option>
                 @endforeach
             </select>
         </div>

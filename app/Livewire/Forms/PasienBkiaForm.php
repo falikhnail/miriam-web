@@ -68,7 +68,7 @@ class PasienBkiaForm extends Form {
                 'tanggal_lahir',
             ]));
 
-            $this->scheduleRepo->updateKuota($this->schedule, 'bkia');
+            $this->scheduleRepo->updateKuota($this->schedule, $this->dokter_id, 'bkia');
 
             DB::commit();
 

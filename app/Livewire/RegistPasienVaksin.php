@@ -22,7 +22,7 @@ class RegistPasienVaksin extends Component {
         ScheduleRepository $scheduleRepository
     ) {
         // \DB::enableQueryLog();
-        $this->dokterList = $dokterRepository->getActive();
+        $this->dokterList = $dokterRepository->getReadyDokterByTanggal()->toArray();
         //$this->scheduleList = date_interval(date('Y-m-d'), 12);
         $this->scheduleList = $scheduleRepository->getEstimate(12);
 
@@ -53,13 +53,21 @@ class RegistPasienVaksin extends Component {
 
     public function updated($propertyName) {
         $this->validateOnly($propertyName);
+
+        //\Log::warning('json >>> ' . json_encode($this->dokterList));
     }
 
     public function updatedFormSchedule($value) {
-        $dokterRepository = new DokterRepository(new Dokter());
-        $dokterAvail = $dokterRepository->getReadyDokterByTanggal($value);
+        $this->_dokterBySchedule($value);
+    }
 
-        if ($dokterAvail->isEmpty()) {
+    private function _dokterBySchedule($tanggal) {
+        $dokterRepository = new DokterRepository(new Dokter());
+        $dokterAvail = $dokterRepository
+            ->getReadyDokterByTanggal($tanggal)
+            ->toArray();
+
+        if (count($dokterAvail) == 0) {
             $this->dispatch("swal", [
                 'icon' => 'warning',
                 'title' => 'Info',
@@ -72,6 +80,8 @@ class RegistPasienVaksin extends Component {
         } else {
             $this->dokterList = $dokterAvail;
         }
+
+        //\Log::warning('json >>> ' . json_encode($this->dokterList));
     }
 
     public function render() {

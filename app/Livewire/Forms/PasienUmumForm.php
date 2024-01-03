@@ -73,7 +73,7 @@ class PasienUmumForm extends Form
                 'tanggal_lahir',
             ]));
 
-            $this->scheduleRepo->updateKuota($this->schedule, 'pasien_umum');
+            $this->scheduleRepo->updateKuota($this->schedule, $this->dokter_id, 'pasien_umum');
 
             DB::commit();
 

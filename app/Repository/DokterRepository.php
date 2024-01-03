@@ -108,7 +108,7 @@ class DokterRepository {
         return $dokterAvail;
     }
 
-    public function getReadyDokterByTanggal($tanggal){
+    public function getReadyDokterByTanggal($tanggal = ''){
         $dokterAvail = $this->model::leftJoinSchedule($tanggal)
             ->get();
 

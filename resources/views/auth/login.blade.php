@@ -12,7 +12,7 @@
                 <h1 class="text-xl text-center font-bold">Login Admin</h1>
                 <span class="short-divider"></span>
             </div>
-            <div class="flex mt-2">
+            <div class="flex">
                 <form action="{{ route('auth.admin_login.action') }}" method="POST" class="w-full p-4">
                     @csrf
                     <div class="flex flex-col">
