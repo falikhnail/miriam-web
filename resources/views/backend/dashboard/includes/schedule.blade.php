@@ -22,6 +22,48 @@
                 center: "title",
                 right: ""
             },
+             eventContent: function(args) {
+                    const title = args.event.title;
+                    const data = args.event.extendedProps;
+
+                    //console.log('dokter', data.dokter_id.join(','))
+                    //console.log('data', data)
+                    //console.log('args', args)
+                    //console.log('createElement', createElement)
+                    var div = document.createElement('div')
+                    div.classList.add('flex')
+                    div.classList.add('flex-col')
+                    div.setAttribute('id', 'event-schedule')
+                    div.setAttribute('data-id', data.schedule)
+                    div.setAttribute('data-dokter-id', data.dokter_id)
+                    div.setAttribute('data-nama-dokter', data.dokter)
+                    div.setAttribute('data-kuota', data.kuota)
+
+                    var h3Kuota = document.createElement('h3')
+                    h3Kuota.classList.add('text-md')
+                    h3Kuota.innerText = title
+
+                    var ulDokter = document.createElement('ul')
+                    ulDokter.classList.add('flex')
+                    ulDokter.classList.add('flex-col')
+
+                    var listDokter = ``;
+                    if (typeof data === 'object' && data.dokter !== null) {
+                        var liDokter = document.createElement('li')
+                        liDokter.classList.add('text-sm')
+                        liDokter.innerText = `- ${data.dokter}`
+                        ulDokter.append(liDokter)
+                    }
+
+                    div.append(h3Kuota)
+                    div.append(ulDokter)
+                    //console.log('div', div)
+
+                    return {
+                        //html: `<div class="p-2"></div>`
+                        domNodes: [div]
+                    };
+                },
         });
 
         calendar.render();

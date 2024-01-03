@@ -19,7 +19,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $data->nama_lengkap_anak }}</td>
                             <td>{{ $data->alamat }}</td>
-                            <td>{{ date('d/m/Y', strtotime($data->schedule->tanggal)) }}</td>
+                            <td>{{ date('d/m/Y', strtotime($data->schedule)) }}</td>
                             <td>{{ date('d/m/Y', strtotime($data->created_at)) }}</td>
                         </tr>
                     @else
@@ -27,7 +27,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $data->nama_lengkap_anak }}</td>
                             <td>{{ $data->alamat }}</td>
-                            <td>{{ date('d/m/Y', strtotime($data->schedule->tanggal)) }}</td>
+                            <td>{{ date('d/m/Y', strtotime($data->schedule)) }}</td>
                             <td>{{ date('d/m/Y', strtotime($data->created_at)) }}</td>
                         </tr>
                     @endif

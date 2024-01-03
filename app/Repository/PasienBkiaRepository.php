@@ -30,9 +30,6 @@ class PasienBkiaRepository {
         $limit = null
     ) {
         $pasien = $this->model::with([
-            'schedule' => function ($q) {
-                $q->select('id', 'tanggal');
-            },
             'dokter' => function ($q) {
                 $q->select('id', 'nama');
             },
