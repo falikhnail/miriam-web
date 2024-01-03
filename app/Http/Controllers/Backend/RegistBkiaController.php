@@ -55,7 +55,7 @@ class RegistBkiaController extends Controller {
             ->addColumn('nama', '{{$nama_lengkap_anak}}')
             ->addColumn('alamat', '{{$alamat}}')
             ->editColumn('no_hp', fn ($data) => "+$data->no_hp")
-            ->addColumn('schedule', fn ($data) => $data->schedule != null ? date('d/m/Y', strtotime($data->schedule)) : '')
+            ->addColumn('schedule', fn ($data) => $data->schedule != null  && !empty($data->schedule) ? date('d/m/Y', strtotime($data->schedule)) : '')
             ->addColumn('created', fn ($data) => date('d/m/Y', strtotime($data->created_at)))
             ->addColumn('action', function (PasienBkia $data) {
                 $viewRoute = 'backend.pasien.bkia.show';
