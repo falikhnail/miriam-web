@@ -56,8 +56,8 @@ class RegistPasienUmum extends Component {
     private function _dokterBySchedule($tanggal) {
         $dokterRepository = new DokterRepository(new Dokter());
         $dokterAvail = $dokterRepository->getReadyDokterByTanggal($tanggal)->toArray();
-
-        if ($dokterAvail->isEmpty()) {
+        //\Log::info('json >>> ' . json_encode($dokterAvail));
+        if (count($dokterAvail) == 0) {
             $this->dispatch("swal", [
                 'icon' => 'warning',
                 'title' => 'Info',

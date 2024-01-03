@@ -52,7 +52,7 @@ class RegistPasienBkia extends Component {
         $this->validateOnly($propertyName);
     }
 
-    public function updatedFormScheduleId($value) {
+    public function updatedFormSchedule($value) {
         $this->_dokterBySchedule($value);
     }
 
@@ -60,7 +60,7 @@ class RegistPasienBkia extends Component {
         $dokterRepository = new DokterRepository(new Dokter());
         $dokterAvail = $dokterRepository->getReadyDokterByTanggal($tanggal)->toArray();
 
-        if ($dokterAvail->isEmpty()) {
+        if (count($dokterAvail) == 0) {
             $this->dispatch("swal", [
                 'icon' => 'warning',
                 'title' => 'Info',

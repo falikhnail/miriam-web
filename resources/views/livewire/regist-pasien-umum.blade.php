@@ -200,7 +200,7 @@
         </div>
     </div>
     <div class="flex flex-wrap mb-6 relative">
-        <div class="w-full md:px-3" wire:target="form.schedule">
+        <div class="w-full md:px-3">
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter">
                 Dokter
             </label>

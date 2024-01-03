@@ -60,6 +60,11 @@ class PasienBkiaForm extends Form {
 
         DB::beginTransaction();
         try {
+            /* \Log::warning('test >>> ' . json_encode([
+                'schedule' => $this->schedule,
+                'dokter' => $this->dokter_id
+            ])); */
+
             $this->tempat_tanggal_lahir_anak = $this->tempat_lahir . ', ' . $this->tanggal_lahir;
             $this->no_hp = StringHelper::formatNoPonsel($this->no_hp);
 
