@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Exceptions\GeneralException;
 use App\Helper\StringHelper;
 use App\Http\Requests\PasienRequest;
 use App\Models\Pasien;
@@ -13,11 +14,12 @@ use Throwable;
 
 class PasienRepository {
 
-    protected $model;
-
-    public function __construct(Pasien $model) {
-        $this->model = $model;
+    public function __construct(
+        public Pasien $model,
+        public ScheduleRepository $scheduleRepository
+    ) {
     }
+
     public function getAll(
         $nama = '',
         $alamat = '',
@@ -88,17 +90,29 @@ class PasienRepository {
     }
 
     public function store(PasienRequest $request) {
-        $request['tempat_tanggal_lahir'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-        $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
+        try {
+            DB::transaction(function () use ($request) {
+                $request['tempat_tanggal_lahir'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
+                $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
-        $pasien = $this->model::create($request->except([
-            'tempat_lahir',
-            'tanggal_lahir'
-        ]));
+                $pasien = $this->model::create($request->except([
+                    'tempat_lahir',
+                    'tanggal_lahir'
+                ]));
 
-        $pasien->save();
+                $pasien->save();
 
-        return $pasien;
+                $this->scheduleRepository->updateKuota(
+                    $pasien->schedule,
+                    $pasien->dokter_id,
+                    'pasien_umum'
+                );
+
+                return $pasien;
+            });
+        } catch (Throwable $e) {
+            throw new GeneralException('Gagal Menambahkan data');
+        }
     }
 
     public function update($id, PasienRequest $request) {

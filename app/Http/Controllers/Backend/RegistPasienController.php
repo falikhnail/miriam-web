@@ -103,9 +103,15 @@ class RegistPasienController extends Controller {
     }
 
     public function store(PasienRequest $request) {
-        $this->pasienRepo->store($request);
+        try {
+            $this->pasienRepo->store($request);
 
-        return redirect(route('backend.pasien.p.index'))->with("success", "Pasien berhasil disimpan");
+            return redirect(route('backend.pasien.p.index'))->with("success", "Pasien berhasil disimpan");
+        } catch (Throwable $e) {
+            return redirect()->back()->with([
+                'error' => $e->getMessage()
+            ]);
+        }
     }
 
     public function edit($id) {

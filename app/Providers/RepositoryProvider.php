@@ -28,28 +28,30 @@ class RepositoryProvider extends ServiceProvider {
      * Bootstrap services.
      */
     public function boot(): void {
-        $this->app->bind(PasienVaksinRepository::class, function ($app) {
-            return new PasienVaksinRepository(new PasienVaksin(), new Schedule());
+        $scheduleRepository = new ScheduleRepository(
+            new Schedule(),
+            new Dokter(),
+            new KuotaTransaksi()
+        );
+
+        $this->app->bind(ScheduleRepository::class, function ($app) use ($scheduleRepository) {
+            return $scheduleRepository;
         });
 
-        $this->app->bind(PasienRepository::class, function ($app) {
-            return new PasienRepository(new Pasien());
+        $this->app->bind(PasienVaksinRepository::class, function ($app) use ($scheduleRepository) {
+            return new PasienVaksinRepository(new PasienVaksin(), new Schedule(), $scheduleRepository);
         });
 
-        $this->app->bind(PasienBkiaRepository::class, function ($app) {
-            return new PasienBkiaRepository(new PasienBkia());
+        $this->app->bind(PasienRepository::class, function ($app) use ($scheduleRepository) {
+            return new PasienRepository(new Pasien(), $scheduleRepository);
+        });
+
+        $this->app->bind(PasienBkiaRepository::class, function ($app) use ($scheduleRepository) {
+            return new PasienBkiaRepository(new PasienBkia(), $scheduleRepository);
         });
 
         $this->app->bind(DokterRepository::class, function ($app) {
             return new DokterRepository(new Dokter());
-        });
-
-        $this->app->bind(ScheduleRepository::class, function ($app) {
-            return new ScheduleRepository(
-                new Schedule(),
-                new Dokter(),
-                new KuotaTransaksi()
-            );
         });
     }
 }

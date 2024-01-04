@@ -15,10 +15,11 @@ use Throwable;
 
 class PasienBkiaRepository {
 
-    protected $model;
+    public function __construct(
+        public PasienBkia $model,
+        public ScheduleRepository $scheduleRepository
+    ) {
 
-    public function __construct(PasienBkia $model) {
-        $this->model = $model;
     }
 
     public function getAll(
@@ -91,16 +92,20 @@ class PasienBkiaRepository {
         DB::beginTransaction();
         try {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-            $request['schedule'] = $request->schedule;
-            $request['dokter_id'] = $request->dokter;
             $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
             $pasien = $this->model::create($request->except(
-                'schedule',
-                'dokter'
+                'tempat_lahir',
+                'tanggal_lahir'
             ));
 
             $pasien->save();
+
+            $this->scheduleRepository->updateKuota(
+                $pasien->schedule,
+                $pasien->dokter_id,
+                'pasien_bkia'
+            );
 
             DB::commit();
 

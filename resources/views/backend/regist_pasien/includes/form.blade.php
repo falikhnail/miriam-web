@@ -111,10 +111,10 @@
             </label>
             <div class="relative">
                 <select class="main-input" id="schedule" name="schedule"
-                    style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
+                    style="{{ $errors->has('schedule') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
                     @foreach ($scheduleList as $data)
-                        <option value="{{ $data->id }}" class="flex justify-between">
+                        <option value="{{ $data->tanggal }}" class="flex justify-between">
                             <span>{{ date('d/m/Y', strtotime($data->tanggal)) }}</span>
                         </option>
                     @endforeach
@@ -183,9 +183,7 @@
             </select>
         </div>
     </div>
-    @can('edit_pasien')
-        <div class="flex-shrink-0 flex  items-center justify-center mt-5">
-            <button type="submit" class="btn btn-primary">Simpan</button>
-        </div>
-    @endcan
+    <div class="flex-shrink-0 flex  items-center justify-center mt-5">
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </div>
 </form>

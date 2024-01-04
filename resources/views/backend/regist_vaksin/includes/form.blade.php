@@ -60,7 +60,7 @@
                     style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
                     @foreach ($scheduleList as $data)
-                        <option value="{{ $data->id }}" class="flex justify-between">
+                        <option value="{{ $data->tanggal }}" class="flex justify-between">
                             <span>{{ date('d/m/Y', strtotime($data->tanggal)) }}</span>
                         </option>
                     @endforeach

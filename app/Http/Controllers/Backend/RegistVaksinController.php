@@ -30,7 +30,6 @@ class RegistVaksinController extends Controller {
         return view('backend.regist_vaksin.index');
     }
 
-
     public function indexDT(Request $request) {
         //\Log::warning(json_encode($request->all()));
         DB::enableQueryLog();

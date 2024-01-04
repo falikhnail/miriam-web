@@ -16,7 +16,8 @@ class PasienVaksinRepository {
 
     public function __construct(
         public PasienVaksin $model,
-        public Schedule $schedule
+        public Schedule $schedule,
+        public ScheduleRepository $scheduleRepository
     ) {
     }
 
@@ -93,19 +94,23 @@ class PasienVaksinRepository {
         DB::beginTransaction();
         try {
             $request['tempat_tanggal_lahir_anak'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
-            $request['schedule'] = $request->schedule;
-            $request['dokter_id'] = $request->dokter;
             $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
-            $pasienVaksin = $this->model::create($request->except([
-                'schedule',
-                'dokter'
+            $pasien = $this->model::create($request->except([
+                'tempat_lahir',
+                'tanggal_lahir'
             ]));
 
-            $pasienVaksin->save();
+            $pasien->save();
+
+            $this->scheduleRepository->updateKuota(
+                $pasien->schedule,
+                $pasien->dokter_id,
+                'pasien_bkia'
+            );
 
             DB::commit();
-            return $pasienVaksin;
+            return $pasien;
         } catch (Throwable $e) {
             DB::rollBack();
             \Log::error('Error store(PasienVaksinRequest $request) >>> ' . $e->getMessage());
