@@ -8,8 +8,8 @@ use App\Repository\ScheduleRepository;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
-class ScheduleDokter extends Component {
-
+class ScheduleDokter extends Component
+{
     public Collection $scheduleList;
     public array $dokterList;
     public ?string $schedule;
@@ -24,15 +24,17 @@ class ScheduleDokter extends Component {
         $this->dokterList = $dokterRepository->getReadyDokterByTanggal()->toArray();
         $this->scheduleList = $scheduleRepository->getEstimate(12);
 
-        $this->schedule = $schedule;
-        $this->dokterId = $dokterId;
+        $this->schedule = $schedule == null ? '' : $schedule;
+        $this->dokterId = $dokterId == null ? '' : $dokterId;
     }
 
-    public function updatedSchedule($value) {
+    public function updatedSchedule($value)
+    {
         $this->_dokterBySchedule($value);
     }
 
-    public function updatedDokterId($value) {
+    public function updatedDokterId($value)
+    {
         if (!empty($value)) {
             foreach ($this->dokterList as $dokter) {
                 if ($dokter['id'] == $value) {
@@ -52,7 +54,8 @@ class ScheduleDokter extends Component {
         }
     }
 
-    private function _dokterBySchedule($tanggal) {
+    private function _dokterBySchedule($tanggal)
+    {
         $dokterRepository = new DokterRepository(new Dokter());
         $dokterAvail = $dokterRepository->getReadyDokterByTanggal($tanggal)->toArray();
 
@@ -74,7 +77,8 @@ class ScheduleDokter extends Component {
         }
     }
 
-    public function render() {
+    public function render()
+    {
         return view('livewire.schedule-dokter');
     }
 }
