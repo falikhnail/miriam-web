@@ -71,7 +71,7 @@
                 $("#alamat").text(data.alamat)
                 $("#vaksin").val(data.vaksin)
                 $("#schedule").val(data.schedule)
-                $("#dokter_id").val(data.dokter_id)
+                $("#dokter").val(data.dokter_id)
                 $("#cara_bayar").val(data.cara_bayar)
                 $("#no_hp").val(`+${data.no_hp}`)
                 $("#tgl-regist").text(`Tanggal Registrasi ${data.tglRegist}`)

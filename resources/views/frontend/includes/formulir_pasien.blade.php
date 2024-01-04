@@ -4,7 +4,7 @@
             Formulir Pendaftaran Pasien
         </h3>
         <span class="short-divider"></span>
-        @livewire('regist-pasien-umum')
+        @livewire('regist-pasien-umum', ['id' => ''])
     </div>
 </div>
 

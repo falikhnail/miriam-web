@@ -4,7 +4,7 @@
             Formulir Pendaftaran BKIA
         </h3>
         <span class="short-divider"></span>
-        @livewire('regist-pasien-bkia')
+        @livewire('regist-pasien-bkia', ['id' => ''])
     </div>
 </div>
 {{-- <form action="{{ route('frontend.form_bkia') }}" method="POST" class="w-full mt-[3rem]">

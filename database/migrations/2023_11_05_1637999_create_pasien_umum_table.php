@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('jenis_kelamin', 20)->nullable();
             $table->string('tempat_tanggal_lahir', 100);
             $table->string('agama', 50)->nullable();
-            $table->text('alamat');
+            $table->text('alamat')->nullable();
             $table->string('pendidikan_terakhir', 20)->nullable();
             $table->string('pekerjaan', 50)->nullable();
             $table->string('status_kawin', 50)->nullable();

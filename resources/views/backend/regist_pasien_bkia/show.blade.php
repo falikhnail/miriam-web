@@ -61,7 +61,7 @@
 
         function setEditShowForm(isShow = false) {
             const data = @json(isset($pasien) ? $pasien : []);
-            //console.log(data)
+            console.log(data)
             if (data) {
                 $("#nama_lengkap_anak").val(data.nama_lengkap_anak)
                 $("#tanggal_lahir").val(data.tglLahir)
@@ -70,7 +70,7 @@
                 $("#nama_orang_tua").val(data.nama_orang_tua)
                 $("#alamat").text(data.alamat)
                 $("#schedule").val(data.schedule)
-                $("#dokter_id").val(data.dokter_id)
+                $("#dokter").val(data.dokter_id)
                 $("#cara_bayar").val(data.cara_bayar)
                 $("#no_hp").val(`+${data.no_hp}`)
                 $("#tgl-regist").text(`Tanggal Registrasi ${data.tglRegist}`)

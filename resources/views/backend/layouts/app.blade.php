@@ -135,6 +135,18 @@
             togglePadSectionFooter(isCollapsed)
         })
 
+        window.addEventListener('swal', function(e) {
+            var res = {};
+            if (Array.isArray(e.detail)) {
+                res = e.detail[0];
+            } else {
+                res = e.detail;
+            }
+
+            //console.log('swal', res)
+            Swal.fire(res);
+        });
+
         async function initialSidebar() {
             let isSidebarCollapsed = sessionStorage.getItem('admin_sidebar_slim');
             if (isSidebarCollapsed == 'false') {

@@ -52,40 +52,7 @@
             <textarea rows="5" id="alamat" name="alamat" class="main-input" required></textarea>
         </div>
     </div>
-    <div class="flex flex-wrap mb-6">
-        <div class="w-full md:px-3">
-            <label class="block tracking-wide text-gray-700 font-bold mb-2" for="schedule">
-                Hari / Tanggal Rencana Periksa <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
-            </label>
-            <div class="relative">
-                <select class="main-input" id="schedule" name="schedule"
-                    style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
-                    <option value="" disabled selected>Pilih Tanggal</option>
-                    @foreach ($scheduleList as $data)
-                        <option value="{{ $data->tanggal }}" class="flex justify-between">
-                            <span>{{ date('d/m/Y', strtotime($data->tanggal)) }}</span>
-                        </option>
-                    @endforeach
-                </select>
-            </div>
-            @error('schedule')
-                <span class="text-red-500 text-xs italic">{{ $message }}</span>
-            @enderror
-        </div>
-    </div>
-    <div class="flex flex-wrap mb-6">
-        <div class="w-full md:px-3">
-            <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter_id">
-                Dokter
-            </label>
-            <select class="main-input" id="dokter_id" name="dokter_id">
-                <option value="" disabled selected hidden>Pilih Dokter</option>
-                @foreach ($dokterList as $data)
-                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
-                @endforeach
-            </select>
-        </div>
-    </div>
+    @livewire('schedule-dokter', ['schedule' => isset($pasien) ? $pasien->schedule : null, 'dokterId' => isset($pasien) ? $pasien->dokter_id : null])
     <div class="flex flex-wrap mb-6">
         <div class="w-full md:px-3">
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="cara_bayar">

@@ -128,7 +128,7 @@
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="pekerjaan">
                 Pekerjaan
             </label>
-            <input class="main-input" id="pekerjaan" name="pekerjaan" type="text" wire:model="pekerjaan">
+            <input class="main-input" id="pekerjaan" name="pekerjaan" type="text" wire:model="form.pekerjaan">
         </div>
     </div>
     <div class="flex flex-wrap mb-6">

@@ -126,7 +126,7 @@
                 res = e.detail;
             }
 
-            console.log('swal', res)
+            //console.log('swal', res)
             Swal.fire(res);
         });
     </script>

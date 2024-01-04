@@ -51,26 +51,8 @@
             </label>
             <input class="main-input" id="vaksin" name="vaksin" type="text">
         </div>
-        <div class="w-full md:px-3">
-            <label class="block tracking-wide text-gray-700 font-bold mb-2" for="schedule">
-                Hari / Tanggal Rencana Vaksin <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
-            </label>
-            <div class="relative">
-                <select class="main-input" id="schedule" name="schedule"
-                    style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
-                    <option value="" disabled selected>Pilih Tanggal</option>
-                    @foreach ($scheduleList as $data)
-                        <option value="{{ $data->tanggal }}" class="flex justify-between">
-                            <span>{{ date('d/m/Y', strtotime($data->tanggal)) }}</span>
-                        </option>
-                    @endforeach
-                </select>
-            </div>
-            @error('schedule')
-                <span class="text-red-500 text-xs italic">{{ $message }}</span>
-            @enderror
-        </div>
     </div>
+    @livewire('schedule-dokter', ['schedule' => isset($pasien) ? $pasien->schedule : null, 'dokterId' => isset($pasien) ? $pasien->dokter_id : null])
     <div class="flex mb-6">
         <div class="w-full px-3">
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="no_hp">
@@ -79,19 +61,6 @@
             <input
                 class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded-xl py-3 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:shadow-md"
                 id="no_hp" name="no_hp" type="text" required>
-        </div>
-    </div>
-    <div class="flex flex-wrap mb-6">
-        <div class="w-full md:px-3">
-            <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter_id">
-                Dokter
-            </label>
-            <select class="main-input" id="dokter_id" name="dokter_id">
-                <option value="" disabled selected hidden>Pilih Dokter</option>
-                @foreach ($dokterList as $data)
-                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
-                @endforeach
-            </select>
         </div>
     </div>
     <div class="flex flex-wrap mb-6">

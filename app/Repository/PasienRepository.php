@@ -95,6 +95,10 @@ class PasienRepository {
                 $request['tempat_tanggal_lahir'] = $request->tempat_lahir . ', ' . $request->tanggal_lahir;
                 $request['no_hp'] = StringHelper::formatNoPonsel($request->no_hp);
 
+                if (!$request->has('dokter_id') && $request->has('dokter')) {
+                    $request['dokter_id'] = $request->dokter;
+                }
+
                 $pasien = $this->model::create($request->except([
                     'tempat_lahir',
                     'tanggal_lahir'

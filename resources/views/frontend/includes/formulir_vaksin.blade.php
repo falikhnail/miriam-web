@@ -4,7 +4,7 @@
             Formulir Pendaftaran Vaksin
         </h3>
         <span class="short-divider"></span>
-        @livewire('regist-pasien-vaksin')
+        @livewire('regist-pasien-vaksin', ['id' => ''])
     </div>
 </div>
 {{-- <form action="{{ route('frontend.form_vaksin') }}" method="POST" class="w-full mt-[3rem]">

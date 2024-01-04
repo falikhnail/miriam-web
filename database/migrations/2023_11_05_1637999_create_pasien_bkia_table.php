@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('tempat_tanggal_lahir_anak', 100);
             $table->string('nama_orang_tua', 150);
             $table->string('no_hp', 50);
-            $table->text('alamat');
+            $table->text('alamat')->nullable();
 
             /* $table->unsignedBigInteger('schedule_id')->nullable();
             $table->foreign('schedule_id')->references('id')->on('schedule')->onDelete('cascade'); */

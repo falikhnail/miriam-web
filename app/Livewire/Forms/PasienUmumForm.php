@@ -30,7 +30,7 @@ class PasienUmumForm extends Form
     public $agama;
     public $pendidikan_terakhir;
     public $pekerjaan;
-    public $pekerjaanSuami;
+    public $pekerjaan_suami;
     public $status_kawin;
     public $no_rm;
     public $nik;
@@ -61,7 +61,7 @@ class PasienUmumForm extends Form
     }
 
     public function save(): bool|string {
-        $this->validate();
+        //$this->validate();
 
         DB::beginTransaction();
         try {
@@ -69,7 +69,7 @@ class PasienUmumForm extends Form
                 'schedule' => $this->schedule,
                 'dokter' => $this->dokter_id
             ])); */
-            
+
             $this->tempat_tanggal_lahir = $this->tempat_lahir . ', ' . $this->tanggal_lahir;
             $this->no_hp = StringHelper::formatNoPonsel($this->no_hp);
 

@@ -58,7 +58,7 @@ class PasienVaksinForm extends Form {
     }
 
     public function save(): bool|string {
-        $this->validate();
+        //$this->validate();
 
         DB::beginTransaction();
         try {
