@@ -28,7 +28,8 @@ class Dokter extends Model {
         return $query
             ->leftJoin('schedule', 'schedule.dokter_id', '=', 'dokter.id')
             ->when(!empty($tanggal), fn ($q) => $q->where('schedule.tanggal', $tanggal))
-            ->select('dokter.*', 'schedule.id as schedule_id', 'schedule.kuota', 'schedule.tanggal');
+            ->select('dokter.*', 'schedule.id as schedule_id', 'schedule.kuota', 'schedule.tanggal')
+            ->groupBy('dokter.id');
     }
 
     public function scopeNotInSchedule($query, $tanggal): Builder {
