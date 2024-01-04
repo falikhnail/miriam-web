@@ -77,7 +77,10 @@ class RegistPasienVaksin extends Component {
             ]);
 
             $this->form->schedule = "";
+            $this->form->dokter_id = "";
+            $this->dokterList = [];
         } else {
+            $this->form->dokter_id = "";
             $this->dokterList = $dokterAvail;
         }
 

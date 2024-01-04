@@ -215,7 +215,7 @@
             <label class="block tracking-wide text-gray-700  font-bold mb-2" for="dokter">
                 Dokter
             </label>
-            <select class="main-input" id="dokter" wire:model="form.dokter_id">
+            <select class="main-input" id="dokter" wire:model.live="form.dokter_id">
                 <option value="" disabled selected hidden>Pilih Dokter</option>
                 @foreach ($dokterList as $data)
                     <option value="{{ $data['id'] }}">{{ $data['nama'] . ', Kuota ' . $data['kuota'] . 'x' }}
