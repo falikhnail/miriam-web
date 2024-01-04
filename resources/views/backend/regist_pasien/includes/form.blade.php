@@ -104,7 +104,7 @@
             </select>
         </div>
     </div>
-    @livewire('schedule-dokter', ['schedule' => isset($pasien) ? $pasien->schedule : null, 'dokterId' => isset($pasien) ? $pasien->dokter_id : null])
+    @livewire('schedule-dokter', ['schedule' => isset($pasien) && $pasien != null ? $pasien->schedule : null, 'dokterId' => isset($pasien) ? $pasien->dokter_id : null])
     <div class="flex flex-col mb-6 mt-5">
         <h2 class="font-bold text-2xl mb-4">Data Pasangan</h2>
         <div class="flex flex-col">

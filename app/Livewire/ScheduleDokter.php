@@ -12,12 +12,12 @@ class ScheduleDokter extends Component {
 
     public Collection $scheduleList;
     public array $dokterList;
-    public string $schedule;
-    public string $dokterId;
+    public ?string $schedule;
+    public ?string $dokterId;
 
     public function mount(
-        string $schedule,
-        string $dokterId,
+        ?string $schedule,
+        ?string $dokterId,
         DokterRepository $dokterRepository,
         ScheduleRepository $scheduleRepository
     ) {
