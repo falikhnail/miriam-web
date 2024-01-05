@@ -111,7 +111,7 @@ class ScheduleRepository {
         return $this->getAll('', $estimate)
             ->selectRaw("id, tanggal, sum(kuota) as kuota")
             ->groupByRaw("tanggal")
-            ->orderBy('tanggal')
+            ->orderBy('tanggal', 'asc')
             ->get();
     }
 
