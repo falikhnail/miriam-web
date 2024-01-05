@@ -99,7 +99,7 @@
     <div class="flex flex-wrap mb-3">
         <div class="w-full md:px-3">
             <label class="block tracking-wide text-gray-700 font-bold mb-2" for="tanggal_schedule">
-                Hari / Tanggal Rencana Vaksin <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
+                Hari / Tanggal Rencana Periksa <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
             </label>
             <div class="relative" wire:ignore>
                 <select class="main-input" id="tanggal_schedule" name="schedule" wire:model.live="form.schedule"
