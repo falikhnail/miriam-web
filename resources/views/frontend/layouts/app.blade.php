@@ -108,9 +108,9 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
         $(document).ready(function() {
-            $(window).on('load', function() {
+            /* $(window).on('load', function() {
                 $('.loading-content').slideDown();
-            });
+            }); */
 
             $(window).on('beforeunload', function() {
                 $('.loading-content').slideDown();
