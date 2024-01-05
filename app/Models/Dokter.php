@@ -29,7 +29,6 @@ class Dokter extends Model {
             ->leftJoin('schedule', 'schedule.dokter_id', '=', 'dokter.id')
             ->when(!empty($tanggal), fn ($q) => $q->where('schedule.tanggal', $tanggal))
             ->select('dokter.*', 'schedule.id as schedule_id', 'schedule.kuota', 'schedule.tanggal')
-            ->whereRaw("schedule.id != null")
             ->groupBy('dokter.id');
     }
 
