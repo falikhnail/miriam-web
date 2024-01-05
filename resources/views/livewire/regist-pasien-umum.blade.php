@@ -191,7 +191,7 @@
             <label class="block tracking-wide text-gray-700 font-bold mb-2" for="tanggal_schedule">
                 Hari / Tanggal Rencana Vaksin <span style="font-size: 10px;">(*Hanya berisi tanggal tersedia)</span>
             </label>
-            <div class="relative">
+            <div class="relative" wire:ignore>
                 <select class="main-input" id="tanggal_schedule" wire:model.live="form.schedule"
                     style="{{ $errors->has('form.schedule') ? 'border-color: red;' : '' }}">
                     <option value="" disabled selected>Pilih Tanggal</option>
