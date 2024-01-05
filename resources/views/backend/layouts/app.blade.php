@@ -105,13 +105,13 @@
             sidebarElement.addEventListener("expanded.te.sidenav", (event) => {
                 //console.log('event expanded sidenav', event);
                 $('.side-nav-dropdown').show()
-                $('.dropdown-item').show()
+                //$('.dropdown-item').show()
             })
 
             sidebarElement.addEventListener("collapse.te.sidenav", (event) => {
                 //console.log('event collapse sidenav', event);
                 $('.side-nav-dropdown').hide()
-                $('.dropdown-item').hide()
+                //$('.dropdown-item').hide()
             })
         })
 
@@ -156,7 +156,7 @@
                 //$('.dropdown-item').show()
             } else {
                 $('.side-nav-dropdown').hide()
-                $('.dropdown-item').hide()
+                //$('.dropdown-item').hide()
             }
         }
 

@@ -15,7 +15,8 @@
                 <i class="fa fa-user"></i>
             </a>
             <div class="dropdown-menu" x-show="show" x-cloak accesskey
-                x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0"
+                x-transition:enter="transition ease-out duration-1000"
+                x-transition:enter-start="opacity-0"
                 x-transition:enter-end="opacity-100">
                 <div class="dropdown-item">
                     <h2 class="font-bold text-lg text-center">{{ auth()->user()->name }}</h2>
