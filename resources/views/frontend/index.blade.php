@@ -275,7 +275,7 @@
                         <div class="pic"><img src="assets/img/doctors/cewe2.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Gizela Yuanita</h4>
+                            <h4>Dr Lilis Handayani</h4>
                             <span>Dokter Umum</span>
                             <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
                             <!-- <div class="social">
