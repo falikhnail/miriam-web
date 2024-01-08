@@ -22,4 +22,10 @@ class FrontendController extends Controller {
     public function jadwalDokter() {
         return view("frontend.jadwal_dokter");
     }
+    public function igd() {
+        return view("frontend.igd");
+    }
+    public function usg() {
+        return view("frontend.usg");
+    }
 }

@@ -27,8 +27,14 @@
                 <ul>
                     <?php
                     $profile = ['visi_misi'];
-                    $pelayanan = ['pelayanan'];
-                    $informasi = ['jadwal_dokter'];
+                    $pelayanan = ['pelayanan',
+                                'igd'        
+                                ];
+                    $informasi = [
+                        'jadwal_dokter',];
+                    $instalasiRadiologi = [
+                        'usg', 'rontgen'
+                    ];
 
                     $current = explode('.', Route::current()->getName())[1];
 
@@ -74,12 +80,16 @@
                                 <a href="{{ route('frontend.pelayanan') }}"
                                     class="{{ $isActive('pelayanan') }}">Pelayanan Rsia Miriam</a>
                             </li>
-                            <li><a href="#">Instalasi Gawat Darurat</a></li>
-                            <li class="dropdown"><a href="#"><span>Instalasi Radiologi</span> <i
-                                        class="bi bi-chevron-right"></i></a>
+                            <li><a href="{{ route('frontend.igd') }}"
+                                    class="{{ $isActive('igd') }}">Instalasi Gawat Darurat</a></li>
+                            <li class="dropdown">
+                                <a href="" class="{{ $isActive($instalasiRadiologi) }}">
+                                    <span>Instalasi Radiologi</span> <i class="bi bi-chevron-right"></i>
+                                    </a>
                                 <ul>
-                                    <li><a href="#">Radiologi USG</a></li>
-                                    <li><a href="#">Radiologi Rontgen</a></li>
+                                    <li><a href="{{ route('frontend.usg') }}"
+                                    class="{{ $isActive('usg') }}">Radiologi USG</a></li>
+                                    <li><a href="#" class="{{ $isActive('rontgen') }}">Radiologi Rontgen</a></li>
                                 </ul>
                             <li><a href="#">Konsutasi Ahli Gizi</a></li>
                             <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
