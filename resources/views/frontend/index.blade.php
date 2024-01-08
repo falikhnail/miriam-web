@@ -275,8 +275,8 @@
                         <div class="pic"><img src="assets/img/doctors/cewe2.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Lilis Handayani</h4>
-                            <span>Dokter Umum</span>
+                            <h4>Dr Lilis Handayani, Sp. OG</h4>
+                            <span>Dokter Spesialis Kebidanan dan Kandungan</span>
                             <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>

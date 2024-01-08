@@ -16,9 +16,9 @@
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/jadwal-dokter/drg-vega.jpg') }}" alt="">
             </div>
-            <div class="my-5 d-flex justify-content-center">
+            <!-- <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/jadwal-dokter/drg-m-wildan.jpg') }}" alt="">
-            </div>
+            </div> -->
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/jadwal-dokter/drg-yudi.jpg') }}" alt="">
             </div>
