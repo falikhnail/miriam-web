@@ -106,6 +106,10 @@
             $('.loading-content').hide();
         });
 
+        $(window).on('unload', function() {
+            console.log('unload');
+        });
+
 
         $(document).ready(async function() {
             $('meta[name="viewport"]').prop('content', 'width=1440');
@@ -242,10 +246,7 @@
 
         var perfEntries = performance.getEntriesByType("navigation");
         for (var i = 0; i < perfEntries.length; i++) {
-            console.log(perfEntries[i].type);
-            if (perfEntries[i].type == 'back_forward') {
-                $('.loading-content').hide();
-            }
+            $('.loading-content').hide();
         }
     </script>
 
