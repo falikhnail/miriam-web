@@ -107,20 +107,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
-        $(document).ready(function() {
-            /* $(window).on('load', function() {
-                $('.loading-content').slideDown();
-            }); */
-
-            $(window).on('beforeunload', function() {
-                $('.loading-content').slideDown();
-            });
-
-            $(function() {
-                $('.loading-content').slideUp();
-            })
-
+        $(window).on('load', function() {
             $('.loading-content').hide();
+        });
+
+        $(window).on('beforeunload', function() {
+            $('.loading-content').slideDown();
+        });
+
+        $(document).ready(function() {
+            //$('.loading-content').hide();
             /* if ($("#notification").is(":visible")) {
                 setTimeout(() => {
                     $("#notification").hide()

@@ -94,13 +94,22 @@
             sidebarElement
         );
 
+        $(window).on('beforeunload', function() {
+            $('.loading-content').slideDown();
+        });
+
+        $(window).on('load', function() {
+            $('.loading-content').hide();
+        });
+
+
         $(document).ready(async function() {
             $('meta[name="viewport"]').prop('content', 'width=1440');
 
             await initialSidebar()
 
             $("#full-loading").hide()
-            $(".loading-content").hide()
+            //$(".loading-content").hide()
 
             sidebarElement.addEventListener("expanded.te.sidenav", (event) => {
                 //console.log('event expanded sidenav', event);
@@ -115,17 +124,6 @@
             })
         })
 
-        $(window).on('load', function() {
-            //$('.loading-content').show();
-        });
-
-        $(window).on('beforeunload', function() {
-            $('.loading-content').slideDown();
-        });
-
-        $(function() {
-            $('.loading-content').slideUp();
-        })
 
         $("#admin-sidebar-toggler").click(() => {
             sidebar.toggleSlim();
