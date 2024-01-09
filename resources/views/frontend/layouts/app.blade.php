@@ -122,6 +122,10 @@
             $('.loading-content').hide();
         });
 
+        $(window).on('unload', function() {
+            console.log('unload');
+        });
+
         $(document).ready(function() {
             //$('.loading-content').hide();
             /* if ($("#notification").is(":visible")) {
