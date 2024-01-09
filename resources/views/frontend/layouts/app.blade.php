@@ -115,14 +115,6 @@
         $(window).on('beforeunload', function() {
             console.log('beforeunload')
             $('.loading-content').slideDown();
-
-            var perfEntries = performance.getEntriesByType("navigation");
-            for (var i = 0; i < perfEntries.length; i++) {
-                console.log(perfEntries[i].type);
-                if (perfEntries[i].type == 'back_forward') {
-                    $('.loading-content').hide();
-                }
-            }
         });
 
         $(window).on('popstate', function(event) {
@@ -154,10 +146,7 @@
 
         var perfEntries = performance.getEntriesByType("navigation");
         for (var i = 0; i < perfEntries.length; i++) {
-            console.log(perfEntries[i].type);
-            if (perfEntries[i].type == 'back_forward') {
-                $('.loading-content').hide();
-            }
+            $('.loading-content').hide();
         }
     </script>
 
