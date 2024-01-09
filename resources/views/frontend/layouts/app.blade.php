@@ -115,6 +115,10 @@
             $('.loading-content').slideDown();
         });
 
+        $(window).on('popstate', function(event) {
+            $('.loading-content').hide();
+        });
+
         $(document).ready(function() {
             //$('.loading-content').hide();
             /* if ($("#notification").is(":visible")) {
@@ -135,6 +139,15 @@
             //console.log('swal', res)
             Swal.fire(res);
         });
+
+
+        var perfEntries = performance.getEntriesByType("navigation");
+        for (var i = 0; i < perfEntries.length; i++) {
+            console.log(perfEntries[i].type);
+            if (perfEntries[i].type == 'back_forward') {
+                $('.loading-content').hide();
+            }
+        }
     </script>
 
     @stack('after-scripts')
