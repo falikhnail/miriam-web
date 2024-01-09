@@ -108,14 +108,25 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
         $(window).on('load', function() {
+            console.log('load')
             $('.loading-content').hide();
         });
 
         $(window).on('beforeunload', function() {
+            console.log('beforeunload')
             $('.loading-content').slideDown();
+
+            var perfEntries = performance.getEntriesByType("navigation");
+            for (var i = 0; i < perfEntries.length; i++) {
+                console.log(perfEntries[i].type);
+                if (perfEntries[i].type == 'back_forward') {
+                    $('.loading-content').hide();
+                }
+            }
         });
 
         $(window).on('popstate', function(event) {
+            console.log('popstate')
             $('.loading-content').hide();
         });
 
