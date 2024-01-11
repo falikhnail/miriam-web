@@ -35,6 +35,7 @@
                     $instalasiRadiologi = [
                         'usg', 'rontgen'
                     ];
+                    $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
 
@@ -91,6 +92,7 @@
                                     class="{{ $isActive('usg') }}">Radiologi USG</a></li>
                                     <li><a href="#" class="{{ $isActive('rontgen') }}">Radiologi Rontgen</a></li>
                                 </ul>
+                            <li><a href="#">Instalasi Laboratorium</a></li>    
                             <li><a href="#">Konsutasi Ahli Gizi</a></li>
                             <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
                                         class="bi bi-chevron-right"></i></a>
@@ -117,12 +119,27 @@
                             </li>
                             <li><a href="#">Tarif Pelayanan Rumah Sakit</a></li>
                             <li><a href="#">Tata Tertib Pasien, Pengujung, dan Penunggu</a></li>
-                            <li><a href="#">Ruang Rawat</a></li>
+                            <li>
+                                <a href="#">Ketersediaan Tempat Tidur</a></li>
                             <li><a href="#">Hak & Kewajiban Pasien & Keluarga Pasien</a></li>
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>
+                        <li class="dropdown">
+                        <a href="#" class="{{ $isActive($edukasi) }}">
+                            <span>Edukasi</span> <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Edukasi 1</a>
+                            </li>
+                            <li><a href="#">Edukasi 2</a></li>
+                            <li><a href="#">Edukasi 3</a></li>
+                            <li><a href="#">Edukasi 4</a></li>
+                        </ul>
+
                     <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li>
+
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li class="inline-block md:inline-block lg:hidden mt-2 ml-3 md:-ml-2">
                         <a href="{{ route('frontend.register_pasien') }}" class="appointment-btn text-white px-3 py-2">
