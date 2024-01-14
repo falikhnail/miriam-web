@@ -110,7 +110,7 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Unit</h2>
+                <h2>Instalasi</h2>
                 <!-- <p>...........</p> -->
             </div>
 
@@ -449,7 +449,6 @@
                             </p>
                             <p>Pelayanan Di RSIA Miriam Tidak Hanya Untuk Ibu dan Anak, Sekarang Di RSIA Miriam Juga
                                 Terdapat Pelayanan Umum.
-
                             </p>
                         </div>
                     </li>
