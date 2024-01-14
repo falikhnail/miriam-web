@@ -117,25 +117,35 @@
                                     Jadwal Dokter
                                 </a>
                             </li>
-                            <li><a href="#">Tarif Pelayanan Rumah Sakit</a></li>
+                            <li><a href="#">Indikator Mutu 2023</a></li>
                             <li><a href="#">Tata Tertib Pasien, Pengujung, dan Penunggu</a></li>
-                            <li>
-                                <a href="#">Ketersediaan Tempat Tidur</a></li>
+                            <li><a href="#">Ketersediaan Tempat Tidur</a></li>
+                            <li><a href="#">Alur Pelayanan</a></li>
                             <li><a href="#">Hak & Kewajiban Pasien & Keluarga Pasien</a></li>
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>
                         <li class="dropdown">
                         <a href="#" class="{{ $isActive($edukasi) }}">
-                            <span>Edukasi</span> <i class="bi bi-chevron-down"></i>
+                            <span>Artikel</span> <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul>
-                            <li>
-                                <a href="#">Edukasi 1</a>
-                            </li>
-                            <li><a href="#">Edukasi 2</a></li>
-                            <li><a href="#">Edukasi 3</a></li>
-                            <li><a href="#">Edukasi 4</a></li>
+                            <li class="dropdown"><a href="#"><span>Informasi Kesehatan</span><i
+                                    class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                                <li class="dropdown"><a href="#"><span>Leaflet & Poster</span><i
+                                    class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            <!-- <li><a href="#">Edukasi 3</a></li>
+                            <li><a href="#">Edukasi 4</a></li> -->
                         </ul>
 
                     <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li>
