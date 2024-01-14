@@ -8,7 +8,7 @@
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <h1>Selamat datang di RSIA Miriam</h1>
-            <h2>To Love, To Share, To Care</h2>
+            <h2>To Love, To Care, To Share</h2>
             <a href="#about" class="btn-get-started scrollto">Mulai</a>
         </div>
     </section><!-- End Hero -->
