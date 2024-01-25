@@ -28,4 +28,7 @@ class FrontendController extends Controller {
     public function usg() {
         return view("frontend.usg");
     }
+    public function rotgen() {
+        return view("frontend.rotgen");
+    }
 }

@@ -33,7 +33,7 @@
                     $informasi = [
                         'jadwal_dokter',];
                     $instalasiRadiologi = [
-                        'usg', 'rontgen'
+                        'usg', 'rotgen'
                     ];
                     $edukasi = [''];
 
@@ -90,7 +90,8 @@
                                 <ul>
                                     <li><a href="{{ route('frontend.usg') }}"
                                     class="{{ $isActive('usg') }}">Radiologi USG</a></li>
-                                    <li><a href="#" class="{{ $isActive('rontgen') }}">Radiologi Rontgen</a></li>
+                                    <li><a href="{{ route('frontend.rotgen') }}"
+                                        class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
                                 </ul>
                             <li><a href="#">Instalasi Laboratorium</a></li>    
                             <li><a href="#">Konsutasi Ahli Gizi</a></li>

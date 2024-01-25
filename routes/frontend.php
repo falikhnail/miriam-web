@@ -9,6 +9,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/jadwal-dokter', 'FrontendController@jadwalDokter')->name('jadwal_dokter');
     Route::get('/igd', 'FrontendController@igd')->name('igd');
     Route::get('/usg', 'FrontendController@usg')->name('usg');
+    Route::get('/rotgen', 'FrontendController@rotgen')->name('rotgen');
 
 
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');
