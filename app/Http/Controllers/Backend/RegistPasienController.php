@@ -135,6 +135,8 @@ class RegistPasienController extends Controller {
     public function destroy($id) {
         $this->pasienRepo->delete($id);
 
-        return redirect()->back()->with("success", "Pasien berhasil dihapus");
+        return redirect()
+            ->route('backend.pasien.p.index')
+            ->with("success", "Pasien berhasil dihapus");
     }
 }
