@@ -802,7 +802,7 @@
                         <div class="email">
                             <i class="bi bi-envelope"></i>
                             <h4>Email:</h4>
-                            <p>sdm.rsiamiriam@gmail.com</p>
+                            <p>miriam@rsiamiriam.com</p>
                         </div>
 
                         <div class="phone">

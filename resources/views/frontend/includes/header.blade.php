@@ -2,7 +2,7 @@
     <div class="container-sm flex flex-col md:flex-row items-center justify-center md:justify-between my-[10px] md:my-5">
         <div class="contact-info d-flex flex-column flex-md-row align-items-center">
             <a href="mailto:contact@example.com">
-                <i class="bi bi-envelope"></i> sdm.rsiamiriam@gmail.com
+                <i class="bi bi-envelope"></i> miriam@rsiamiriam.com
             </a>
             <a href="#" class="mt-3 mt-md-0">
                 <i class="bi bi-phone"></i> +62 853-2947-3535
