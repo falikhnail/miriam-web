@@ -35,6 +35,7 @@
                     $instalasiRadiologi = [
                         'usg', 'rotgen'
                     ];
+                    $instalasiLaboratorium = ['lab'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
@@ -93,7 +94,8 @@
                                     <li><a href="{{ route('frontend.rotgen') }}"
                                         class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
                                 </ul>
-                            <li><a href="#">Instalasi Laboratorium</a></li>    
+                            <li><a href="{{ route('frontend.lab') }}"
+                                    class="{{ $isActive('lab') }}">Instalasi Laboratorium</a></li>    
                             <li><a href="#">Konsutasi Ahli Gizi</a></li>
                             <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
                                         class="bi bi-chevron-right"></i></a>

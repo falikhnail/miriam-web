@@ -31,4 +31,7 @@ class FrontendController extends Controller {
     public function rotgen() {
         return view("frontend.rotgen");
     }
+    public function lab() {
+        return view("frontend.lab");
+    }
 }
