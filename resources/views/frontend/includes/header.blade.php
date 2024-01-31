@@ -96,9 +96,9 @@
                                         class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
                                 </ul>
                             <li><a href="{{ route('frontend.lab') }}"
-                                    class="{{ $isActive('lab') }}">Instalasi Laboratorium</a></li>
-
-                            
+                                    class="{{ $isActive('lab') }}">Instalasi Laboratorium</a></li>                                    
+                            <li><a href="{{ route('frontend.gizi') }}"
+                                    class="{{ $isActive('gizi') }}">Instalasi Gizi</a></li>
 
                             <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
                                         class="bi bi-chevron-right"></i></a>
