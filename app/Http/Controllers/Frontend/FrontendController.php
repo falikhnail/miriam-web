@@ -34,4 +34,7 @@ class FrontendController extends Controller {
     public function lab() {
         return view("frontend.lab");
     }
+    public function gizi() {
+        return view("frontend.gizi");
+    }
 }
