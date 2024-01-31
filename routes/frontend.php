@@ -11,7 +11,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/usg', 'FrontendController@usg')->name('usg');
     Route::get('/rotgen', 'FrontendController@rotgen')->name('rotgen');
     Route::get('/lab', 'FrontendController@lab')->name('lab');
-    Route::get('/gizi', 'FrontendController@lab')->name('gizi');
+    
 
 
 
