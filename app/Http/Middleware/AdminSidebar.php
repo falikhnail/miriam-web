@@ -294,20 +294,6 @@ class AdminSidebar {
                     'class' => 'nav-link',
                 ]); */
 
-            // Set Active Menu
-            $menu->filter(function ($item) {
-                if ($item->activematches) {
-                    $activematches = (is_string($item->activematches)) ? [$item->activematches] : $item->activematches;
-                    foreach ($activematches as $pattern) {
-                        if (request()->is($pattern)) {
-                            $item->active();
-                            $item->link->active();
-                            if ($item->hasParent()) {
-                                $item->parent()->active();
-                            }
-                        }
-                    }
-                }
 
                 return true;
             });
