@@ -420,11 +420,11 @@
                                 persalinan yang
                                 lengkap untuk memastikan kenyamanan dan pemulihan yang optimal bagi ibu setelah melahirkan.
                             </p>
-                            <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia
+                            {{-- <p> untuk saat ini RSIA Miriam sudah terakreditasi dengan bintang 5 dan sudah tersedia
                                 pelayanan
                                 yang menggunakan.
                                 BPJS.
-                            </p>
+                            </p> --}}
                         </div>
                     </li>
 
