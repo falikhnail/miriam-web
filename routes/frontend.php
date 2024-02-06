@@ -13,6 +13,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/rotgen', 'FrontendController@rotgen')->name('rotgen');
     Route::get('/lab', 'FrontendController@lab')->name('lab');
     Route::get('/gizi', 'FrontendController@gizi')->name('gizi');
+    Route::get('/pijat-bayi', 'FrontendController@pijat-bayi')->name('pijat-bayi');
 
 
 
