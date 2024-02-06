@@ -37,4 +37,7 @@ class FrontendController extends Controller {
     public function gizi() {
         return view("frontend.gizi");
     }
+    public function ketersediaantempattidur() {
+        return view("frontend.ketersediaantempattidur");
+    }
 }

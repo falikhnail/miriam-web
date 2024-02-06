@@ -31,10 +31,9 @@
                                 'igd'        
                                 ];
                     $informasi = [
-                        'jadwal_dokter',];
+                        'jadwal_dokter', 'ketersediaantempattidur'];
                     $instalasiRadiologi = [
-                        'usg', 'rotgen'
-                    ];
+                        'usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
                     $edukasi = [''];
@@ -125,7 +124,14 @@
                             </li>
                             <li><a href="#">Indikator Mutu 2023</a></li>
                             <li><a href="#">Tata Tertib Pasien, Pengujung, dan Penunggu</a></li>
-                            <li><a href="#">Ketersediaan Tempat Tidur</a></li>
+
+                            <li>
+                                <a href="{{ route('frontend.ketersediaantempattidur') }}"
+                                    class="{{ $isActive('ketersediaantempattidur') }}">
+                                    Ketersedian Tempat Tidur
+                                </a>
+                            </li>
+
                             <li><a href="#">Alur Pelayanan</a></li>
                             <li><a href="#">Hak & Kewajiban Pasien & Keluarga Pasien</a></li>
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
