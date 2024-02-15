@@ -40,4 +40,7 @@ class FrontendController extends Controller {
     public function ketersediaantempattidur() {
         return view("frontend.ketersediaantempattidur");
     }
+    public function pijat_bayi() {
+        return view("frontend.pijat_bayi");
+    }
 }
