@@ -36,6 +36,7 @@
                         'usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
+                    $polibkia = ['pijat_bayi'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
@@ -99,13 +100,31 @@
                             <li><a href="{{ route('frontend.gizi') }}"
                                     class="{{ $isActive('gizi') }}">Instalasi Gizi</a></li>
 
-                            <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
+                            <li class="dropdown">
+                                <a href="" class="{{ $isActive($polibkia) }}">
+                                    <span>Poli BKIA</span> <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                <ul>
+                                    <li><a href="{{ route('frontend.pijat_bayi') }}"
+                                        class="{{ $isActive('usg') }}">Pijat Bayi</a></li>
+                                    <li><a href="{{ route('frontend.rotgen') }}"
+                                        class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
+                                    <li><a href="{{ route('frontend.rotgen') }}"
+                                        class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
+                                </ul>   
+                                
+                                
+
+                            {{-- <li class="dropdown"><a href="#"><span>Poli BKIA</span> <i
                                         class="bi bi-chevron-right"></i></a>
                                 <ul>
                                     <li><a href="#">Pijat Bayi</a></li>
                                     <li><a href="#">Cukur Bayi</a></li>
                                     <li><a href="#">Tindik Bayi</a></li>
-                                </ul>
+                                </ul> --}}
+
+
+
                             <li><a href="#">Imunisasi Dasar</a></li>
                             <li><a href="#">Imunisasi Tambahan</a></li>
                             <li><a href="#">Imunisasi MR</a></li>
