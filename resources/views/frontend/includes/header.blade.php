@@ -106,7 +106,7 @@
                                     </a>
                                 <ul>
                                     <li><a href="{{ route('frontend.pijat_bayi') }}"
-                                        class="{{ $isActive('usg') }}">Pijat Bayi</a></li>
+                                        class="{{ $isActive('pijat_bayi') }}">Pijat Bayi</a></li>
                                     <li><a href="{{ route('frontend.rotgen') }}"
                                         class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
                                     <li><a href="{{ route('frontend.rotgen') }}"
