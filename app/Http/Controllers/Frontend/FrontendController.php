@@ -43,4 +43,7 @@ class FrontendController extends Controller {
     public function pijat_bayi() {
         return view("frontend.pijat_bayi");
     }
+    public function cukur_bayi() {
+        return view("frontend.cukur_bayi");
+    }
 }
