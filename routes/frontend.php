@@ -15,7 +15,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/gizi', 'FrontendController@gizi')->name('gizi');
     Route::get('/pijat_bayi', 'FrontendController@pijat_bayi')->name('pijat_bayi');
     Route::get('/cukur_bayi', 'FrontendController@cukur_bayi')->name('cukur_bayi');
-
+    Route::get('/tindik_bayi', 'FrontendController@tindik_bayi')->name('tindik_bayi');
 
 
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');
