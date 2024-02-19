@@ -36,7 +36,7 @@
                         'usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
-                    $polibkia = ['pijat_bayi','cukur_bayi'];
+                    $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
