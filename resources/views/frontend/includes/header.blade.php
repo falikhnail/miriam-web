@@ -109,8 +109,8 @@
                                         class="{{ $isActive('pijat_bayi') }}">Pijat Bayi</a></li>
                                     <li><a href="{{ route('frontend.cukur_bayi') }}"
                                         class="{{ $isActive('rotgen') }}">Cukur Bayi</a></li>
-                                    <li><a href="{{ route('frontend.rotgen') }}"
-                                        class="{{ $isActive('rotgen') }}">Radiologi Rontgen</a></li>
+                                    <li><a href="{{ route('frontend.tindik_bayi') }}"
+                                        class="{{ $isActive('rotgen') }}">Tindik Bayi</a></li>
                                 </ul>   
                                 
                                 
