@@ -12,8 +12,8 @@
                     <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg">
                 </div>
                 {{-- <h1 class="fw-bold fs-1">Visi & Misi RSIA</h1> --}}
-                <div class="container-sm container-md my-5">
-                    <h2 class="fw-bold fs-3">HAK PASIEN</h2>
+                <div class="container-sm container-md my-5 text-center">
+                    <h2 class="fw-bold fs-3 mx-auto">HAK PASIEN</h2>
                     <div class="px-2 px-md-3 mt-3">
                         <p class="">
                             Menjadi RSIA pilihan utama dengan pelayanan yang berkualitas dan penuh kasih di Kudus dan
