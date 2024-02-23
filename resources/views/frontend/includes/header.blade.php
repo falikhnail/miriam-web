@@ -33,7 +33,7 @@
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
                     $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
-                    $imunisasi = ['imun_dasar'];
+                    $imunisasi = ['imun_dasar','imun_tambahan','imun_mr'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
@@ -104,14 +104,13 @@
                                     <li><a href="{{ route('frontend.pijat_bayi') }}"
                                         class="{{ $isActive('pijat_bayi') }}">Pijat Bayi</a></li>
                                     <li><a href="{{ route('frontend.cukur_bayi') }}"
-                                        class="{{ $isActive('rotgen') }}">Cukur Bayi</a></li>
+                                        class="{{ $isActive('cukur_bayi') }}">Cukur Bayi</a></li>
                                     <li><a href="{{ route('frontend.tindik_bayi') }}"
-                                        class="{{ $isActive('rotgen') }}">Tindik Bayi</a></li>
+                                        class="{{ $isActive('tindik_bayi') }}">Tindik Bayi</a></li>
                                 </ul>   
-                                
 
                             <li class="dropdown">
-                                <a href="" class="{{ $isActive($polibkia) }}">
+                                <a href="" class="{{ $isActive($imunisasi) }}">
                                     <span>Imunisasi</span> <i class="bi bi-chevron-right"></i>
                                     </a>
                                 <ul>
@@ -121,15 +120,10 @@
                                         class="{{ $isActive('rotgen') }}">Imunisasi Tambahan</a></li>
                                     <li><a href="{{ route('frontend.tindik_bayi') }}"
                                         class="{{ $isActive('rotgen') }}">Imunisasi MR</a></li>
-                                </ul> 
-
-                            {{-- <li><a href="#">Imunisasi Dasar</a></li>
-                            <li><a href="#">Imunisasi Tambahan</a></li>
-                            <li><a href="#">Imunisasi MR</a></li> --}}
-                            
-                            <li><a href="#">Vaksinasi Dewasa</a></li>
-                            
+                                </ul>                             
+                            <li><a href="#">Vaksinasi Dewasa</a></li>                            
                         </ul>
+
                     <li class="dropdown">
                         <a href="#" class="{{ $isActive($informasi) }}">
                             <span>Informasi</span> <i class="bi bi-chevron-down"></i>
