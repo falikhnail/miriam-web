@@ -27,13 +27,9 @@
                 <ul>
                     <?php
                     $profile = ['visi_misi'];
-                    $pelayanan = ['pelayanan',
-                                'igd'        
-                                ];
-                    $informasi = [
-                        'jadwal_dokter', 'ketersediaantempattidur'];
-                    $instalasiRadiologi = [
-                        'usg', 'rotgen'];
+                    $pelayanan = ['pelayanan','igd'];
+                    $informasi = ['jadwal_dokter','ketersediaantempattidur'];
+                    $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
                     $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
