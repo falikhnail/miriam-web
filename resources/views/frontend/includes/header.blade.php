@@ -116,10 +116,10 @@
                                 <ul>
                                     <li><a href="{{ route('frontend.imun_dasar') }}"
                                         class="{{ $isActive('imun_dasar') }}">Imunisasi Dasar</a></li>
-                                    <li><a href="{{ route('frontend.imun_tambahan') }}"
-                                        class="{{ $isActive('imun_tambahan') }}">Imunisasi Tambahan</a></li>
                                     <li><a href="{{ route('frontend.imun_mr') }}"
                                         class="{{ $isActive('imun_mr') }}">Imunisasi MR</a></li>
+                                    {{-- <li><a href="{{ route('frontend.imun_mr') }}"
+                                        class="{{ $isActive('imun_mr') }}">Imunisasi MR</a></li> --}}
                                 </ul>                             
                             <li><a href="{{ route('frontend.vaksin_dewasa') }}"
                                 class="{{ $isActive('vaksin_dewasa') }}">Vaksinasi Dewasa</a></li>                           
