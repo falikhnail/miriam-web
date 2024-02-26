@@ -34,6 +34,7 @@
                     $instalasiGizi = ['gizi'];
                     $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
                     $imunisasi = ['imun_dasar','imun_tambahan','imun_mr'];
+                    $vaksinasi = ['vaksin_dewasa'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
@@ -108,7 +109,6 @@
                                     <li><a href="{{ route('frontend.tindik_bayi') }}"
                                         class="{{ $isActive('tindik_bayi') }}">Tindik Bayi</a></li>
                                 </ul>   
-
                             <li class="dropdown">
                                 <a href="" class="{{ $isActive($imunisasi) }}">
                                     <span>Imunisasi</span> <i class="bi bi-chevron-right"></i>
@@ -121,7 +121,8 @@
                                     <li><a href="{{ route('frontend.imun_mr') }}"
                                         class="{{ $isActive('imun_mr') }}">Imunisasi MR</a></li>
                                 </ul>                             
-                            <li><a href="#">Vaksinasi Dewasa</a></li>                            
+                            <li><a href="{{ route('frontend.vaksin_dewasa') }}"
+                                class="{{ $isActive('vaksin_dewasa') }}">Vaksinasi Dewasa</a></li>                           
                         </ul>
 
                     <li class="dropdown">
