@@ -19,6 +19,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/imun_dasar', 'FrontendController@imun_dasar')->name('imun_dasar');
     Route::get('/imun_tambahan', 'FrontendController@imun_tambahan')->name('imun_tambahan');
     Route::get('/imun_mr', 'FrontendController@imun_mr')->name('imun_mr');
+    Route::get('/vaksin_dewasa', 'FrontendController@vaksin_dewasa')->name('vaksin_dewasa');
 
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');
 
