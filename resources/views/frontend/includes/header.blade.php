@@ -116,8 +116,8 @@
                                 <ul>
                                     <li><a href="{{ route('frontend.imun_dasar') }}"
                                         class="{{ $isActive('imun_dasar') }}">Imunisasi Dasar</a></li>
-                                    <li><a href="{{ route('frontend.cukur_bayi') }}"
-                                        class="{{ $isActive('rotgen') }}">Imunisasi Tambahan</a></li>
+                                    <li><a href="{{ route('frontend.imun_tambahan') }}"
+                                        class="{{ $isActive('imun_tambahan') }}">Imunisasi Tambahan</a></li>
                                     <li><a href="{{ route('frontend.tindik_bayi') }}"
                                         class="{{ $isActive('rotgen') }}">Imunisasi MR</a></li>
                                 </ul>                             
