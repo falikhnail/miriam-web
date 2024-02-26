@@ -13,7 +13,7 @@
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/pelayanan/pelayanan-1.jpg') }}" alt="">
             </div>
-            <div class="my-5 d-flex justify-content-center">
+            {{-- <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/pelayanan/pelayanan-2.jpg') }}" alt="">
             </div>
             <div class="my-5 d-flex justify-content-center">
@@ -57,7 +57,7 @@
             </div>
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/pelayanan/vaksinasi-1.jpg') }}" alt="">
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
