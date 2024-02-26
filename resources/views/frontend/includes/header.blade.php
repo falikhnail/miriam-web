@@ -118,8 +118,8 @@
                                         class="{{ $isActive('imun_dasar') }}">Imunisasi Dasar</a></li>
                                     <li><a href="{{ route('frontend.imun_tambahan') }}"
                                         class="{{ $isActive('imun_tambahan') }}">Imunisasi Tambahan</a></li>
-                                    <li><a href="{{ route('frontend.tindik_bayi') }}"
-                                        class="{{ $isActive('rotgen') }}">Imunisasi MR</a></li>
+                                    <li><a href="{{ route('frontend.imun_mr') }}"
+                                        class="{{ $isActive('imun_mr') }}">Imunisasi MR</a></li>
                                 </ul>                             
                             <li><a href="#">Vaksinasi Dewasa</a></li>                            
                         </ul>
