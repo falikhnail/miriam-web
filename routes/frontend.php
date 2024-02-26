@@ -18,7 +18,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/tindik_bayi', 'FrontendController@tindik_bayi')->name('tindik_bayi');
     Route::get('/imun_dasar', 'FrontendController@imun_dasar')->name('imun_dasar');
     Route::get('/imun_tambahan', 'FrontendController@imun_tambahan')->name('imun_tambahan');
-    Route::get('/imun_mr', 'FrontendController@imun_mr')->name('imun_mr');
+    Route::get('/imun_tambahan1', 'FrontendController@imun_tambahan1')->name('imun_tambahan1');
     Route::get('/vaksin_dewasa', 'FrontendController@vaksin_dewasa')->name('vaksin_dewasa');
 
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');

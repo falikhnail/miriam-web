@@ -33,7 +33,7 @@
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
                     $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
-                    $imunisasi = ['imun_dasar','imun_tambahan','imun_mr'];
+                    $imunisasi = ['imun_dasar','imun_tambahan','imun_tambahan1'];
                     $vaksinasi = ['vaksin_dewasa'];
                     $edukasi = [''];
 
@@ -116,10 +116,10 @@
                                 <ul>
                                     <li><a href="{{ route('frontend.imun_dasar') }}"
                                         class="{{ $isActive('imun_dasar') }}">Imunisasi Dasar</a></li>
-                                    <li><a href="{{ route('frontend.imun_mr') }}"
-                                        class="{{ $isActive('imun_mr') }}">Imunisasi MR</a></li>
-                                    {{-- <li><a href="{{ route('frontend.imun_mr') }}"
-                                        class="{{ $isActive('imun_mr') }}">Imunisasi MR</a></li> --}}
+                                    <li><a href="{{ route('frontend.imun_tambahan') }}"
+                                        class="{{ $isActive('imun_tambahan') }}">Imunisasi Tambahan</a></li>
+                                    <li><a href="{{ route('frontend.imun_tambahan1') }}"
+                                        class="{{ $isActive('imun_tambahan1') }}">Imunisasi MR</a></li>
                                 </ul>                             
                             <li><a href="{{ route('frontend.vaksin_dewasa') }}"
                                 class="{{ $isActive('vaksin_dewasa') }}">Vaksinasi Dewasa</a></li>                           
