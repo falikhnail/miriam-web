@@ -55,4 +55,7 @@ class FrontendController extends Controller {
     public function imun_tambahan() {
         return view("frontend.imun_tambahan");
     }
+    public function imun_mr() {
+        return view("frontend.imun_mr");
+    }
 }
