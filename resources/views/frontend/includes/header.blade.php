@@ -28,7 +28,8 @@
                     <?php
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
-                    $informasi = ['jadwal_dokter','ketersediaantempattidur'];
+                    $informasi = ['jadwal_dokter','ketersediaantempattidur'
+                                ,'hak_kewajiban'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -147,7 +148,12 @@
                             </li>
 
                             <li><a href="#">Alur Pelayanan</a></li>
-                            <li><a href="#">Hak & Kewajiban Pasien & Keluarga Pasien</a></li>
+                            <li>
+                                <a href="{{ route('frontend.hak_kewajiban') }}"
+                                    class="{{ $isActive('hak_kewajiban') }}">
+                                    Hak & Kewajiban Pasien & Keluarga Pasien
+                                </a>
+                            </li>
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>
