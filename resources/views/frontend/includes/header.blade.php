@@ -151,7 +151,7 @@
                             <li>
                                 <a href="{{ route('frontend.hak_kewajiban') }}"
                                     class="{{ $isActive('hak_kewajiban') }}">
-                                    Hak & Kewajiban Pasien & Keluarga Pasien
+                                    Hak & Kewajiban Pasien
                                 </a>
                             </li>
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
