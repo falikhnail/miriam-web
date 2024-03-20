@@ -7,9 +7,8 @@
 @section('content')
     <div class="d-flex flex-column mx-[0.75rem] md:mx-[3rem] bg-white">
         <div class="container-sm container-md">
-            {{-- <div class="mt-3 mb-5">
-                <h1 class="fw-bold fs-1">Pelayanan RSIA</h1>
-            </div> --}}
+            <div class="container-sm container-md my-5">
+                <center><h2 class="fw-bold fs-2">Informasi Lowongan Pekerjaan</h2></center></div>
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/karir/bidan-s1.jpeg') }}" alt="">
             </div>
