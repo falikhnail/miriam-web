@@ -186,7 +186,7 @@
                             <li><a href="#">Edukasi 4</a></li> -->
                         </ul>
 
-                    <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li>
+                    {{-- <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li> --}}
 
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li class="inline-block md:inline-block lg:hidden mt-2 ml-3 md:-ml-2">
