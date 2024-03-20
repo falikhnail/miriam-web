@@ -64,4 +64,7 @@ class FrontendController extends Controller {
     public function hak_kewajiban() {
         return view("frontend.hak_kewajiban");
     }
+    public function karir() {
+        return view("frontend.karir");
+    }
 }

@@ -29,7 +29,7 @@
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['jadwal_dokter','ketersediaantempattidur'
-                                ,'hak_kewajiban'];
+                                ,'hak_kewajiban','karir'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -155,6 +155,12 @@
                                 </a>
                             </li>
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
+                            <li>
+                                <a href="{{ route('frontend.karir') }}"
+                                    class="{{ $isActive('karir') }}">
+                                    Karir
+                                </a>
+                            </li>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>
                         <li class="dropdown">
