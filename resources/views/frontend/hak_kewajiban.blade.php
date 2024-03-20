@@ -12,9 +12,9 @@
                     <img src="{{ asset('images/rsia.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg">
                 </div>
                 {{-- <h1 class="fw-bold fs-1">Visi & Misi RSIA</h1> --}}
-                <div class="container-sm container-md my-5">
-                    <center><h2 class="fw-bold fs-2">HAK PASIEN</h2></center>
-                    <div class="px-2 px-md-3 mt-7">
+                <div class="container-sm container-md my-7">
+                    <center><h2 class="fw-bold fs-1">HAK PASIEN</h2></center>
+                    <div class="px-3 px-md-5 mt-7">
                         <ol class="ol-numbered">
                             <li class="ol-item">
                                 Memperoleh informasi mengenai tata tertib & peraturan yang berlaku di RS
@@ -70,9 +70,9 @@
                         </ol>
                     </div>
                 </div>
-                <div class="container-sm container-md my-5">
-                    <center><h2 class="fw-bold fs-2">KEWAJIBAN PASIEN</h2></center>
-                    <div class="px-2 px-md-3 mt-7">
+                <div class="container-sm container-md my-7">
+                    <center><h2 class="fw-bold fs-1">KEWAJIBAN PASIEN</h2></center>
+                    <div class="px-3 px-md-5 mt-7">
                         <ol class="ol-numbered">
                             <li class="ol-item">
                                 Mematuhi peraturan yang berlaku di RS
