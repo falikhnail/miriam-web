@@ -9,15 +9,15 @@
         <div class="container-sm container-md">
             <div class="container-sm container-md my-5">
                 <center><h2 class="fw-bold fs-2">Informasi Lowongan Pekerjaan</h2></center></div>
-            <div class="my-5 d-flex justify-content-center">
+            {{-- <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/karir/bidan-s1.jpeg') }}" alt="">
             </div>
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/karir/bidan-d3.jpeg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
+            </div> --}}
+            {{-- <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/karir/perawat.jpeg') }}" alt="">
-            </div>
+            </div> --}}
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/karir/marketing.jpeg') }}" alt="">
             </div>
