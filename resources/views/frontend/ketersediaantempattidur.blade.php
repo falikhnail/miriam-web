@@ -11,7 +11,7 @@
                 <h1 class="fw-bold fs-1">Pelayanan RSIA</h1>
             </div> --}}
             <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/tempattidur/informasi-kamar.jpg') }}" alt="">
+                <img src="{{ asset('images/tempattidur/informasi-kamar-update.jpg') }}" alt="">
             </div>
         </div>
     </div>
