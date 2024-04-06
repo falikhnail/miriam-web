@@ -74,4 +74,7 @@ class FrontendController extends Controller {
     public function marketing() {
         return view("frontend.marketing");
     }
+    public function adminpendaftaran() {
+        return view("frontend.adminpendaftaran");
+    }
 }
