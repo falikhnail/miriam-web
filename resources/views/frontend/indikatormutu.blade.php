@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-    Informasi Lowongan Pekerjaan - PDF
+    {{ app_name() }}
 @endsection
 
 @section('content')
