@@ -29,7 +29,8 @@
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['jadwal_dokter','ketersediaantempattidur'
-                                ,'hak_kewajiban','bidan','perawat','marketing','adminpendaftaran','indikatormutu'];
+                                ,'hak_kewajiban','indikatormutu'];
+                    $karir = ['bidan','perawat','marketing','adminpendaftaran',];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -164,7 +165,7 @@
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
 
                             <li class="dropdown">
-                                <a href="" class="{{ $isActive($informasi) }}">
+                                <a href="" class="{{ $isActive($karir) }}">
                                     <span>Karir</span> <i class="bi bi-chevron-right"></i>
                                     </a>
                                 <ul>
