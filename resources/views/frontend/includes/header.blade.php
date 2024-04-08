@@ -29,7 +29,7 @@
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['jadwal_dokter','ketersediaantempattidur'
-                                ,'hak_kewajiban','bidan','perawat','marketing','adminpendaftaran'];
+                                ,'hak_kewajiban','bidan','perawat','marketing','adminpendaftaran','indikatormutu'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -137,7 +137,14 @@
                                     Jadwal Dokter
                                 </a>
                             </li>
-                            <li><a href="#">Indikator Mutu 2023</a></li>
+
+                            <li>
+                                <a href="{{ route('frontend.indikatormutu') }}"
+                                    class="{{ $isActive('indikatormutu') }}">
+                                    Indikator Mutu 2023
+                                </a>
+                            </li>
+
                             <li><a href="#">Tata Tertib Pasien, Pengujung, dan Penunggu</a></li>
 
                             <li>

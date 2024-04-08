@@ -77,4 +77,7 @@ class FrontendController extends Controller {
     public function adminpendaftaran() {
         return view("frontend.adminpendaftaran");
     }
+    public function indikatormutu() {
+        return view("frontend.indikatormutu");
+    }
 }
