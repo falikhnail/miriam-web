@@ -30,7 +30,7 @@
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['jadwal_dokter','ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu'];
-                    $karir = ['bidan','perawat','marketing','adminpendaftaran',];
+                    $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -177,6 +177,8 @@
                                         class="{{ $isActive('marketing') }}">Marketing</a></li>
                                     <li><a href="{{ route('frontend.adminpendaftaran') }}"
                                         class="{{ $isActive('adminpendaftaran') }}">Admin Pendaftaran</a></li>
+                                    <li><a href="{{ route('frontend.ttk') }}"
+                                        class="{{ $isActive('ttk') }}">Tenaga Teknis Kefarmasian</a></li>
                                 </ul>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>
