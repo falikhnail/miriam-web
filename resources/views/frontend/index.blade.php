@@ -192,7 +192,7 @@
                                         tingkat kegawatannya.
                                         IGD juga melayani pemeriksaan kesehatan untuk umum (tidak hanya ibu hamil dan
                                         anak-anak).
-                                        Di IGD dilayani oleh Dokter Umum : Dr Sri Uminingsih & Dr Gizela Yuanita.</p>
+                                        Di IGD dilayani oleh Dokter Umum Dr Sri Uminingsih</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/igd.jpg" alt="" class="img-fluid">
@@ -207,8 +207,8 @@
                                     </p>
                                     <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
                                         konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
-                                        perawatan pasca operasi sesar. Dilayani oleh Dr Ferry Santoso, Sp.OG, M.Biomed dan
-                                        Dr Yudi Indarto, Sp.OG </p>
+                                        perawatan pasca operasi sesar. Dilayani oleh Dr Ferry Santoso, Sp.OG, M.Biomed &
+                                        Dr Yudi Indarto, Sp.OG & Dr Lilis Handayani, Sp. OG</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/obgyn.jpg" alt="" class="img-fluid">
