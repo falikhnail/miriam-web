@@ -30,7 +30,7 @@
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['jadwal_dokter','ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu'];
-                    $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk'];
+                    $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
