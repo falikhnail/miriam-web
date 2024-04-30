@@ -80,6 +80,9 @@ class FrontendController extends Controller {
     public function ttk() {
         return view("frontend.ttk");
     }
+    public function analiskesehatan() {
+        return view("frontend.analiskesehatan");
+    }
     public function indikatormutu() {
         return view("frontend.indikatormutu");
     }
