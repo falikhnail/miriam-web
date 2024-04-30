@@ -10,7 +10,7 @@
             <div class="container-sm container-md my-5">
                 <center><h2 class="fw-bold fs-2">Informasi Lowongan Pekerjaan</h2></center></div>
             <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/karir/ttk.jpg') }}" alt="">
+                <img src="{{ asset('images/karir/analis-kesehatan.jpg') }}" alt="">
             </div>
         </div>
     </div>
