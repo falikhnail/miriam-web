@@ -26,6 +26,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/perawat', 'FrontendController@perawat')->name('perawat');
     Route::get('/marketing', 'FrontendController@marketing')->name('marketing');
     Route::get('/ttk', 'FrontendController@ttk')->name('ttk');
+    Route::get('/analiskesehatan', 'FrontendController@ttk')->name('analiskesehatan');
     Route::get('/adminpendaftaran', 'FrontendController@adminpendaftaran')->name('adminpendaftaran');
 
     Route::get('/indikatormutu', 'FrontendController@indikatormutu')->name('indikatormutu');
