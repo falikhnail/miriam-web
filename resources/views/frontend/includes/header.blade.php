@@ -179,6 +179,8 @@
                                         class="{{ $isActive('adminpendaftaran') }}">Admin Pendaftaran</a></li>
                                     <li><a href="{{ route('frontend.ttk') }}"
                                         class="{{ $isActive('ttk') }}">Tenaga Teknis Kefarmasian</a></li>
+                                    <li><a href="{{ route('frontend.analiskesehatan') }}"
+                                        class="{{ $isActive('ttk') }}">Analis Kesehatan</a></li>
                                 </ul>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>
