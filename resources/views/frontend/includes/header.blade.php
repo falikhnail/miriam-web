@@ -28,9 +28,11 @@
                     <?php
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
-                    $informasi = ['jadwal_dokter','ketersediaantempattidur'
-                                ,'hak_kewajiban','indikatormutu'];
-                    $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',];
+                    $informasi = ['ketersediaantempattidur'
+                                ,'hak_kewajiban','indikatormutu','jadwal_dokter','dokteryudi'];
+                                
+                    $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
+                                'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -139,6 +141,35 @@
                                 </a>
                             </li>
 
+                                {{-- <li class="dropdown">
+                                    <a href="{{ route('frontend.jadwal_dokter') }}"
+                                        class="{{ $isActive('jadwal_dokter') }}"> <span>Jadwal Dokter</span> 
+                                        <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li class="dropdown">
+                                            <a href="{{ route('frontend.jadwal_dokter') }}"
+                                                class="{{ $isActive('jadwal_dokter') }}"> <span>Spesialis Kandungan</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dokteryudi') }}" 
+                                                            class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
+                                                    </li>
+                                                </ul>
+                                        <li class="dropdown">
+                                            <a href="{{ route('frontend.jadwal_dokter') }}"
+                                                class="{{ $isActive('jadwal_dokter') }}"> <span>Spesialis Anak</span> 
+                                                <i class="bi bi-chevron-right"></i></a></li>
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dokteryudi') }}" 
+                                                            class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
+                                                    </li>
+                                                </ul>        
+                                        </li>
+                                    </ul>
+                                </li> --}}
+
                             <li>
                                 <a href="{{ route('frontend.indikatormutu') }}"
                                     class="{{ $isActive('indikatormutu') }}">
@@ -181,6 +212,8 @@
                                         class="{{ $isActive('ttk') }}">Tenaga Teknis Kefarmasian</a></li>
                                     <li><a href="{{ route('frontend.analiskesehatan') }}"
                                         class="{{ $isActive('ttk') }}">Analis Kesehatan</a></li>
+                                    <li><a href="{{ route('frontend.tata_boga') }}"
+                                        class="{{ $isActive('tata_boga') }}">Tata Boga</a></li>    
                                 </ul>
                             <li><a href="#">Mitra Kami</a></li>
                         </ul>

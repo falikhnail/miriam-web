@@ -83,6 +83,14 @@ class FrontendController extends Controller {
     public function analiskesehatan() {
         return view("frontend.analiskesehatan");
     }
+    public function tata_boga() {
+        return view("frontend.tata_boga");
+    }
+
+    public function dokteryudi() {
+        return view("frontend.dokteryudi");
+    }
+
     public function indikatormutu() {
         return view("frontend.indikatormutu");
     }
