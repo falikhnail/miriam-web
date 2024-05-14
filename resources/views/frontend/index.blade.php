@@ -146,7 +146,7 @@
                                     <p class="fst-italic"></p>
                                     <p>Melayani pemeriksaan kesehatan fisik serta perkembangan
                                         tumbuh kembang anak mulai dari usia anak 0–18 tahun, dilayani oleh Dokter Spesialis
-                                        Anak : Dr. Tezza Dinayanti, Sp.A
+                                        Anak : dr. Tezza Dinayanti, Sp.A
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -162,7 +162,7 @@
                                     <p>Melayani pemeriksaaan bagian dalam tubuh manusia dengan menggunakan teknologi
                                         pencitraan,
                                         baik gelombang elektromagnetik maupun gelombang mekanik.
-                                        Untuk Pelayanan Radiologi dilayani oleh Dr. Michael A. Leuwol, Sp. Rad</p>
+                                        Untuk Pelayanan Radiologi dilayani oleh dr. Michael A. Leuwol, Sp. Rad</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/rad.jpg" alt="" class="img-fluid">
@@ -192,7 +192,7 @@
                                         tingkat kegawatannya.
                                         IGD juga melayani pemeriksaan kesehatan untuk umum (tidak hanya ibu hamil dan
                                         anak-anak).
-                                        Di IGD dilayani oleh Dokter Umum Dr Sri Uminingsih</p>
+                                        Di IGD dilayani oleh Dokter Umum dr. Sri Uminingsih</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/igd.jpg" alt="" class="img-fluid">
@@ -207,8 +207,8 @@
                                     </p>
                                     <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
                                         konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
-                                        perawatan pasca operasi sesar. Dilayani oleh Dr Ferry Santoso, Sp.OG, M.Biomed &
-                                        Dr Yudi Indarto, Sp.OG & Dr Lilis Handayani, Sp. OG</p>
+                                        perawatan pasca operasi sesar. Dilayani oleh dr. Ferry Santoso, Sp.OG, M.Biomed &
+                                        dr. Yudi Indarto, Sp.OG & dr. Lilis Handayani, Sp. OG</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/obgyn.jpg" alt="" class="img-fluid">

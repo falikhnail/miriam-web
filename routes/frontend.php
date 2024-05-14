@@ -31,6 +31,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/tata_boga', 'FrontendController@tata_boga')->name('tata_boga');
 
     Route::get('/dokteryudi', 'FrontendController@dokteryudi')->name('dokteryudi');
+    Route::get('/dr_tezza', 'FrontendController@dr_tezza')->name('dr_tezza');
 
     Route::get('/indikatormutu', 'FrontendController@indikatormutu')->name('indikatormutu');
 

@@ -29,7 +29,7 @@
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['ketersediaantempattidur'
-                                ,'hak_kewajiban','indikatormutu','jadwal_dokter','dokteryudi'];
+                                ,'hak_kewajiban','indikatormutu','jadwal_dokter','dokteryudi','dr_tezza'];
                                 
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
@@ -134,41 +134,69 @@
                             <span>Informasi</span> <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('frontend.jadwal_dokter') }}"
                                     class="{{ $isActive('jadwal_dokter') }}">
                                     Jadwal Dokter
                                 </a>
-                            </li>
+                            </li> --}}
 
-                                {{-- <li class="dropdown">
+                                <li class="dropdown">
                                     <a href="{{ route('frontend.jadwal_dokter') }}"
                                         class="{{ $isActive('jadwal_dokter') }}"> <span>Jadwal Dokter</span> 
                                         <i class="bi bi-chevron-right"></i></a>
                                     <ul>
                                         <li class="dropdown">
-                                            <a href="{{ route('frontend.jadwal_dokter') }}"
-                                                class="{{ $isActive('jadwal_dokter') }}"> <span>Spesialis Kandungan</span> 
+                                            {{-- <a href="{{ route('frontend.dokteryudi') }}" --}}
+                                            <a class="{{ $isActive('jadwal_dokteryudi') }}"> <span>Dokter Spesialis Kandungan & Kebidanan</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
                                                 <ul>
                                                     <li>
-                                                        <a href="{{ route('frontend.dokteryudi') }}" 
+                                                        <a href="{{ route('frontend.dokteryudi') }}"
                                                             class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
                                                     </li>
-                                                </ul>
-                                        <li class="dropdown">
-                                            <a href="{{ route('frontend.jadwal_dokter') }}"
-                                                class="{{ $isActive('jadwal_dokter') }}"> <span>Spesialis Anak</span> 
-                                                <i class="bi bi-chevron-right"></i></a></li>
-                                                <ul>
                                                     <li>
-                                                        <a href="{{ route('frontend.dokteryudi') }}" 
+                                                        <a href="{{ route('frontend.dokteryudi') }}"
                                                             class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
                                                     </li>
-                                                </ul>        
+                                                </ul>      
+                                        </li>
+                                        <li class="dropdown">
+                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
+                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Spesialis Anak</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                {{-- <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_tezza') }}"
+                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                    </li>
+                                                </ul> --}}
+                                        </li>
+                                        <li class="dropdown">
+                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
+                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Umum</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                {{-- <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_tezza') }}"
+                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                    </li>
+                                                </ul> --}}
+                                        </li>
+                                        <li class="dropdown">
+                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
+                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Gigi</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                {{-- <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_tezza') }}"
+                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                    </li>
+                                                </ul> --}}
+                                        </li>                  
                                         </li>
                                     </ul>
-                                </li> --}}
+                                </li>
 
                             <li>
                                 <a href="{{ route('frontend.indikatormutu') }}"

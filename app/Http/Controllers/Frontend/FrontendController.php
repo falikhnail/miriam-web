@@ -90,6 +90,9 @@ class FrontendController extends Controller {
     public function dokteryudi() {
         return view("frontend.dokteryudi");
     }
+    public function dr_tezza() {
+        return view("frontend.dr_tezza");
+    }
 
     public function indikatormutu() {
         return view("frontend.indikatormutu");
