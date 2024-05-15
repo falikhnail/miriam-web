@@ -29,8 +29,10 @@
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['ketersediaantempattidur'
-                                ,'hak_kewajiban','indikatormutu','jadwal_dokter','dokteryudi','dr_tezza'];
-                                
+                                ,'hak_kewajiban','indikatormutu','jadwal_dokter'
+                                ,'dr_yudi','dr_tezza'];
+                    
+                    $jadwal = ['dr_yudi','dr_tezza'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
@@ -142,23 +144,23 @@
                             </li> --}}
 
                                 <li class="dropdown">
-                                    <a href="{{ route('frontend.jadwal_dokter') }}"
-                                        class="{{ $isActive('jadwal_dokter') }}"> <span>Jadwal Dokter</span> 
+                                    {{-- <a href="{{ route('frontend.jadwal_dokter') }}" --}}
+                                    <a  class="{{ $isActive('jadwal') }}"> <span>Jadwal Dokter</span> 
                                         <i class="bi bi-chevron-right"></i></a>
                                     <ul>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dokteryudi') }}" --}}
-                                            <a class="{{ $isActive('jadwal_dokteryudi') }}"> <span>Dokter Spesialis Kandungan & Kebidanan</span> 
+                                            <a class="{{ $isActive('dr_yudi') }}"> <span>Dokter Spesialis Kandungan & Kebidanan</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
                                                 <ul>
                                                     <li>
+                                                        <a href="{{ route('frontend.dr_yudi') }}"
+                                                            class="{{ $isActive('dr_yudi') }}"> dr. Yudi Indarto, Sp.OG</a>
+                                                    </li>
+                                                    {{-- <li>
                                                         <a href="{{ route('frontend.dokteryudi') }}"
                                                             class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('frontend.dokteryudi') }}"
-                                                            class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
-                                                    </li>
+                                                    </li> --}}
                                                 </ul>      
                                         </li>
                                         <li class="dropdown">
@@ -175,6 +177,17 @@
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
                                             <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Umum</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                {{-- <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_tezza') }}"
+                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                    </li>
+                                                </ul> --}}
+                                        </li>
+                                        <li class="dropdown">
+                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
+                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Radiologi</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
                                                 {{-- <ul>
                                                     <li>
