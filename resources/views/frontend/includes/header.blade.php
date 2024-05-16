@@ -136,80 +136,14 @@
                             <span>Informasi</span> <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul>
-                            {{-- <li>
+                            <li>
                                 <a href="{{ route('frontend.jadwal_dokter') }}"
                                     class="{{ $isActive('jadwal_dokter') }}">
                                     Jadwal Dokter
                                 </a>
-                            </li> --}}
+                            </li>
 
-                                <li class="dropdown">
-                                    {{-- <a href="{{ route('frontend.jadwal_dokter') }}" --}}
-                                    <a  class="{{ $isActive('jadwal') }}"> <span>Jadwal Dokter</span> 
-                                        <i class="bi bi-chevron-right"></i></a>
-                                    <ul>
-                                        <li class="dropdown">
-                                            {{-- <a href="{{ route('frontend.dokteryudi') }}" --}}
-                                            <a class="{{ $isActive('dr_yudi') }}"> <span>Dokter Spesialis Kandungan & Kebidanan</span> 
-                                                <i class="bi bi-chevron-right"></i></a>
-                                                <ul>
-                                                    <li>
-                                                        <a href="{{ route('frontend.dr_yudi') }}"
-                                                            class="{{ $isActive('dr_yudi') }}"> dr. Yudi Indarto, Sp.OG</a>
-                                                    </li>
-                                                    {{-- <li>
-                                                        <a href="{{ route('frontend.dokteryudi') }}"
-                                                            class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
-                                                    </li> --}}
-                                                </ul>      
-                                        </li>
-                                        <li class="dropdown">
-                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Spesialis Anak</span> 
-                                                <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
-                                                    <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
-                                                    </li>
-                                                </ul> --}}
-                                        </li>
-                                        <li class="dropdown">
-                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Umum</span> 
-                                                <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
-                                                    <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
-                                                    </li>
-                                                </ul> --}}
-                                        </li>
-                                        <li class="dropdown">
-                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Radiologi</span> 
-                                                <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
-                                                    <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
-                                                    </li>
-                                                </ul> --}}
-                                        </li>
-                                        <li class="dropdown">
-                                            {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Gigi</span> 
-                                                <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
-                                                    <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
-                                                    </li>
-                                                </ul> --}}
-                                        </li>                  
-                                        </li>
-                                    </ul>
-                                </li>
+                                
 
                             <li>
                                 <a href="{{ route('frontend.indikatormutu') }}"
