@@ -252,7 +252,7 @@
                                     <li><a href="{{ route('frontend.ttk') }}"
                                         class="{{ $isActive('ttk') }}">Tenaga Teknis Kefarmasian</a></li>
                                     <li><a href="{{ route('frontend.analiskesehatan') }}"
-                                        class="{{ $isActive('ttk') }}">Analis Kesehatan</a></li>
+                                        class="{{ $isActive('analiskesehatan') }}">Analis Kesehatan</a></li>
                                     <li><a href="{{ route('frontend.tata_boga') }}"
                                         class="{{ $isActive('tata_boga') }}">Tata Boga</a></li>    
                                 </ul>
