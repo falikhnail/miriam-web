@@ -157,10 +157,10 @@
                                                         <a href="{{ route('frontend.dr_yudi') }}"
                                                             class="{{ $isActive('dr_yudi') }}"> dr. Yudi Indarto, Sp.OG</a>
                                                     </li>
-                                                    {{-- <li>
-                                                        <a href="{{ route('frontend.dokteryudi') }}"
-                                                            class="{{ $isActive('dokteryudi') }}"> Dr. Yudi Indarto, Sp.OG</a>
-                                                    </li> --}}
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_yudi') }}"
+                                                            class="{{ $isActive('dr_yudi') }}"> dr. Ferry Santoso, Sp.OG, M.Biomed</a>
+                                                    </li>
                                                 </ul>      
                                         </li>
                                         <li class="dropdown">
