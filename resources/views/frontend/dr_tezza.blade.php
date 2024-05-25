@@ -5,13 +5,13 @@
 @endsection
 
 @section('content')
-    <div class="d-flex flex-column mx-[0.75rem] md:mx-[3rem] bg-white">
+    <div class="card shadow rounded-lg d-flex flex-column mx-[0.75rem] md:mx-[3rem] my-5 bg-white">
         <div class="container-sm container-md">
             {{-- <div class="mt-3 mb-5">
                 <h1 class="fw-bold fs-1">Pelayanan RSIA</h1>
             </div> --}}
             <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/jadwal-dokter/drg-yudi-update1.jpeg') }}" alt="">
+                <img src="{{ asset('images/jadwal-dokter/dr.tezza.jpg') }}" alt="">
             </div>
         </div>
     </div>

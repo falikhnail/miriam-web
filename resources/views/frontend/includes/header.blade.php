@@ -167,12 +167,12 @@
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
                                             <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Spesialis Anak</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
+                                                <ul>
                                                     <li>
                                                         <a href="{{ route('frontend.dr_tezza') }}"
                                                             class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
                                                     </li>
-                                                </ul> --}}
+                                                </ul>
                                         </li>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
