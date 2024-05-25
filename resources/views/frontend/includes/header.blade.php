@@ -31,7 +31,7 @@
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu','jadwal_dokter'];
                     
-                    $jadwal = ['dr_yudi','dr_ferry','dr_tezza'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
@@ -159,6 +159,10 @@
                                                     <li>
                                                         <a href="{{ route('frontend.dr_ferry') }}"
                                                             class="{{ $isActive('dr_ferry') }}"> dr. Ferry Santoso, Sp.OG, M.Biomed</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_lilis') }}"
+                                                            class="{{ $isActive('dr_lilis') }}"> dr. Lilis Handayani, Sp.OG</a>
                                                     </li>
                                                 </ul>      
                                         </li>
