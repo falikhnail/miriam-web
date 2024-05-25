@@ -99,6 +99,9 @@ class FrontendController extends Controller {
     public function dr_tezza() {
         return view("frontend.dr_tezza");
     }
+    public function drg_vera() {
+        return view("frontend.drg_vera");
+    }
 
     public function indikatormutu() {
         return view("frontend.indikatormutu");
