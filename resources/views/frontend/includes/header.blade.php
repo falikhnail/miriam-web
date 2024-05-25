@@ -29,10 +29,9 @@
                     $profile = ['visi_misi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['ketersediaantempattidur'
-                                ,'hak_kewajiban','indikatormutu','jadwal_dokter'
-                                ,'dr_yudi','dr_tezza'];
+                                ,'hak_kewajiban','indikatormutu','jadwal_dokter'];
                     
-                    $jadwal = ['dr_yudi','dr_tezza'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_tezza'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
@@ -158,8 +157,8 @@
                                                             class="{{ $isActive('dr_yudi') }}"> dr. Yudi Indarto, Sp.OG</a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('frontend.dr_yudi') }}"
-                                                            class="{{ $isActive('dr_yudi') }}"> dr. Ferry Santoso, Sp.OG, M.Biomed</a>
+                                                        <a href="{{ route('frontend.dr_ferry') }}"
+                                                            class="{{ $isActive('dr_ferry') }}"> dr. Ferry Santoso, Sp.OG, M.Biomed</a>
                                                     </li>
                                                 </ul>      
                                         </li>
