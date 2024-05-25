@@ -162,7 +162,7 @@
                                     <p>Melayani pemeriksaaan bagian dalam tubuh manusia dengan menggunakan teknologi
                                         pencitraan,
                                         baik gelombang elektromagnetik maupun gelombang mekanik.
-                                        Untuk Pelayanan Radiologi dilayani oleh dr. Michael A. Leuwol, Sp. Rad</p>
+                                        Untuk Pelayanan Radiologi dilayani oleh dr. Michael A. Leuwol, Sp.Rad</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/rad.jpg" alt="" class="img-fluid">
@@ -208,7 +208,7 @@
                                     <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
                                         konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
                                         perawatan pasca operasi sesar. Dilayani oleh dr. Ferry Santoso, Sp.OG, M.Biomed &
-                                        dr. Yudi Indarto, Sp.OG & dr. Lilis Handayani, Sp. OG</p>
+                                        dr. Yudi Indarto, Sp.OG & dr. Lilis Handayani, Sp.OG</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/obgyn.jpg" alt="" class="img-fluid">
@@ -256,7 +256,7 @@
                         <div class="pic"><img src="assets/img/doctors/cewe.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Sri Uminingsih</h4>
+                            <h4>dr. Sri Uminingsih</h4>
                             <span>Dokter Umum</span>
                             <p>Jangan takut untuk berubah; dalam perubahan terdapat potensi untuk pertumbuhan dan
                                 keberhasilan.</p>
@@ -275,7 +275,7 @@
                         <div class="pic"><img src="assets/img/doctors/cewe2.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Lilis Handayani, Sp. OG</h4>
+                            <h4>dr. Lilis Handayani, Sp.OG</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
                             <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
                             <!-- <div class="social">
@@ -293,7 +293,7 @@
                         <div class="pic"><img src="assets/img/doctors/cewe3.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Tezza Dinayanti, Sp.A</h4>
+                            <h4>dr. Tezza Dinayanti, Sp.A</h4>
                             <span>Dokter Spesialis Anak</span>
                             <p>Keberhasilan belum final, kegagalan tidak fatal: Keberanian untuk melanjutkanlah yang
                                 terpenting.</p>
@@ -312,7 +312,7 @@
                         <div class="pic"><img src="assets/img/doctors/cowo.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Yudi Indarto, Sp. OG</h4>
+                            <h4>dr. Yudi Indarto, Sp.OG</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
                             <p>Hidup ini seperti sepasang sepatu; terkadang sulit, tapi langkah demi langkah akan membawamu
                                 ke tempat yang indah.</p>
@@ -331,7 +331,7 @@
                         <div class="pic"><img src="assets/img/doctors/cowo1.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr Ferry Santoso, Sp.OG, M. Biomed</h4>
+                            <h4>dr. Ferry Santoso, Sp.OG, M. Biomed</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
                             <p>Jadilah seseorang yang memberikan lebih banyak cahaya daripada bayangan, dan dunia akan
                                 menjadi tempat yang lebih terang.</p>
@@ -350,7 +350,7 @@
                         <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Dr. Michael A. Leuwol, Sp. Rad</h4>
+                            <h4>dr. Michael A. Leuwol, Sp.Rad</h4>
                             <span>Dokter Spesialis Radiology</span>
                             <p>Setiap matahari terbit membawa kesempatan baru. Dalam setiap tantangan, kita temukan
                                 kekuatan. Berikan cinta, cari keindahan, dan berjalanlah dengan keyakinan. Hiduplah hari ini
@@ -370,7 +370,7 @@
                         <div class="pic"><img src="assets/img/doctors/cewe4.png" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Drg Vera Sentosa</h4>
+                            <h4>drg. Vera Sentosa</h4>
                             <span>Dokter Gigi</span>
                             <p>Jadilah matahari yang menerangi kegelapan, baik bagi dirimu sendiri maupun orang lain.</p>
                             <!-- <div class="social">
