@@ -31,7 +31,7 @@
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu','jadwal_dokter'];
                     
-                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza','dr_umi'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
@@ -179,14 +179,14 @@
                                         </li>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Umum</span> 
+                                            <a class="{{ $isActive('dr_umi') }}"> <span>Dokter Umum</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
+                                                <ul>
                                                     <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                        <a href="{{ route('frontend.dr_umi') }}"
+                                                            class="{{ $isActive('dr_umi') }}">dr. Sri Uminingsih</a>
                                                     </li>
-                                                </ul> --}}
+                                                </ul>
                                         </li>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
