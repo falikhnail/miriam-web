@@ -31,7 +31,7 @@
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu','jadwal_dokter'];
                     
-                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza','dr_umi'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza','dr_umi','drg_vera'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
@@ -201,14 +201,14 @@
                                         </li>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Gigi</span> 
+                                            <a class="{{ $isActive('drg_vera') }}"> <span>Dokter Gigi</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
+                                                <ul>
                                                     <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                        <a href="{{ route('frontend.drg_vera') }}"
+                                                            class="{{ $isActive('drg_vera') }}">drg. Vera Sentosa</a>
                                                     </li>
-                                                </ul> --}}
+                                                </ul>
                                         </li>                  
                                         </li>
                                     </ul>
