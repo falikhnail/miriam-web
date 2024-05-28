@@ -190,14 +190,14 @@
                                         </li>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}
-                                            <a class="{{ $isActive('dr_tezza') }}"> <span>Dokter Radiologi</span> 
+                                            <a class="{{ $isActive('dr_michel') }}"> <span>Dokter Radiologi</span> 
                                                 <i class="bi bi-chevron-right"></i></a>
-                                                {{-- <ul>
+                                                <ul>
                                                     <li>
-                                                        <a href="{{ route('frontend.dr_tezza') }}"
-                                                            class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                        <a href="{{ route('frontend.dr_michel') }}"
+                                                            class="{{ $isActive('dr_michel') }}">dr. Michael A. Leuwol, Sp.Rad</a>
                                                     </li>
-                                                </ul> --}}
+                                                </ul>
                                         </li>
                                         <li class="dropdown">
                                             {{-- <a href="{{ route('frontend.dr_tezza') }}" --}}

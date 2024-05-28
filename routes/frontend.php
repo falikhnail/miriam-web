@@ -21,7 +21,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/imun_tambahan1', 'FrontendController@imun_tambahan1')->name('imun_tambahan1');
     Route::get('/vaksin_dewasa', 'FrontendController@vaksin_dewasa')->name('vaksin_dewasa');
     Route::get('/hak_kewajiban', 'FrontendController@hak_kewajiban')->name('hak_kewajiban');
-
+// route from karir
     Route::get('/bidan', 'FrontendController@bidan')->name('bidan');
     Route::get('/perawat', 'FrontendController@perawat')->name('perawat');
     Route::get('/marketing', 'FrontendController@marketing')->name('marketing');
@@ -29,12 +29,13 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/analiskesehatan', 'FrontendController@analiskesehatan')->name('analiskesehatan');
     Route::get('/adminpendaftaran', 'FrontendController@adminpendaftaran')->name('adminpendaftaran');
     Route::get('/tata_boga', 'FrontendController@tata_boga')->name('tata_boga');
-
+// route from jadwal dokter
     Route::get('/dr_yudi', 'FrontendController@dr_yudi')->name('dr_yudi');
     Route::get('/dr_ferry', 'FrontendController@dr_ferry')->name('dr_ferry');
     Route::get('/dr_lilis', 'FrontendController@dr_lilis')->name('dr_lilis');
     Route::get('/dr_tezza', 'FrontendController@dr_tezza')->name('dr_tezza');
     Route::get('/dr_umi', 'FrontendController@dr_umi')->name('dr_umi');
+    Route::get('/dr_michel', 'FrontendController@dr_michel')->name('dr_michel');
     Route::get('/drg_vera', 'FrontendController@drg_vera')->name('drg_vera');
 
     Route::get('/indikatormutu', 'FrontendController@indikatormutu')->name('indikatormutu');

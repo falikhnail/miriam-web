@@ -102,6 +102,9 @@ class FrontendController extends Controller {
     public function dr_umi() {
         return view("frontend.dr_umi");
     }
+    public function dr_michel() {
+        return view("frontend.dr_michel");
+    }
     public function drg_vera() {
         return view("frontend.drg_vera");
     }
