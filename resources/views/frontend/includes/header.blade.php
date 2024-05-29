@@ -26,10 +26,10 @@
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
                     <?php
-                    $profile = ['visi_misi'];
+                    $profile = ['visi_misi','struktur_organisasi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['ketersediaantempattidur'
-                                ,'hak_kewajiban','indikatormutu','jadwal_dokter'];
+                                ,'hak_kewajiban','indikatormutu'];
                     
                     $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza','dr_umi','drg_vera'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
@@ -67,12 +67,12 @@
                                 <a href="#">Profile RSIA MIRIAM</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.visi_misi') }}" class="{{ $isActive('visi_misi') }}">Visi
-                                    dan Misi</a>
-                            </li>
+                                <a href="{{ route('frontend.visi_misi') }}" 
+                                class="{{ $isActive('visi_misi') }}">Visi dan Misi</a></li>
                             <li><a href="#">Sejarah</a></li>
                             <li><a href="#">Unit Kerja</a></li>
-                            <li><a href="#">Struktur Organisasi</a></li>
+                            <li><a href="{{ route('frontend.struktur_organisasi') }}" 
+                                class="{{ $isActive('struktur_organisasi') }}">Sturktur Organisasi</a></li>
                         </ul>
                     <li class="dropdown">
                         <a href="#" class="{{ $isActive($pelayanan) }}">
