@@ -110,6 +110,9 @@ class FrontendController extends Controller {
     public function drg_vera() {
         return view("frontend.drg_vera");
     }
+    public function drg_cindy() {
+        return view("frontend.drg_cindy");
+    }
 
     public function indikatormutu() {
         return view("frontend.indikatormutu");

@@ -31,7 +31,7 @@
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu'];
                     
-                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza','dr_umi','drg_vera'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_lilis','dr_tezza','dr_umi','drg_vera','drg_cindy'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
                                 'tata_boga'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
@@ -207,6 +207,10 @@
                                                     <li>
                                                         <a href="{{ route('frontend.drg_vera') }}"
                                                             class="{{ $isActive('drg_vera') }}">drg. Vera Sentosa</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('frontend.drg_cindy') }}"
+                                                            class="{{ $isActive('drg_cindy') }}">drg. Cindy Natalia A.</a>
                                                     </li>
                                                 </ul>
                                         </li>                  
