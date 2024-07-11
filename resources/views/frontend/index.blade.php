@@ -208,7 +208,7 @@
                                     <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
                                         konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
                                         perawatan pasca operasi sesar. Dilayani oleh dr. Ferry Santoso, Sp.OG, M.Biomed &
-                                        dr. Yudi Indarto, Sp.OG & dr. Lilis Handayani, Sp.OG</p>
+                                        dr. Yudi Indarto, Sp.OG</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <img src="assets/img/obgyn.jpg" alt="" class="img-fluid">
@@ -251,9 +251,9 @@
 
             <div class="row">
 
-                <div class="col-lg-6">
+                <div style="width: 50%; height: 50%;" class="col-lg-6">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe.png" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.umi.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Sri Uminingsih</h4>
@@ -270,27 +270,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-4 mt-lg-0">
+                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe2.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>dr. Lilis Handayani, Sp.OG</h4>
-                            <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
-                            <!-- <div class="social">
-                                                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mt-4">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe3.png" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.tezza.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Tezza Dinayanti, Sp.A</h4>
@@ -307,9 +289,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-4">
+                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cowo.png" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.yudi.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Yudi Indarto, Sp.OG</h4>
@@ -326,12 +308,12 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-4">
+                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cowo1.png" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.fery.jpg" class="img-fluid" alt="" width="100%" height="auto">
                         </div>
                         <div class="member-info">
-                            <h4>dr. Ferry Santoso, Sp.OG, M. Biomed</h4>
+                            <h4>dr. Ferry S. , Sp.OG, M. Biomed</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
                             <p>Jadilah seseorang yang memberikan lebih banyak cahaya daripada bayangan, dan dunia akan
                                 menjadi tempat yang lebih terang.</p>
@@ -345,16 +327,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-4">
+                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid" alt="" width="100%" height="auto">
                         </div>
                         <div class="member-info">
                             <h4>dr. Michael A. Leuwol, Sp.Rad</h4>
                             <span>Dokter Spesialis Radiology</span>
                             <p>Setiap matahari terbit membawa kesempatan baru. Dalam setiap tantangan, kita temukan
-                                kekuatan. Berikan cinta, cari keindahan, dan berjalanlah dengan keyakinan. Hiduplah hari ini
-                                sepenuh hati.</p>
+                                kekuatan.</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -365,14 +346,32 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-4">
+                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/cewe4.png" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/drg.vera.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>drg. Vera Sentosa</h4>
                             <span>Dokter Gigi</span>
                             <p>Jadilah matahari yang menerangi kegelapan, baik bagi dirimu sendiri maupun orang lain.</p>
+                            <!-- <div class="social">
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="assets/img/doctors/drg.cindy.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>drg. Cindy Natalia A.</h4>
+                            <span>Dokter Gigi</span>
+                            <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
