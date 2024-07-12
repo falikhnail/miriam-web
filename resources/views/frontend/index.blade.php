@@ -251,9 +251,9 @@
 
             <div class="row">
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6">
+                <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/dr.umi.jpg" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.ummi.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Sri Uminingsih</h4>
@@ -269,7 +269,7 @@
                     </div>
                 </div>
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-0">
+                <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
                         <div class="pic"><img src="assets/img/doctors/dr.tezza.jpg" class="img-fluid" alt="">
                         </div>
@@ -287,9 +287,9 @@
                     </div>
                 </div>
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
+                <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.yudii.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Yudi Indarto, Sp.OG</h4>
@@ -306,7 +306,7 @@
                     </div>
                 </div>
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
+                <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
                         <div class="pic"><img src="assets/img/doctors/dr.fery.jpg" class="img-fluid" alt="" width="100%" height="auto">
                         </div>
@@ -325,7 +325,7 @@
                     </div>
                 </div>
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
+                <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
                         <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid" alt="" width="100%" height="auto">
                         </div>
@@ -344,7 +344,7 @@
                     </div>
                 </div>
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
+                <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
                         <div class="pic"><img src="assets/img/doctors/drg.vera.jpg" class="img-fluid" alt="">
                         </div>
@@ -362,7 +362,7 @@
                     </div>
                 </div>
 
-                <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
+                <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
                         <div class="pic"><img src="assets/img/doctors/drg.cindy.jpg" class="img-fluid" alt="">
                         </div>
