@@ -258,8 +258,7 @@
                         <div class="member-info">
                             <h4>dr. Sri Uminingsih</h4>
                             <span>Dokter Umum</span>
-                            <p>Jangan takut untuk berubah; dalam perubahan terdapat potensi untuk pertumbuhan dan
-                                keberhasilan.</p>
+                            <p>"Melayani kegawatdaruratan, konsultasi, rawat luka, nebulizer, dan sebagainya di IGD RSIA Miriamn 24 jam"</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -277,8 +276,7 @@
                         <div class="member-info">
                             <h4>dr. Tezza Dinayanti, Sp.A</h4>
                             <span>Dokter Spesialis Anak</span>
-                            <p>Keberhasilan belum final, kegagalan tidak fatal: Keberanian untuk melanjutkanlah yang
-                                terpenting.</p>
+                            <p>"Melayani imunisasi/vaksinasi dasar dan tambahan (sesuai dengan jadwal dari IDAI) , melayani test mantoux, dan lain sebagainya"</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -291,7 +289,7 @@
 
                 <div style="width: 50%; height: 50%;" class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/dr.yudi.jpg" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Yudi Indarto, Sp.OG</h4>
