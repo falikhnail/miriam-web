@@ -294,8 +294,7 @@
                         <div class="member-info">
                             <h4>dr. Yudi Indarto, Sp.OG</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>Hidup ini seperti sepasang sepatu; terkadang sulit, tapi langkah demi langkah akan membawamu
-                                ke tempat yang indah.</p>
+                            <p>"Melayani ANC kehamilan, USG 2 dimensi, USG 4 dimensi, USG transvaginal, konsultasi kesehatan reproduksi dan program hamil"</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -313,8 +312,7 @@
                         <div class="member-info">
                             <h4>dr. Ferry S. , Sp.OG, M. Biomed</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>Jadilah seseorang yang memberikan lebih banyak cahaya daripada bayangan, dan dunia akan
-                                menjadi tempat yang lebih terang.</p>
+                            <p>"Melayani ANC kehamilan, USG 2 dimensi, USG 4 dimensi, USG transvaginal, konsultasi kesehatan reproduksi dan program hamil"</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -332,8 +330,7 @@
                         <div class="member-info">
                             <h4>dr. Michael A. Leuwol, Sp.Rad</h4>
                             <span>Dokter Spesialis Radiology</span>
-                            <p>Setiap matahari terbit membawa kesempatan baru. Dalam setiap tantangan, kita temukan
-                                kekuatan.</p>
+                            <p>"Melayani USG abdomen, mammae, massa, dll sesuai dengan surat pengantar USG dari dokter yang merekomendasikan"</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -475,12 +472,8 @@
                             <i class="bx bx-chevron-up icon-close"></i>
                         </a>
                         <div id="faq-list-4" class="!visible hidden" data-te-collapse-item>
-                            <p>Anda dapat mendaftar secara online melalui situs web kami atau menghubungi
-                                layanan pendaftaran kami di nomor WA kami; 0853-2947-3535 untuk membuat janji.
-                                Kami memiliki jadwal yang fleksibel untuk memenuhi kebutuhan waktu Anda.
-                            </p>
-                            <p>Fasilitas Di RSIA Miriam Saat Ini Sudah Terbilang Cukup Lengkap Untuk Menunjang Kebutuhan
-                                Pasien.
+                            <p>Pendaftaran poli anak dengan dr Tezza Dinayanti, Sp.A dilayani langsung ketika pasien datang sesuai jadwal praktik
+                                Pendaftaran poli anak dilayani mulai satu jam sebelum jam praktik sampai jam praktik selesai
                             </p>
                         </div>
                     </li>
@@ -522,20 +515,27 @@
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
         <div class="container">
+
+            <div class="section-title">
+                <h2>Testimonial</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="container">
+            
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
                         <div class="testimonial-wrap">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Bambang Sugeni</h3>
-                                <h4>Karyawan Swasta</h4>
+                                {{-- <img src="assets/img/testimonials/icon-female-6.png" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Ashaki Triasa/Rossa Firdaus</h3>
+                                {{-- <h4>Karyawan Swasta</h4> --}}
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    RSIA Miriam Memiliki Kualitas dan Kuantitas Yang Dapat Menunjang Semua Kebutuhan Anak
-                                    dan Istri saya. Dimana Juga Memiliki Pelayanan Yang Cepat dan Efisien
+                                    Setelah 2thn baru kesini lagi, Alhamdullilah pelayanan semakin bagus dan rapi. Jadi satset, kalo kritik dari saya belum ada, soalnya dari tahun kemarin semakin bagus
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -546,13 +546,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-wrap">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Richa Auliya Sari</h3>
-                                <h4>PNS</h4>
+                                {{-- <img src="assets/img/testimonials/beauty.png" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Ika Pratiwi</h3>
+                                {{-- <h4>PNS</h4> --}}
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Terimakasih Sudah Memberikan Yang Terbaik Untuk Saya.
+                                    Tempat menunggu yang nyaman dan pelayanan yang ramah
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -563,14 +563,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-wrap">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Naomi Sudarsono</h3>
-                                <h4>Store Owner</h4>
+                                {{-- <img src="assets/img/testimonials/woman.png" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Wahyu Rinda Septiana</h3>
+                                {{-- <h4>Store Owner</h4> --}}
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Pelayanan Yang Diberikan Oleh Perawat Di RSIA Miriam Sangat Memuaskan dan Ramah Terhadap
-                                    Pasien.
+                                    Alhamdullilah tidak ada kritik apa pun, ramah dan bagus, dokter obgyn nya hamble dan kelas sekali saat menjelaskan ke pasien
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -581,16 +580,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-wrap">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Tommy Bagus</h3>
-                                <h4>Freelancer</h4>
+                                {{-- <img src="assets/img/testimonials/gir" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Asti</h3>
+                                {{-- <h4>Freelancer</h4> --}}
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Terimakasih Sudah Memberikan Pertolongan Kepada Anak dan Istri Saya Pasca Melahirkan
-                                    Hingga Pengobatan Anak Saya Yang Sampai
-                                    Saat Ini Diusia 10th Sudah memberikan Pelayanan Yang Terbaik. Semoga Kedepannya Semakin
-                                    Sukses
+                                    Fasilitas dan infrastruktur sudah semakin meningkat, pelayanan secara online mempermudah pasien untuk mendaftar
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -601,13 +597,93 @@
                     <div class="swiper-slide">
                         <div class="testimonial-wrap">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Budi Setiawan</h3>
-                                <h4>Pengusaha</h4>
+                                {{-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Devi Aprilia S.</h3>
+                                {{-- <h4>Pengusaha</h4> --}}
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Pelayanan RSIA Miriam Memiliki Keunggulan Dimana RS Belum Memiliki Hal Tersebut.
+                                    Tidak ada, selama berobat dari th 2021 saat hamil dan sekarang berobat/imunisasi untuk anak semuanya sedah baik, pelayanan para perawata dan dokter jg sudah baik
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                {{-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Wulan</h3>
+                                {{-- <h4>Pengusaha</h4> --}}
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Untuk kunjungan pertama semua pelayanan bagus dari satpam yang ramah, pendaftaran cepat, nurse ramah
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                {{-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Megalia</h3>
+                                {{-- <h4>Pengusaha</h4> --}}
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Dapat ditingkatkan kembli pelayanannya yang sudah bagus, ketepatan waktu dalam kehadiran dokter dan pelayanan dapat ditingkatkan lagi
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                {{-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>drg. Tribuana Putri</h3>
+                                {{-- <h4>Pengusaha</h4> --}}
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Sejauh ini baik dan memuaskan
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                {{-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Iwan Ashari</h3>
+                                {{-- <h4>Pengusaha</h4> --}}
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    tetapkan pelayanan yang bagus
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                {{-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt=""> --}}
+                                <h3>Tia Rahmawati</h3>
+                                {{-- <h4>Pengusaha</h4> --}}
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    pelayanan sudah bagus, tampat bersih dan nyaman
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
