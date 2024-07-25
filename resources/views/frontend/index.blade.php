@@ -75,7 +75,7 @@
                     <a href="https://www.youtube.com/watch?v=Tk6OXQwtSN4" class="glightbox play-btn mb-4"></a>
                 </div>
 
-                <div
+                {{-- <div
                     class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                     <h3>RSIA MIRIAM</h3>
                     <p>Rumah Sakit Ibu dan Anak Miriam Merupakan </p>
@@ -98,7 +98,7 @@
                         <p class="description">isi dengan penejelasan singkat</p>
                     </div>
 
-                </div>
+                </div> --}}
             </div>
 
         </div>
