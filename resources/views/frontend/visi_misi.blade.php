@@ -63,6 +63,15 @@
                         </ol>
                     </div>
                 </div>
+                <div class="container-sm container-md my-5">
+                    <h2 class="fw-bold fs-3">Tujuan Rumah Sakit</h2>
+                    <div class="px-2 px-md-3 mt-3">
+                        <p class="">
+                            Menjadi Rumah Sakit Pilihan dengan menyediakan layanan rawat jalan dan rawat inap serta pelayanan 
+                            Rumah Sakit lainnya secara berkualitas untuk masyarakat secara profesional, bersahabat dan penuh kasih.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
