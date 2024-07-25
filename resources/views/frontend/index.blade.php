@@ -258,7 +258,7 @@
                         <div class="member-info">
                             <h4>dr. Sri Uminingsih</h4>
                             <span>Dokter Umum</span>
-                            <p>"Melayani kegawatdaruratan, konsultasi, rawat luka, nebulizer, dan sebagainya di IGD RSIA Miriamn 24 jam"</p>
+                            <p>"Melayani kegawatdaruratan, konsultasi, rawat luka, nebulizer, dan sebagainya di IGD RSIA Miriamn 24 jam."</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -276,7 +276,7 @@
                         <div class="member-info">
                             <h4>dr. Tezza Dinayanti, Sp.A</h4>
                             <span>Dokter Spesialis Anak</span>
-                            <p>"Melayani imunisasi/vaksinasi dasar dan tambahan (sesuai dengan jadwal dari IDAI) , melayani test mantoux, dan lain sebagainya"</p>
+                            <p>"Melayani imunisasi/vaksinasi dasar dan tambahan (sesuai dengan jadwal dari IDAI) , melayani test mantoux, dan lain sebagainya."</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -294,7 +294,7 @@
                         <div class="member-info">
                             <h4>dr. Yudi Indarto, Sp.OG</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>"Melayani ANC kehamilan, USG 2 dimensi, USG 4 dimensi, USG transvaginal, konsultasi kesehatan reproduksi dan program hamil"</p>
+                            <p>"Melayani ANC kehamilan, USG 2 dimensi, USG 4 dimensi, USG transvaginal, konsultasi kesehatan reproduksi dan program hamil."</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -312,7 +312,43 @@
                         <div class="member-info">
                             <h4>dr. Ferry S. , Sp.OG, M. Biomed</h4>
                             <span>Dokter Spesialis Kebidanan dan Kandungan</span>
-                            <p>"Melayani ANC kehamilan, USG 2 dimensi, USG 4 dimensi, USG transvaginal, konsultasi kesehatan reproduksi dan program hamil"</p>
+                            <p>"Melayani ANC kehamilan, USG 2 dimensi, USG 4 dimensi, USG transvaginal, konsultasi kesehatan reproduksi dan program hamil."</p>
+                            <!-- <div class="social">
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-3">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="assets/img/doctors/drg.vera.jpg" class="img-fluid" alt="" width="100%" height="auto">
+                        </div>
+                        <div class="member-info">
+                            <h4>drg. Vera Sentosa</h4>
+                            <span>Dokter Gigi</span>
+                            <p>"Melayani konsultasi kesehatan gigi dan mulut anak dan dewasa, tindakan cabut gigi, tambal gigi, pembersihan karang gigi, veneer, dan lain sebagainya."</p>
+                            <!-- <div class="social">
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-3">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="assets/img/doctors/drg.cindy.jpg" class="img-fluid" alt="" width="100%" height="auto">
+                        </div>
+                        <div class="member-info">
+                            <h4>drg. Cindy Natalia A.</h4>
+                            <span>Dokter Gigi</span>
+                            <p>"Melayani konsultasi kesehatan gigi dan mulut anak dan dewasa, tindakan cabut gigi, tambal gigi, pembersihan karang gigi, veneer, dan lain sebagainya."</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -330,7 +366,7 @@
                         <div class="member-info">
                             <h4>dr. Michael A. Leuwol, Sp.Rad</h4>
                             <span>Dokter Spesialis Radiology</span>
-                            <p>"Melayani USG abdomen, mammae, massa, dll sesuai dengan surat pengantar USG dari dokter yang merekomendasikan"</p>
+                            <p>"Melayani USG abdomen, mammae, massa, dll sesuai dengan surat pengantar USG dari dokter yang merekomendasikan."</p>
                             <!-- <div class="social">
                                                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -340,43 +376,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-3">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/drg.vera.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>drg. Vera Sentosa</h4>
-                            <span>Dokter Gigi</span>
-                            <p>Jadilah matahari yang menerangi kegelapan, baik bagi dirimu sendiri maupun orang lain.</p>
-                            <!-- <div class="social">
-                                                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-3">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/drg.cindy.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>drg. Cindy Natalia A.</h4>
-                            <span>Dokter Gigi</span>
-                            <p>satunya cara untuk melakukan pekerjaan yang hebat dengan mencintai apa yang Anda lakukan</p>
-                            <!-- <div class="social">
-                                                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
         </div>
@@ -888,7 +887,8 @@
 
                 </div>
 
-                <div class="col-lg-8 mt-5 mt-lg-0">
+                {{-- Kritik Dan Saran --}}
+                {{-- <div class="col-lg-8 mt-5 mt-lg-0">
 
                     <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                         <div class="row">
@@ -916,7 +916,7 @@
                         <div class="text-center"><button type="submit">Kirim Pesan</button></div>
                     </form>
 
-                </div>
+                </div> --}}
 
             </div>
 
