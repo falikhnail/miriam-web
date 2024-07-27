@@ -29,7 +29,7 @@
                     $profile = ['visi_misi','struktur_organisasi'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['ketersediaantempattidur'
-                                ,'hak_kewajiban','indikatormutu'];
+                                ,'hak_kewajiban','indikatormutu',"mitra"];
                     
                     $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy'];           
                     $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
@@ -240,7 +240,7 @@
                             <li><a href="#">Prosedur Pengurusan Pasien Pulang</a></li>
 
                             <li class="dropdown">
-                                <a href="" class="{{ $isActive($karir) }}">
+                                {{-- <a href="" class="{{ $isActive($karir) }}">
                                     <span>Karir</span> <i class="bi bi-chevron-right"></i>
                                     </a>
                                 <ul>
@@ -258,8 +258,13 @@
                                         class="{{ $isActive('analiskesehatan') }}">Analis Kesehatan</a></li>
                                     <li><a href="{{ route('frontend.tata_boga') }}"
                                         class="{{ $isActive('tata_boga') }}">Tata Boga</a></li>    
-                                </ul>
-                            <li><a href="#">Mitra Kami</a></li>
+                                </ul> --}}
+                            <li>
+                                <a href="{{ route('frontend.mitra') }}"
+                                    class="{{ $isActive('mitra') }}">
+                                    Mitra Kami
+                                </a>
+                            </li>
                         </ul>
                         <li class="dropdown">
                         <a href="#" class="{{ $isActive($edukasi) }}">

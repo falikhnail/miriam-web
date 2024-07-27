@@ -32,13 +32,13 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
 // route from jadwal dokter
     Route::get('/dr_yudi', 'FrontendController@dr_yudi')->name('dr_yudi');
     Route::get('/dr_ferry', 'FrontendController@dr_ferry')->name('dr_ferry');
-    
     Route::get('/dr_tezza', 'FrontendController@dr_tezza')->name('dr_tezza');
     Route::get('/dr_umi', 'FrontendController@dr_umi')->name('dr_umi');
     Route::get('/dr_michel', 'FrontendController@dr_michel')->name('dr_michel');
     Route::get('/drg_vera', 'FrontendController@drg_vera')->name('drg_vera');
     Route::get('/drg_cindy', 'FrontendController@drg_cindy')->name('drg_cindy');
 
+    Route::get('/mitra', 'FrontendController@mitra')->name('mitra');
     Route::get('/indikatormutu', 'FrontendController@indikatormutu')->name('indikatormutu');
 
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');

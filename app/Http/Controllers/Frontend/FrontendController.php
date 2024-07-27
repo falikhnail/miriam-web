@@ -115,4 +115,7 @@ class FrontendController extends Controller {
     public function indikatormutu() {
         return view("frontend.indikatormutu");
     }
+    public function mitra() {
+        return view("frontend.mitra");
+    }
 }
