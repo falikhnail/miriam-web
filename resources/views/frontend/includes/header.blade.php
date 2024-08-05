@@ -26,7 +26,7 @@
             <nav id="navbar" class="navbar order-last order-lg-0 mt-2 md:mt-0">
                 <ul>
                     <?php
-                    $profile = ['visi_misi','struktur_organisasi'];
+                    $profile = ['visi_misi','struktur_organisasi','sejarah'];
                     $pelayanan = ['pelayanan','igd'];
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu',"mitra"];
@@ -40,6 +40,7 @@
                     $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
                     $imunisasi = ['imun_dasar','imun_tambahan','imun_tambahan1'];
                     $vaksinasi = ['vaksin_dewasa'];
+                    $hut = ['lomba_bay'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
@@ -69,7 +70,9 @@
                             <li>
                                 <a href="{{ route('frontend.visi_misi') }}" 
                                 class="{{ $isActive('visi_misi') }}">Visi dan Misi</a></li>
-                            <li><a href="#">Sejarah</a></li>
+                            <li>
+                                <a href="{{ route('frontend.sejarah') }}" 
+                                class="{{ $isActive('sejarah') }}">Sejarah</a></li>
                             <li><a href="#">Unit Kerja</a></li>
                             <li><a href="{{ route('frontend.struktur_organisasi') }}" 
                                 class="{{ $isActive('struktur_organisasi') }}">Sturktur Organisasi</a></li>
@@ -267,6 +270,37 @@
                             </li>
                         </ul>
                         <li class="dropdown">
+                            <a href="#" class="{{ $isActive($hut) }}">
+                                <span>HUT 4th</span> <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="{{ route('frontend.lomba_bayi') }}"
+                                        class="{{ $isActive('lomba_bayi') }}">
+                                        Lomba Bayi Merangkak dan Berjalan
+                                    </a>
+                                </li>
+                                {{-- <li>
+                                    <a href="{{ route('frontend.ketersediaantempattidur') }}"
+                                        class="{{ $isActive('ketersediaantempattidur') }}">
+                                        Lomba Cuci Tangan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('frontend.ketersediaantempattidur') }}"
+                                        class="{{ $isActive('ketersediaantempattidur') }}">
+                                        Jalan Santai
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('frontend.ketersediaantempattidur') }}"
+                                        class="{{ $isActive('ketersediaantempattidur') }}">
+                                        Potong Tumpeng dan Pembagian Bantuan Sosial
+                                    </a>
+                                </li> --}}
+                            </ul>
+                            </li>
+                        <li class="dropdown">
                         <a href="#" class="{{ $isActive($edukasi) }}">
                             <span>Artikel</span> <i class="bi bi-chevron-down"></i>
                         </a>
@@ -288,6 +322,7 @@
                             <!-- <li><a href="#">Edukasi 3</a></li>
                             <li><a href="#">Edukasi 4</a></li> -->
                         </ul>
+                        </li>
 
                     {{-- <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li> --}}
 

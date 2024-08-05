@@ -7,9 +7,11 @@
 @section('content')
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
-            <h1>Selamat datang di RSIA Miriam</h1>
-            <h2>To Love, To Care, To Share</h2>
-            <a href="#about" class="btn-get-started scrollto">Mulai</a>
+            {{-- <h1>Selamat datang di</h1>
+            <h1> <span class="text-pink">RSIA</span> </h1>
+            <h1> <span style="color: #006de9;">Miriam</span> </h1>
+            <h2> <span class="text-white">To Love, To Care, To Share</span> </h2>
+            <a href="#about" class="btn-get-started scrollto">Mulai</a> --}}
         </div>
     </section><!-- End Hero -->
 

@@ -14,6 +14,9 @@ class FrontendController extends Controller {
     public function visiMisi() {
         return view("frontend.visi_misi");
     }
+    public function sejarah() {
+        return view("frontend.sejarah");
+    }
     public function struktur_organisasi() {
         return view("frontend.struktur_organisasi");
     }
@@ -117,5 +120,8 @@ class FrontendController extends Controller {
     }
     public function mitra() {
         return view("frontend.mitra");
+    }
+    public function lomba_bayi() {
+        return view("frontend.lomba_bayi");
     }
 }
