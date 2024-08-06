@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section id="#" class="d-flex align-items-center">
+    <section id="hero-bg" class="d-flex align-items-center">
         <div class="container">
             {{-- <h1>Selamat datang di</h1>
             <h1> <span class="text-pink">RSIA</span> </h1>
