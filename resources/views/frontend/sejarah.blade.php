@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center mt-3 mb-5">
-                    <img src="{{ asset('images/Picture1.PNG') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
+                    <img src="{{ asset('images/Picture1.png') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
                 </div>    
                 <div class="container-sm container-md my-5">
                     {{-- <h2 class="fw-bold fs-3">Visi</h2> --}}
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center mt-3 mb-5">
-                    <img src="{{ asset('images/Picture4.JPG') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
+                    <img src="{{ asset('images/Picture4.jpg') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
                 </div>    
                 <div class="container-sm container-md my-5">
                     {{-- <h2 class="fw-bold fs-3">Visi</h2> --}}
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center mt-3 mb-5">
-                    <img src="{{ asset('images/Picture9.JPG') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
+                    <img src="{{ asset('images/Picture9.jpg') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
                 </div>    
                 <div class="container-sm container-md my-5">
                     {{-- <h2 class="fw-bold fs-3">Visi</h2> --}}
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center mt-3 mb-5">
-                    <img src="{{ asset('images/Picture8.JPG') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
+                    <img src="{{ asset('images/Picture8.jpg') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
                 </div>    
                 <div class="container-sm container-md my-5">
                     {{-- <h2 class="fw-bold fs-3">Visi</h2> --}}
