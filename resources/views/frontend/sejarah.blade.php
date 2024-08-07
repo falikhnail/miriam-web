@@ -10,7 +10,7 @@
             <div class="container-sm container-md">
                     <h1 class="fw-bold fs-1 d-flex align-items-center justify-content-center mt-3 mb-5">Sejarah RSIA Miriam</h1>
                 <div class="d-flex align-items-center justify-content-center mt-3 mb-5">
-                    <img src="{{ asset('images/DSCF9349.JPG') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
+                    <img src="{{ asset('images/DSCF9349.jpg') }}" alt="RSIA Ibu dan Anak MIRIAM" class="logo-rsia-lg" style="width: 50%; height: auto;" >
                 </div>    
                 <div class="container-sm container-md my-5">
                     {{-- <h2 class="fw-bold fs-3">Visi</h2> --}}
