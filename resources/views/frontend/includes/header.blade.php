@@ -32,8 +32,7 @@
                                 ,'hak_kewajiban','indikatormutu',"mitra"];
                     
                     $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy'];           
-                    $karir = ['bidan','perawat','marketing','adminpendaftaran','ttk','analiskesehatan',
-                                'tata_boga'];
+                    // $karir = ['bidan'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -138,13 +137,6 @@
                             <span>Informasi</span> <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul>
-                            {{-- <li>
-                                <a href="{{ route('frontend.jadwal_dokter') }}"
-                                    class="{{ $isActive('jadwal_dokter') }}">
-                                    Jadwal Dokter
-                                </a>
-                            </li> --}}
-
                                 <li class="dropdown">
                                     {{-- <a href="{{ route('frontend.jadwal_dokter') }}" --}}
                                     <a  class="{{ $isActive('jadwal') }}"> <span>Jadwal Dokter</span> 
@@ -249,18 +241,6 @@
                                 <ul>
                                     <li><a href="{{ route('frontend.bidan') }}"
                                         class="{{ $isActive('bidan') }}">Bidan</a></li>
-                                    <li><a href="{{ route('frontend.perawat') }}"
-                                        class="{{ $isActive('perawat') }}">Perawat</a></li>
-                                    <li><a href="{{ route('frontend.marketing') }}"
-                                        class="{{ $isActive('marketing') }}">Marketing</a></li>
-                                    <li><a href="{{ route('frontend.adminpendaftaran') }}"
-                                        class="{{ $isActive('adminpendaftaran') }}">Admin Pendaftaran</a></li>
-                                    <li><a href="{{ route('frontend.ttk') }}"
-                                        class="{{ $isActive('ttk') }}">Tenaga Teknis Kefarmasian</a></li>
-                                    <li><a href="{{ route('frontend.analiskesehatan') }}"
-                                        class="{{ $isActive('analiskesehatan') }}">Analis Kesehatan</a></li>
-                                    <li><a href="{{ route('frontend.tata_boga') }}"
-                                        class="{{ $isActive('tata_boga') }}">Tata Boga</a></li>    
                                 </ul> --}}
                             <li>
                                 <a href="{{ route('frontend.mitra') }}"

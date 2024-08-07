@@ -70,28 +70,6 @@ class FrontendController extends Controller {
         return view("frontend.hak_kewajiban");
     }
 
-    public function bidan() {
-        return view("frontend.bidan");
-    }
-    public function perawat() {
-        return view("frontend.perawat");
-    }
-    public function marketing() {
-        return view("frontend.marketing");
-    }
-    public function adminpendaftaran() {
-        return view("frontend.adminpendaftaran");
-    }
-    public function ttk() {
-        return view("frontend.ttk");
-    }
-    public function analiskesehatan() {
-        return view("frontend.analiskesehatan");
-    }
-    public function tata_boga() {
-        return view("frontend.tata_boga");
-    }
-
     public function dr_yudi() {
         return view("frontend.dr_yudi");
     }

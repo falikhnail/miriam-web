@@ -13,51 +13,6 @@
             <div class="my-5 d-flex justify-content-center">
                 <img src="{{ asset('images/pelayanan/pelayanan-1.jpg') }}" alt="">
             </div>
-            {{-- <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/pelayanan-2.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/pelayanan-3.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/pelayanan-4.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/radiologi-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/usg-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/radiologi-rontgen-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/konsultasi-gizi-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/poli-bkia-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/pijat-bayi-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/cukur-bayi-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/tindik-bayi.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/imunisasi-1.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/imunisasi-2.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/imunisasi-3.jpg') }}" alt="">
-            </div>
-            <div class="my-5 d-flex justify-content-center">
-                <img src="{{ asset('images/pelayanan/vaksinasi-1.jpg') }}" alt="">
-            </div> --}}
         </div>
     </div>
 @endsection
