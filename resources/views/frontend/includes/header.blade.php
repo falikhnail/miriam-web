@@ -39,7 +39,6 @@
                     $polibkia = ['pijat_bayi','cukur_bayi','tindik_bayi'];
                     $imunisasi = ['imun_dasar','imun_tambahan','imun_tambahan1'];
                     $vaksinasi = ['vaksin_dewasa'];
-                    $hut = ['lomba_bay'];
                     $edukasi = [''];
 
                     $current = explode('.', Route::current()->getName())[1];
@@ -249,37 +248,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <li class="dropdown">
-                            <a href="#" class="{{ $isActive($hut) }}">
-                                <span>HUT 4th</span> <i class="bi bi-chevron-down"></i>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="{{ route('frontend.lomba_bayi') }}"
-                                        class="{{ $isActive('lomba_bayi') }}">
-                                        Lomba Bayi Merangkak dan Berjalan
-                                    </a>
-                                </li>
-                                {{-- <li>
-                                    <a href="{{ route('frontend.ketersediaantempattidur') }}"
-                                        class="{{ $isActive('ketersediaantempattidur') }}">
-                                        Lomba Cuci Tangan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('frontend.ketersediaantempattidur') }}"
-                                        class="{{ $isActive('ketersediaantempattidur') }}">
-                                        Jalan Santai
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('frontend.ketersediaantempattidur') }}"
-                                        class="{{ $isActive('ketersediaantempattidur') }}">
-                                        Potong Tumpeng dan Pembagian Bantuan Sosial
-                                    </a>
-                                </li> --}}
-                            </ul>
-                            </li>
+                        
                         <li class="dropdown">
                         <a href="#" class="{{ $isActive($edukasi) }}">
                             <span>Artikel</span> <i class="bi bi-chevron-down"></i>

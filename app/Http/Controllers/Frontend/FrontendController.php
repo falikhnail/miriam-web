@@ -99,7 +99,4 @@ class FrontendController extends Controller {
     public function mitra() {
         return view("frontend.mitra");
     }
-    public function lomba_bayi() {
-        return view("frontend.lomba_bayi");
-    }
 }

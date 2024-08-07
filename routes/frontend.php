@@ -32,7 +32,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/drg_vera', 'FrontendController@drg_vera')->name('drg_vera');
     Route::get('/drg_cindy', 'FrontendController@drg_cindy')->name('drg_cindy');
 // route HUT
-    Route::get('lomba_bayi', 'FrontendController@lomba_bayi')->name('lomba_bayi');
     
     Route::get('/mitra', 'FrontendController@mitra')->name('mitra');
     Route::get('/indikatormutu', 'FrontendController@indikatormutu')->name('indikatormutu');
