@@ -120,10 +120,10 @@
                 <div class="col-lg-3">
                     <ul class="nav nav-tabs flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Pediatri</a>
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Meternity</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Radiologi</a>
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Pediatri</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Laboratorium</a>
@@ -132,7 +132,7 @@
                             <a class="nav-link" data-bs-toggle="tab" href="#tab-4">IGD</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Poli Obgyn</a>
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Radiologi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#tab-6">BKIA</a>
@@ -144,30 +144,31 @@
                         <div class="tab-pane active show" id="tab-1">
                             <div class="row gy-4">
                                 <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>Pediatri</h3>
+                                    <h3>Meternity</h3>
                                     <p class="fst-italic"></p>
-                                    <p>Melayani pemeriksaan kesehatan fisik serta perkembangan
-                                        tumbuh kembang anak mulai dari usia anak 0–18 tahun, dilayani oleh Dokter Spesialis
-                                        Anak : dr. Tezza Dinayanti, Sp.A
+                                    <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
+                                        konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
+                                        perawatan pasca operasi sesar. Dilayani oleh dr. Ferry Santoso, Sp.OG, M.Biomed &
+                                        dr. Yudi Indarto, Sp.OG
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/pediatri.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/meternity.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane" id="tab-2">
                             <div class="row gy-4">
                                 <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>Radiologi</h3>
-                                    <p class="fst-italic"></p>
-                                    <p>Melayani pemeriksaaan bagian dalam tubuh manusia dengan menggunakan teknologi
-                                        pencitraan,
-                                        baik gelombang elektromagnetik maupun gelombang mekanik.
-                                        Untuk Pelayanan Radiologi dilayani oleh dr. Michael A. Leuwol, Sp.Rad</p>
+                                    <h3>Pediatri</h3>
+                                    <p class="fst-italic">
+                                    </p>
+                                    <p>Melayani pemeriksaan kesehatan fisik serta perkembangan
+                                        tumbuh kembang anak mulai dari usia anak 0–18 tahun, dilayani oleh Dokter Spesialis
+                                        Anak : dr. Tezza Dinayanti, Sp.A</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/rad.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/Pediatri.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -181,7 +182,7 @@
                                         dalam kisaran normal. </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/lab.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/laboratorium.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -197,23 +198,22 @@
                                         Di IGD dilayani oleh Dokter Umum dr. Sri Uminingsih</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/igd.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/IGD.jpg" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane" id="tab-5">
                             <div class="row gy-4">
                                 <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>Poli Obgyn</h3>
-                                    <p class="fst-italic">
-                                    </p>
-                                    <p>Melayani pemeriksaan ibu hamil dan janin, USG untuk ibu hamil,
-                                        konsultasi gizi ibu hamil, konsultasi pra dan pasca melahirkan,
-                                        perawatan pasca operasi sesar. Dilayani oleh dr. Ferry Santoso, Sp.OG, M.Biomed &
-                                        dr. Yudi Indarto, Sp.OG</p>
+                                    <h3>Radiologi</h3>
+                                    <p class="fst-italic"></p>
+                                    <p>Melayani pemeriksaaan bagian dalam tubuh manusia dengan menggunakan teknologi
+                                        pencitraan,
+                                        baik gelombang elektromagnetik maupun gelombang mekanik.
+                                        Untuk Pelayanan Radiologi dilayani oleh dr. Michael A. Leuwol, Sp.Rad</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/obgyn.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/rad.jpg" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
