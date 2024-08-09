@@ -182,7 +182,7 @@
                                         dalam kisaran normal. </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/laboratorium.png" alt="" class="img-fluid">
+                                    <img src="assets/img/Laboratorium.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
                                         Di IGD dilayani oleh Dokter Umum dr. Sri Uminingsih</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="assets/img/IGD.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/IGD.JPG" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
