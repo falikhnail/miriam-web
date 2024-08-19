@@ -36,6 +36,16 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/mitra', 'FrontendController@mitra')->name('mitra');
     Route::get('/indikatormutu', 'FrontendController@indikatormutu')->name('indikatormutu');
 
+// route Alur Pelayanan
+    Route::get('/alur_ugd', 'FrontendController@alur_ugd')->name('alur_ugd');
+    Route::get('/alur_ranap', 'FrontendController@alur_ranap')->name('alur_ranap');
+    Route::get('/alur_lab', 'FrontendController@alur_lab')->name('alur_lab');
+    Route::get('/alur_perinatologi', 'FrontendController@alur_perinatologi')->name('alur_perinatologi');
+    Route::get('/alur_ponek', 'FrontendController@alur_ponek')->name('alur_ponek');
+    Route::get('/alur_kambay', 'FrontendController@alur_kambay')->name('alur_kambay');
+    Route::get('/alur_vk', 'FrontendController@alur_vk')->name('alur_vk');
+    Route::get('/alur_rajal', 'FrontendController@alur_rajal')->name('alur_rajal');
+
     Route::get('/register-pasien', 'PasienController@index')->name('register_pasien');
 
     Route::post('/register-vaksin', 'PasienController@storeFormVaksin')->name('form_vaksin');

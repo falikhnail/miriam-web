@@ -99,4 +99,28 @@ class FrontendController extends Controller {
     public function mitra() {
         return view("frontend.mitra");
     }
+    public function alur_ugd() {
+        return view("frontend.alur_ugd");
+    }
+    public function alur_ranap() {
+        return view("frontend.alur_ranap");
+    }
+    public function alur_lab() {
+        return view("frontend.alur_lab");
+    }
+    public function alur_perinatologi() {
+        return view("frontend.alur_perinatologi");
+    }
+    public function alur_ponek() {
+        return view("frontend.alur_ponek");
+    }
+    public function alur_kambay() {
+        return view("frontend.alur_kambay");
+    }
+    public function alur_vk() {
+        return view("frontend.alur_vk");
+    }
+    public function alur_rajal() {
+        return view("frontend.alur_rajal");
+    }
 }

@@ -33,6 +33,8 @@
                     
                     $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy'];           
                     // $karir = ['bidan'];
+                    $alurpelayanan = ['alur_ugd','alur_ranap','alur_lab','alur_perinatologi'
+                                    ,'alur_rajal','alur_kambay','alur_vk','alur_rajals'];
                     $instalasiRadiologi = ['usg', 'rotgen'];
                     $instalasiLaboratorium = ['lab'];
                     $instalasiGizi = ['gizi'];
@@ -114,7 +116,8 @@
                                         class="{{ $isActive('cukur_bayi') }}">Cukur Bayi</a></li>
                                     <li><a href="{{ route('frontend.tindik_bayi') }}"
                                         class="{{ $isActive('tindik_bayi') }}">Tindik Bayi</a></li>
-                                </ul>   
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="" class="{{ $isActive($imunisasi) }}">
                                     <span>Imunisasi</span> <i class="bi bi-chevron-right"></i>
@@ -126,7 +129,8 @@
                                         class="{{ $isActive('imun_tambahan') }}">Imunisasi Tambahan</a></li>
                                     <li><a href="{{ route('frontend.imun_tambahan1') }}"
                                         class="{{ $isActive('imun_tambahan1') }}">Imunisasi MR</a></li>
-                                </ul>                             
+                                </ul>
+                            </li>                             
                             <li><a href="{{ route('frontend.vaksin_dewasa') }}"
                                 class="{{ $isActive('vaksin_dewasa') }}">Vaksinasi Dewasa</a></li>                           
                         </ul>
@@ -136,6 +140,29 @@
                             <span>Informasi</span> <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul>
+                            <li class="dropdown">
+                                <a href="" class="{{ $isActive($alurpelayanan) }}">
+                                    <span>Alur Pelayanan</span> <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                <ul>
+                                    <li><a href="{{ route('frontend.alur_perinatologi') }}"
+                                        class="{{ $isActive('alur_perinatologi') }}">Alur Pelayanan Perinatologi</a></li>
+                                    <li><a href="{{ route('frontend.alur_ugd') }}"
+                                        class="{{ $isActive('alur_ugd') }}">Alur Pelayanan Unit Gawat Darurat</a></li>
+                                    <li><a href="{{ route('frontend.alur_ranap') }}"
+                                        class="{{ $isActive('alur_ranap') }}">Alur Pelayanan Rawat Inap</a></li>
+                                    <li><a href="{{ route('frontend.alur_lab') }}"
+                                        class="{{ $isActive('alur_lab') }}">Alur Pelayanan Laboratorium</a></li>
+                                    <li><a href="{{ route('frontend.alur_ponek') }}"
+                                        class="{{ $isActive('alur_ponek') }}">Alur Pelayanan Ponek</a></li>   
+                                    <li><a href="{{ route('frontend.alur_kambay') }}"
+                                        class="{{ $isActive('alur_kambay') }}">Alur Kamar Bayi</a></li>
+                                    <li><a href="{{ route('frontend.alur_vk') }}"
+                                        class="{{ $isActive('alur_vk') }}">Alur VK</a></li>
+                                    <li><a href="{{ route('frontend.alur_rajal') }}"
+                                        class="{{ $isActive('alur_rajal') }}">Alur Pelayanan Rawat Jalan</a></li>    
+                                </ul>
+                            </li>
                                 <li class="dropdown">
                                     {{-- <a href="{{ route('frontend.jadwal_dokter') }}" --}}
                                     <a  class="{{ $isActive('jadwal') }}"> <span>Jadwal Dokter</span> 
@@ -241,6 +268,8 @@
                                     <li><a href="{{ route('frontend.bidan') }}"
                                         class="{{ $isActive('bidan') }}">Bidan</a></li>
                                 </ul> --}}
+                            </li>
+
                             <li>
                                 <a href="{{ route('frontend.mitra') }}"
                                     class="{{ $isActive('mitra') }}">
@@ -272,6 +301,7 @@
                             <li><a href="#">Edukasi 4</a></li> -->
                         </ul>
                         </li>
+                    
 
                     {{-- <li><a class="nav-link scrollto" href="#">Cara Daftar Online</a></li> --}}
 
