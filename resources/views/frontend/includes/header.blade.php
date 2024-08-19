@@ -27,7 +27,7 @@
                 <ul>
                     <?php
                     $profile = ['visi_misi','struktur_organisasi','sejarah'];
-                    $pelayanan = ['pelayanan','igd'];
+                    $pelayanan = ['igd'];
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu',"mitra"];
                     
@@ -83,11 +83,7 @@
                         </a>
                         <ul>
                             <li>
-                                <a href="#">Maklumat Pelayanan</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('frontend.pelayanan') }}"
-                                    class="{{ $isActive('pelayanan') }}">Pelayanan Rsia Miriam</a>
+                                <a href="#">Daftar Jenis Pelayanan</a>
                             </li>
                             <li><a href="{{ route('frontend.igd') }}"
                                     class="{{ $isActive('igd') }}">Instalasi Gawat Darurat</a></li>

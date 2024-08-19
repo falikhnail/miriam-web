@@ -10,7 +10,6 @@ class FrontendController extends Controller {
     public function index() {
         return view("frontend.index");
     }
-
     public function visiMisi() {
         return view("frontend.visi_misi");
     }
@@ -20,10 +19,6 @@ class FrontendController extends Controller {
     public function struktur_organisasi() {
         return view("frontend.struktur_organisasi");
     }
-    public function pelayanan() {
-        return view("frontend.pelayanan");
-    }
-
     public function jadwalDokter() {
         return view("frontend.jadwal_dokter");
     }

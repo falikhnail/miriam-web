@@ -6,7 +6,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend', 'as' => 'frontend.
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('/visi-misi', 'FrontendController@visiMisi')->name('visi_misi');
     Route::get('/sejarah', 'FrontendController@sejarah')->name('sejarah');
-    Route::get('/pelayanan', 'FrontendController@pelayanan')->name('pelayanan');
     Route::get('/struktur_organisasi', 'FrontendController@struktur_organisasi')->name('struktur_organisasi');
     Route::get('/ketersediaantempattidur', 'FrontendController@ketersediaantempattidur')->name('ketersediaantempattidur');
     Route::get('/igd', 'FrontendController@igd')->name('igd');
