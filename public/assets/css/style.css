@@ -1443,6 +1443,19 @@ section {
     }
 }
 
+.gallery-slider .swiper-pagination {
+    position: relative;
+    bottom: 0mm; /* Sesuaikan nilai ini untuk mengatur jarak pagination dari gambar */
+    text-align: center;
+    width: 100%;
+    z-index: 10; /* Pastikan pagination tidak tertutup elemen lain */
+}
+.gallery-slider .swiper-slide img {
+    width: 400px;  /* Pastikan gambar memenuhi lebar slide */
+    height: 400px; /* Mempertahankan rasio aspek gambar */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+}
+
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
@@ -1459,7 +1472,16 @@ section {
 .gallery .gallery-item:hover img {
     transform: scale(1.1);
 }
+/*--------------------------------------------------------------
+# unggulan
+--------------------------------------------------------------*/
+.gallery-item img {
+    transition: transform 0.3s ease; /* Menambahkan transisi yang halus */
+}
 
+.gallery-item:hover img {
+    transform: scale(1.3); /* Zoom-in sebesar 10% */
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/

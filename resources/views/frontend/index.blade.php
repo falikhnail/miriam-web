@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 d-flex align-items-stretch">
+                {{-- <div class="col-lg-7 d-flex align-items-stretch">
                     <div class="icon-boxes d-flex flex-column justify-content-center">
                         <div class="row">
                             <div class="col-xl-4 d-flex align-items-stretch">
@@ -61,51 +61,46 @@
                             </div>
                         </div>
                     </div><!-- End .content-->
-                </div>
+                </div> --}}
             </div>
 
         </div>
     </section><!-- End Why Us Section -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container-fluid">
+<!-- Include Bootstrap CSS -->
+{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
 
-            <div class="row">
-                <div
-                    class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-                    <a href="https://www.youtube.com/watch?v=Tk6OXQwtSN4" class="glightbox play-btn mb-4"></a>
-                </div>
-
-                {{-- <div
-                    class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                    <h3>RSIA MIRIAM</h3>
-                    <p>Rumah Sakit Ibu dan Anak Miriam Merupakan </p>
-
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                        <h4 class="title"><a href="">kosong</a></h4>
-                        <p class="description">isi dengan penjelasan singkat</p>
-                    </div>
-
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-gift"></i></div>
-                        <h4 class="title"><a href="">kosong</a></h4>
-                        <p class="description">isi dengan penejelasn singkat</p>
-                    </div>
-
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-atom"></i></div>
-                        <h4 class="title"><a href="">kosong</a></h4>
-                        <p class="description">isi dengan penejelasan singkat</p>
-                    </div>
-
-                </div> --}}
-            </div>
-
+<section id="unggulan" class="unggulan">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Pelayanan Unggulan</h2>
+            <p></p>
         </div>
-    </section>
-    <!-- End About Section -->
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center g-10">
+            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
+                <div class="gallery-item position-relative">
+                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
+                        <img src="assets/img/meternity.png" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <h1 class="text-center position-absolute w-100" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; font-size: 42px; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">MATERNITY</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
+                <div class="gallery-item position-relative">
+                    {{-- <a href="assets/img/Pediatri.png" class="galelry-lightbox"> --}}
+                        <img src="assets/img/Pediatri.png" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <h1 class="text-center position-absolute w-100" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; font-size: 42px; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">PEDIATRI</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Pelayanan unggulan -->
 
 
     <section id="departments" class="departments">
@@ -699,152 +694,199 @@
         </div>
     </section>
 
-
-    <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
         <div class="container">
-
             <div class="section-title">
                 <h2>Gallery</h2>
                 <p></p>
             </div>
         </div>
-
-        <div class="container-fluid">
-            <div class="row g-0">
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00606.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00606.jpg" alt="" class="img-fluid">
-                        </a>
+        <div class="container">
+            <div class="gallery-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00606.jpg" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/DSC00606.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00838.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00838.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00838.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00838.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00774.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00774.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00774.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00774.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC09842.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC09842.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC09842.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC09842.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC09916.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC09916.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00606.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00606.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC09924.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC09924.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC09916.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC09916.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00614.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00614.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC09924.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC09924.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00628.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00628.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00614.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00614.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-3.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00628.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00628.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00654.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00654.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00654.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00654.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC03793.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC03793.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC03793.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC03793.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00664.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00664.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00664.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00664.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00674.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00674.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00674.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00674.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00761.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00761.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00761.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00761.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00882.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00882.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00882.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00882.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/DSC00749.jpg" class="galelry-lightbox">
-                            <img src="assets/img/gallery/DSC00749.jpg" alt="" class="img-fluid">
-                        </a>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
+                    <!-- Ulangi blok ini untuk setiap gambar -->
+                    <div class="swiper-slide">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/DSC00749.jpg" class="galelry-lightbox">
+                                    <img src="assets/img/gallery/DSC00749.jpg" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Blok ini akan berulang untuk gambar lainnya -->
                 </div>
-
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-
         </div>
-    </section><!-- End Gallery Section -->
-
+    </section>
+    
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
@@ -924,4 +966,5 @@
 
         </div>
     </section><!-- End Contact Section -->
+
 @endsection
