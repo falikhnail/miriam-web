@@ -69,7 +69,7 @@
 
 <!-- Include Bootstrap CSS -->
 {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
-
+<!-- ======= Pelayanan Unggulan ======= -->
 <section id="unggulan" class="unggulan">
     <div class="container">
         <div class="section-title text-center">
@@ -99,9 +99,30 @@
         </div>
     </div>
 </section>
-
 <!-- End Pelayanan unggulan -->
 
+<!-- ======= Infomarsi ======= -->
+<section id="unggulan" class="unggulan">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Informasi</h2>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center g-10">
+            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
+                <div class="gallery-item position-relative">
+                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
+                        <img src="assets/img/info/dr.destar.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Informasi -->
 
     <section id="departments" class="departments">
         <div class="container">
