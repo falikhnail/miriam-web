@@ -73,7 +73,6 @@
                             <li>
                                 <a href="{{ route('frontend.sejarah') }}" 
                                 class="{{ $isActive('sejarah') }}">Sejarah</a></li>
-                            <li><a href="#">Unit Kerja</a></li>
                             <li><a href="{{ route('frontend.struktur_organisasi') }}" 
                                 class="{{ $isActive('struktur_organisasi') }}">Sturktur Organisasi</a></li>
                         </ul>
@@ -247,7 +246,6 @@
                                 </a>
                             </li>
 
-                            <li><a href="#">Alur Pelayanan</a></li>
                             <li>
                                 <a href="{{ route('frontend.hak_kewajiban') }}"
                                     class="{{ $isActive('hak_kewajiban') }}">
