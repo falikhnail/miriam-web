@@ -64,15 +64,15 @@
                             <span>Profile</span> <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul>
-                            <li>
+                            {{-- <li>
                                 <a href="#">Profile RSIA MIRIAM</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('frontend.visi_misi') }}" 
-                                class="{{ $isActive('visi_misi') }}">Visi dan Misi</a></li>
+                            </li> --}}
                             <li>
                                 <a href="{{ route('frontend.sejarah') }}" 
-                                class="{{ $isActive('sejarah') }}">Sejarah</a></li>
+                                class="{{ $isActive('sejarah') }}">Profile & Sejarah</a></li>
+                            <li>
+                                <a href="{{ route('frontend.visi_misi') }}" 
+                                class="{{ $isActive('visi_misi') }}">Visi & Misi</a></li>
                             <li><a href="{{ route('frontend.struktur_organisasi') }}" 
                                 class="{{ $isActive('struktur_organisasi') }}">Sturktur Organisasi</a></li>
                         </ul>
