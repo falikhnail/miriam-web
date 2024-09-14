@@ -376,6 +376,24 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-lg-6 mt-4 mt-lg-3">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="assets/img/doctors/dr.destar.jpg" class="img-fluid" alt="" width="100%" height="auto">
+                        </div>
+                        <div class="member-info">
+                            <h4>dr. Destar Aditya Yusuf Sp. THT-BKL</h4>
+                            <span>Dokter Spesialis THT</span>
+                            <p>"Melayani konsultasi penyakit yang berkaitan dengan telinga, hidung dan tenggorokan. Irigasi telinga, pemeriksaan THT dan lagi sebagainya."</p>
+                            <!-- <div class="social">
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
@@ -830,17 +848,6 @@
                             <div class="gallery-item">
                                 <a href="assets/img/gallery/DSC00654.jpg" class="galelry-lightbox">
                                     <img src="assets/img/gallery/DSC00654.jpg" alt="" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Blok ini akan berulang untuk gambar lainnya -->
-                    <!-- Ulangi blok ini untuk setiap gambar -->
-                    <div class="swiper-slide">
-                        <div class="gallery-wrap">
-                            <div class="gallery-item">
-                                <a href="assets/img/gallery/DSC03793.jpg" class="galelry-lightbox">
-                                    <img src="assets/img/gallery/DSC03793.jpg" alt="" class="img-fluid">
                                 </a>
                             </div>
                         </div>
