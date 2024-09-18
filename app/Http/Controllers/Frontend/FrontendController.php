@@ -87,6 +87,9 @@ class FrontendController extends Controller {
     public function drg_cindy() {
         return view("frontend.drg_cindy");
     }
+    public function dr_destar() {
+        return view("frontend.dr_destar");
+    }
 
     public function indikatormutu() {
         return view("frontend.indikatormutu");

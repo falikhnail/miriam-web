@@ -30,8 +30,7 @@
                     $pelayanan = ['igd'];
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu',"mitra"];
-                    
-                    $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy','dr_destar'];           
                     // $karir = ['bidan'];
                     $alurpelayanan = ['alur_ugd','alur_ranap','alur_lab','alur_perinatologi'
                                     ,'alur_rajal','alur_kambay','alur_vk','alur_rajals'];
@@ -186,6 +185,16 @@
                                                     <li>
                                                         <a href="{{ route('frontend.dr_tezza') }}"
                                                             class="{{ $isActive('dr_tezza') }}"> Dr. Tezza Dinayanti, Sp.A</a>
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="{{ $isActive('dr_destar') }}"> <span>Dokter Spesialis THT</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_destar') }}"
+                                                            class="{{ $isActive('dr_destar') }}">dr. Destar Aditya Yusuf Sp. THT-BKL</a>
                                                     </li>
                                                 </ul>
                                         </li>
