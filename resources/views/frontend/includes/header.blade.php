@@ -310,18 +310,19 @@
 
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li class="inline-block md:inline-block lg:hidden mt-2 ml-3 md:-ml-2">
-                        <a href="{{ route('frontend.register_pasien') }}" class="appointment-btn text-white px-3 py-2">
+                        <a href="https://reservation.rsiamiriam.com" class="appointment-btn text-white px-3 py-2">
                             <span class="text-center">Pendaftaran Online</span>
                         </a>
                     </li>
-
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-            <a href="{{ route('frontend.register_pasien') }}"
-                class="appointment-btn scrollto hidden md:hidden lg:inline-block">
-                Pendaftaran Online
-            </a>
+                    
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                    </nav><!-- .navbar -->
+                    <a href="https://reservation.rsiamiriam.com"
+                        class="appointment-btn scrollto hidden md:hidden lg:inline-block">
+                        Pendaftaran Online
+                    </a>
+                    
         </div>
     </header>
 </div>
