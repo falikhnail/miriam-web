@@ -122,7 +122,21 @@
             <div class="col-lg-3 col-md-4 d-flex justify-content-center">
                 <div class="gallery-item position-relative">
                     {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/sabtu19.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <img src="assets/img/info/senin21.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
+                <div class="gallery-item position-relative">
+                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
+                        <img src="assets/img/info/bcg21.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
+                <div class="gallery-item position-relative">
+                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
+                        <img src="assets/img/info/kuota21.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
                     </a>
                 </div>
             </div>
