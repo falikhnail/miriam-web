@@ -11,7 +11,7 @@
                 <center><h1 class="fw-bold fs-2">Jadawal dr. Yudi Indarto, Sp.OG</h1></center>
             </div> --}}
             <div class="my-5 d-flex justify-content-center" style="padding-top: 10px;">
-                <img src="{{ asset('images/jadwal-dokter/drg.vera.jpg') }}" alt="">
+                <img src="{{ asset('images/jadwal-dokter/drg.veraupdate.jpg') }}" alt="">
             </div>
         </div>
     </div>
