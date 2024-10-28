@@ -30,7 +30,7 @@
                     $pelayanan = ['igd'];
                     $informasi = ['ketersediaantempattidur'
                                 ,'hak_kewajiban','indikatormutu',"mitra"];
-                    $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy','dr_destar'];           
+                    $jadwal = ['dr_yudi','dr_ferry','dr_tezza','dr_umi','drg_vera','drg_cindy','dr_destar','dr_albert'];           
                     // $karir = ['bidan'];
                     $alurpelayanan = ['alur_ugd','alur_ranap','alur_lab','alur_perinatologi'
                                     ,'alur_rajal','alur_kambay','alur_vk','alur_rajals'];
@@ -194,7 +194,17 @@
                                                 <ul>
                                                     <li>
                                                         <a href="{{ route('frontend.dr_destar') }}"
-                                                            class="{{ $isActive('dr_destar') }}">dr. Destar Aditya Yusuf Sp. THT-BKL</a>
+                                                            class="{{ $isActive('dr_destar') }}">dr. Destar Aditya Yusuf Sp.THT-BKL</a>
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="{{ $isActive('dr_albert') }}"> <span>Dokter Spesialis Dermatologi, Venerologi, Estetika</span> 
+                                                <i class="bi bi-chevron-right"></i></a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ route('frontend.dr_albert') }}"
+                                                            class="{{ $isActive('dr_albert') }}">dr. Albert Novian S., Sp.DVE</a>
                                                     </li>
                                                 </ul>
                                         </li>
