@@ -432,6 +432,24 @@
 
                 <div class="col-lg-6 mt-4 mt-lg-3">
                     <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="assets/img/doctors/dr.albert.jpg" class="img-fluid" alt="" width="100%" height="auto">
+                        </div>
+                        <div class="member-info">
+                            <h4>dr. Albert Novian S., Sp.DVE</h4>
+                            <span>Dokter Spesialis Kulit dan Kelamin</span>
+                            <p>"Melayani konsultasi dan pengobatan penyakit kulit, kelamin dan bisa melayani di bidang estetika atau kosmetika dan berkompetensi melakukan prosedur kosmetik medik."</p>
+                            <!-- <div class="social">
+                                                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-3">
+                    <div class="member d-flex align-items-start">
                         <div class="pic"><img src="assets/img/doctors/cowo3.png" class="img-fluid" alt="" width="100%" height="auto">
                         </div>
                         <div class="member-info">
