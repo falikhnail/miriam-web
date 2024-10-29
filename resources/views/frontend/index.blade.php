@@ -105,7 +105,7 @@
 <section id="unggulan" class="unggulan">
     <div class="container">
         <div class="section-title text-center">
-            <h2>Informasi 29 Oktober 2024</h2>
+            <h2>Informasi</h2>
             <p></p>
         </div>
     </div>
