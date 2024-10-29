@@ -105,27 +105,13 @@
 <section id="unggulan" class="unggulan">
     <div class="container">
         <div class="section-title text-center">
-            <h2>Informasi</h2>
+            <h2>Informasi 29 Oktober 2024</h2>
             <p></p>
         </div>
     </div>
 
     <div class="container-fluid">
         <div class="row justify-content-center g-10">
-            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
-                <div class="gallery-item position-relative">
-                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/destarnew.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
-                <div class="gallery-item position-relative">
-                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/albertnew.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
-                    </a>
-                </div>
-            </div>
             <div class="col-lg-3 col-md-4 d-flex justify-content-center">
                 <div class="gallery-item position-relative">
                     {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
@@ -136,7 +122,7 @@
             <div class="col-lg-3 col-md-4 d-flex justify-content-center">
                 <div class="gallery-item position-relative">
                     {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/senin28.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <img src="assets/img/info/selasa29.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
                     </a>
                 </div>
             </div>
