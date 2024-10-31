@@ -122,14 +122,7 @@
             <div class="col-lg-3 col-md-4 d-flex justify-content-center">
                 <div class="gallery-item position-relative">
                     {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/rabu30.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 d-flex justify-content-center">
-                <div class="gallery-item position-relative">
-                    {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/imunisasiMR.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <img src="assets/img/info/kamis2024.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
                     </a>
                 </div>
             </div>
