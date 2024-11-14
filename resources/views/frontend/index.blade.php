@@ -299,7 +299,7 @@
 
                 <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/tesmi.jpg" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/dr.umi.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Sri Uminingsih</h4>
