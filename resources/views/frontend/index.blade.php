@@ -115,14 +115,14 @@
             <div class="col-lg-3 col-md-4 d-flex justify-content-center">
                 <div class="gallery-item position-relative">
                     {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/rabu13.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <img src="assets/img/info/kamis14.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
                     </a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 d-flex justify-content-center">
                 <div class="gallery-item position-relative">
                     {{-- <a href="assets/img/meternity.png" class="galelry-lightbox"> --}}
-                        <img src="assets/img/info/imun.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
+                        <img src="assets/img/info/kuota.jpg" alt="" class="img-fluid" style="width: 300px; height: auto;">
                     </a>
                 </div>
             </div>
@@ -299,7 +299,7 @@
 
                 <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/doctors/dr.ummi.jpg" class="img-fluid" alt="">
+                        <div class="pic"><img src="assets/img/doctors/tesmi.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>dr. Sri Uminingsih</h4>
